@@ -351,47 +351,59 @@ Copy code
     "dfh:mirrorsTopic": { "@type": "@id" }
   }
 }
-6. Discovery, Freshness, Disambiguation, Federation
-6.1 Discovery Flow
-User/LLM says: “healthcare”.
+6. Discovery, Freshness, and Federation
+6.1 Discovery Workflow
+User/LLM says “healthcare.”
 
-System maps the label → root domain (e.g. healthcaretype.com).
+System identifies root domain (e.g. healthcaretype.com).
 
 Fetches /.well-known/stack.
 
-DFH returns:
+DFH provides:
 
 anchors
 
 mirrors
 
-owl:sameAs links
-
-VoID/DCAT signals
+sameAs
 
 endpoints
 
-This removes ambiguity for AI and gives a deterministic first hop.
+VoID/DCAT signals
 
-6.2 Freshness and Sync
-To prevent drift, DFH and associated datasets should support:
+This becomes the first hop into the semantic ecosystem.
 
-Change feed (RSS/Atom or ActivityPub/LDN)
+6.2 Freshness (avoiding drift)
+To stay in sync:
 
-HTTP caching via ETag + Last-Modified
+Provide change feed (RSS/Atom or ActivityPub/LDN).
 
-Periodic recrawl as a fallback
+Use ETag + Last-Modified for cheap sync.
 
-Dataset-level metadata from DCAT/VoID (dcterms:modified, etc.)
+Fall back to periodic recrawl when needed.
 
-Clients then perform incremental sync, not full reindexing.
+Use dataset signals from:
+
+DCAT
+
+VoID
+
+dcterms:modified
+
+Clients perform incremental sync, not full reindex.
 
 6.3 Deterministic Disambiguation
-Homonyms (Jaguar, Apple, Mercury, etc.) are handled via:
+Homonyms handled via SKOS concept scheme and mirrors.
 
-SKOS concept scheme
+DFH can return:
 
-Mirrors with explicit senses
+a deterministic primary sense
+
+alternates with confidence
+
+multilingual labels
+
+examples and sameAs
 
 Examples:
 
@@ -401,21 +413,11 @@ jaguarcar.com
 
 jaguarsports.com
 
-The root doesn’t choose the sense.
-Mirror selection = sense selection.
-
-DFH can return:
-
-deterministic primary sense
-
-alternates with confidence
-
-multilingual labels
-
-examples & sameAs links
+Root does not choose sense.
+Context (mirror) chooses sense.
 
 6.4 Federation Layer
-The Stack and DFH don’t replace query engines. They plug into existing tooling:
+Use existing tools:
 
 Comunica
 
@@ -423,27 +425,26 @@ Stardog Virtual Graph
 
 Jena/Fuseki
 
-GraphQL / REST façades
+GraphQL / REST façade
 
 Flow:
 
-DFH → anchors → federated queries → results.
+Stack anchors → DFH → federated reasoning.
 
 7. Topic Selection & Governance
-7.1 Decentralized Like DNS
-A topic exists once a root stack is published.
+7.1 No central authority
+A topic exists as soon as a root is published.
+This works more like DNS than Wikipedia:
 
-No gatekeepers
+decentralized
 
-Anyone can publish a root
+no gatekeeping
 
-Competing roots can coexist
+competing roots may coexist
 
-Market/AI/community decides what to trust
+consumers decide what to trust
 
-7.2 Deriving Topics from LOD
-Index vocabulary, not trillions of triples.
-
+7.2 Topics derived from LOD
 Use:
 
 rdfs:Class
@@ -452,34 +453,30 @@ owl:Class
 
 skos:Concept
 
-These labels become candidate topic names.
-Datasets provide semantic signals, not single points of truth.
+Index vocabulary, not trillions of triples.
 
-7.3 Meaning vs Correctness
-“Correct” in this model ≠ philosophically true.
+7.3 Correctness
+“Correct” ≠ philosophically true.
 
 It simply means:
 
-This is the stable first hop for this label in this context.
-
-The Stack doesn’t define truth.
-It defines where to begin.
+This is the stable first hop for this label.
 
 8. User Experience
-8.1 Non-technical users
+Non-technical users
 They get:
 
 Topic explorer
 
-Mirrors (plural, category, context)
+Mirrors
 
 Simple “where this topic lives” view
 
-Chat/search grounded through DFH
+Chat grounded through DFH
 
 No RDF/SPARQL exposed
 
-8.2 Technical users
+Technical users
 They get:
 
 JSON-LD DFH descriptor
@@ -488,35 +485,34 @@ SPARQL / JSON-LD / GraphQL endpoints
 
 VoID/DCAT metadata
 
-Federation-ready endpoints
+Federation hooks
 
 9. Verification Stack (Future Layer)
-The Verification Stack is a future, complementary layer.
-Truth is decomposed into:
+Truth is decomposed as:
 
-chronology — when (timeline, sequence)
+chronology
 
-metadata — what (attributes, specs)
+metadata
 
-taxonomy — how (classification)
+taxonomy
 
-provenance — where from (origin, lineage)
+provenance
 
-ontology — what it fundamentally is (deep identity)
+ontology
 
-Semantic Stack = the meaning
+Semantic Stack = meaning
 
-Verification Stack = the truth
+Verification Stack = truth
 
-Together they provide:
+Together:
 
-Meaning anchored to verifiable truth
+meaning anchored to verifiable truth
 
-Transparent provenance
+provenance becomes inspectable
 
-Reduced circular claims
+circular references are reduced
 
-This aims at a global truth infrastructure.
+This enables a global truth infrastructure.
 
 10. Universal Knowledge Stack™
 Semantic Stack + Verification Stack = Universal Knowledge Stack™
@@ -525,48 +521,46 @@ meaning + truth
 
 definition + verification
 
-external semantic layer + provenance layer
+external semantic & provenance layer
 
-This is the missing foundational layer the web skipped in the 1990s.
+This is the layer the web skipped in the 1990s.
 
-11. Problems Solved (Summary)
-The model is aimed at:
-
+11. Problems Solved
 AI hallucinations
 
-Misinformation
+misinformation
 
-Semantic drift
+semantic drift
 
-Circular citations
+circular citations
 
-Missing provenance
+missing provenance
 
-Topic identity instability
+topic identity instability
 
-Lack of transparency
+lack of transparency
 
-Lack of interoperable grounding for AI
+lack of interoperable grounding
 
 12. Version Roadmap
-v1 → DFH + Root + Mirrors
+v1 → root + mirrors + DFH
 
-v2 → Disambiguation + signals + change-feed
+v2 → disambiguation + change-feed
 
-v3 → Verification Stack
+v3 → verification stack
 
-v4 → Universal Knowledge Stack
+v4 → universal knowledge stack
 
 13. Path Forward
 Start extremely small:
 
-Create a micro-group (4–6 people).
+micro-group (4–6 people)
 
-Define a tiny DFH JSON-LD contract.
+minimal DFH spec
 
-Build one working topic (e.g. healthcare).
+one working topic
 
-Iterate and broaden out to more topics and stakeholders.
+then broaden out
 
 One-Sentence Summary
 The External Semantic Layer / Semantic Stack / DFH Layer is the missing grounding layer: the architecture, the JSON-LD, the discovery endpoint, the mirrors, the disambiguation mechanism, and the minimal DFH contract that finally gives AI a deterministic first hop into meaning.
