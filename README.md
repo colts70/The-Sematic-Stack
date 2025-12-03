@@ -379,5 +379,13 @@ Done. Your topic now has a deterministic first-hop.
 
 “This integrates with GraphRAG/LLM agents.
 
+The idea is 
+
+Make it smaller
+→ Make it clearer
+→ Make it deterministic
+→ Make it external
+→ Make it universal
+→ Make it decentralized
 
 # End of README
