@@ -390,4 +390,5 @@ Make it smaller
 → Make it universal
 → Make it decentralized
 
+Any domain owner can implement DFH in 5 minutes.
 # End of README
