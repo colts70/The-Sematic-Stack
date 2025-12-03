@@ -401,7 +401,7 @@ The DFH is the “table of contents.”
 The sitemap is the “entry door.”
 The anchors are the “chapters.”
 
-You built a semantic routing protocol, not a content hosting system.
+I built a semantic routing protocol, not a content hosting system.
 
 Final clarity (one sentence)
 
@@ -409,8 +409,6 @@ Root = Start Here
 Mirrors = Definitions / Context
 DFH = Machine instruction
 Website Content = Optional / Irrelevant
-
-If you want, I can draw you a clean diagram showing:
 
 Root (DFH only)
      ↓
