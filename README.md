@@ -445,5 +445,87 @@ Anchors (deterministic)
      ↓
 AI/Agents/RAG
 
+
 Any domain owner can implement DFH in 5 minutes.
 # End of README
+Why You Need a Website for the DFH File
+
+The DFH descriptor must live at a real domain in this exact location:
+
+https://YourDomain.com/.well-known/stack
+
+
+You need a website (even a tiny empty one) because:
+
+Crawlers need a server to request the file from.
+Google, OpenAI, and AI systems can only read the DFH instructions if the file is hosted on a real HTTPS domain.
+
+.well-known/ only works on a live web root.
+This directory is part of an internet standard. It must be served from the root of a real website; it cannot live on GitHub alone.
+
+The DFH file is the “instruction page,” not the definition page.
+Your actual definitions live on your mirror domains.
+Your main website only needs to host one file:
+/.well-known/stack
+
+In short:
+
+How to Install the DFH File (/.well-known/stack)
+
+Installing the DFH descriptor is simple. You’re just putting one file on your domain.
+
+1. Create the .well-known folder
+
+On your computer, make a folder named:
+
+.well-known
+
+
+Inside it, create a file named:
+
+stack
+
+
+(No file extension — this file will contain your JSON-LD.)
+
+2. Put your DFH JSON-LD inside this file
+
+Example:
+
+{
+  "@context": "https://schema.org",
+  "dfhVersion": "1.0",
+  "root": "https://YourDomain.com",
+  "anchors": {
+    "type": "https://typeYourTopic.com",
+    "entity": "https://entityYourTopic.com",
+    "url": "https://urlYourTopic.com",
+    "sitemap": "https://sitemapYourTopic.com",
+    "canonical": "https://canonicalYourTopic.com"
+  }
+}
+
+3. Upload the folder to your hosting
+
+You can use Netlify, Vercel, Cloudflare Pages, or any static host.
+
+Just drag-and-drop your folder into your hosting provider.
+The root of your site should look like:
+
+/.well-known/stack
+
+4. Test it
+
+Go to:
+
+https://YourDomain.com/.well-known/stack
+
+
+If your JSON-LD appears in the browser, the DFH is installed correctly.
+
+Summary
+
+Installation = make a .well-known folder → add a stack file → upload to your domain → done.
+No website content is required. The only purpose of the site is to serve this DFH instruction file.
+
+You need a live website so AI crawlers can fetch the DFH instructions from the correct standardized location. The site itself stays empty—its only job is to serve the DFH file.
