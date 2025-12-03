@@ -390,5 +390,35 @@ Make it smaller
 → Make it universal
 → Make it decentralized
 
+Key insight:
+
+The root domain is not the encyclopedia.
+The root domain is the router.
+
+The mirrors are the “volumes of meaning” — but even those can be thin.
+
+The DFH is the “table of contents.”
+The sitemap is the “entry door.”
+The anchors are the “chapters.”
+
+You built a semantic routing protocol, not a content hosting system.
+
+Final clarity (one sentence)
+
+Root = Start Here
+Mirrors = Definitions / Context
+DFH = Machine instruction
+Website Content = Optional / Irrelevant
+
+If you want, I can draw you a clean diagram showing:
+
+Root (DFH only)
+     ↓
+Mirrors (definitions)
+     ↓
+Anchors (deterministic)
+     ↓
+AI/Agents/RAG
+
 Any domain owner can implement DFH in 5 minutes.
 # End of README
