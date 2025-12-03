@@ -543,3 +543,5 @@ DFH would be live instantly.
 Nothing else is required.
 
 You need a live website so AI crawlers can fetch the DFH instructions from the correct standardized location. The site itself stays empty—its only job is to serve the DFH file.
+
+If you want the canonical entry point for a topic, go to /.well-known/stack on the root domain.
