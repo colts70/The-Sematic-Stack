@@ -603,3 +603,94 @@ Even someone who has never used JSON-LD, DNS, hosting, semantic web, or SEO can 
 “Are my anchors valid?”
 
 The protocol is intentionally built so both machines and humans can onboard instantly.
+
+The DFH Semantic Stack uses five deterministic anchor names:
+
+type
+
+entity
+
+url
+
+sitemap
+
+canonical
+
+These names are final and must not be changed, for the following reasons:
+
+1. DFH Has Already Established the Reference Vocabulary
+
+This public protocol defines the first complete, decentralized semantic routing layer.
+Because it is already published, implemented, and cloned, these anchor names serve as the canonical vocabulary for DFH.
+
+Changing the names now would break compatibility with every implementation.
+
+2. Anchor Renaming Causes Fragmentation
+
+If anyone were to rename these anchors—e.g., type → category, or canonical → primary—they would create an incompatible fork that:
+
+cannot interoperate with other DFH maps
+
+cannot be reliably parsed by tools
+
+breaks determinism
+
+confuses implementers
+
+creates dead-end variants
+
+DFH succeeds because it is identical across every domain.
+Renaming destroys that core property.
+
+3. The Web Prefers Determinism and Stability
+
+Standards such as:
+
+robots.txt
+
+sitemap.xml
+
+canonical
+
+ads.txt
+
+security.txt
+
+have succeeded because their naming froze immediately upon first publication.
+DFH follows the same stability principle.
+
+4. AI Grounding Depends on Fixed Anchor Semantics
+
+LLMs and crawlers can only rely on DFH as a deterministic grounding layer if the anchor vocabulary is stable and universal.
+
+Changing the names would invalidate indexing logic and destroy cross-topic alignment.
+
+5. DFH Is a Protocol, Not a Style Guide
+
+DFH is not a suggestion.
+It is a strict external semantic routing layer.
+
+Every DFH descriptor must use the same five anchor names or it is not DFH.
+
+6. Variant Naming Hurts Only the Variant
+
+Anyone who changes the names automatically:
+
+isolates their implementation
+
+breaks compatibility
+
+loses ecosystem support
+
+invalidates interoperability
+
+creates a non-standard fork
+
+The official DFH anchor vocabulary is fixed by publication.
+
+Conclusion
+
+The DFH protocol’s five anchor names are final, canonical, and non-negotiable.
+Implementations that deviate from this vocabulary are not DFH and will not interoperate with the global semantic routing layer.
+
+
