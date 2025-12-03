@@ -121,6 +121,33 @@ Each topic exposes:
 ```
 
 ### **DFH Descriptor Location**
+
+The DFH file must live on your real website, not on a parked domain.
+
+Why?
+
+Because machines can only find the DFH file if the domain is actually hosting a site.
+
+To make it work:
+
+Go to your hosting (Netlify, Cloudflare Pages, GitHub Pages, etc.)
+
+Create a folder named:
+
+/.well-known/
+
+Inside it, create a file called:
+
+stack
+
+Your DFH file will then be reachable at:
+
+https://YourDomain.com/.well-known/stack
+
+This file does not go on a page of your website.
+It goes on the server root, in the .well-known folder.
+
+If the domain has no website hosting, the DFH cannot be discovered.
 ```
 https://YourDomain.com/.well-known/stack
 ```
