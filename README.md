@@ -379,6 +379,8 @@ Done. Your topic now has a deterministic first-hop.
 
 “This integrates with GraphRAG/LLM agents.
 
+“Future work: A verification/provenance layer can sit above DFH for chronological proofs and trust anchors, but is outside scope for this README.”
+
 The idea is 
 
 Make it smaller
