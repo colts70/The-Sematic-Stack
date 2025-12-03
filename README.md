@@ -453,4 +453,31 @@ Deterministic anchors create stable vocabulary
 
 Mirrors allow contextual branching without breaking determinism
 
+### DFH Domain Requirement: All Domains Must Be `.com`
+
+For any implementation of the Deterministic First-Hop (DFH) protocol to be
+considered authoritative and valid, **all domains in the Semantic Stack
+must use the `.com` TLD without exception**.
+
+This includes:
+
+- Root Domain (`.com`)
+- Sitemap Domain (`.com`)
+- Type Anchor (`.com`)
+- Entity Anchor (`.com`)
+- URL Anchor (`.com`)
+- Canonical Anchor (`.com`)
+- Any Mirrors tied to the Root (`.com`)
+
+Using alternate TLDs (such as `.ai`, `.xyz`, `.net`, etc.) for any anchor
+or sitemap **breaks semantic determinism**, fragments authority, and
+collapses the DFH system. DFH depends on a single trusted namespace, and
+`.com` is the only globally recognized, stable, and non-negotiable root
+for real-world adoption.
+
+**Summary:**  
+If it is not `.com`, it is not a DFH Root and will not function as part
+of the Semantic Stack.
+
+
 End of README
