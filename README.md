@@ -417,3 +417,81 @@ All exposed via a JSON-LD descriptor at:
 
 Goal: give AI / search / GraphRAG a deterministic first hop before touching RDF/OWL/LOD or proprietary embeddings.
 
+2) Mirror System (Plural + Category + Context Domains)
+Mirrors are also real domains, but they reflect the root and never replace it.
+
+Plural mirrors
+cars → mirrors car
+
+pharmaceuticals → mirrors pharmaceutical
+
+Category mirrors
+sportsmedicine → mirrors medicine
+
+electriccars → mirrors car
+
+Context mirrors
+healthcaredata
+
+transportationreviews
+
+baseballstats
+
+Mirrors expand context while keeping ONE root definition.
+
+3) Why This Might Matter
+A) Fixing the Missing Semantic Layer (AI Hallucination Issue)
+AI currently guesses meaning from scattered sources.
+A fixed external stack gives it:
+
+one canonical root
+
+predictable definitions
+
+clear topic boundaries
+
+mirrors for context
+
+This acts like the missing card catalog the internet never created.
+
+B) Provenance + Authenticity
+One topic = one stack.
+The stack owner becomes the canonical definitional host —
+not legally, but as an open semantic reference.
+
+This adds:
+
+transparency
+
+traceable provenance
+
+stable external meaning
+
+C) SEO Advantages
+The external domain structure provides:
+
+consistent canonical signals
+
+predictable URL patterns
+
+structured sitemaps
+
+less topic ambiguity
+
+easier crawlability
+
+Search engines (and AI) benefit from reduced fragmentation.
+
+D) Public Ownership of Meaning
+Because these definitions live on public external domains, the semantic layer becomes:
+
+globally visible
+
+publicly referenceable
+
+outside corporate control
+
+a shared index for all topics
+
+The public gains the index layer,
+instead of private algorithms controlling meaning.
