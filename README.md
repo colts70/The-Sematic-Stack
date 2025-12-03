@@ -435,4 +435,22 @@ Even if you break something or have no technical skill at all, you can always as
 
 And it will.
 
+Why DFH is viable
+
+Uses IETF .well-known standard
+
+Uses JSON-LD (W3C-compliant)
+
+Uses decentralized DNS (no authority needed)
+
+Follows same pattern as ACME, OpenID, WebFinger
+
+Does not conflict with Schema.org
+
+Is extension-compatible with RDF/OWL
+
+Deterministic anchors create stable vocabulary
+
+Mirrors allow contextual branching without breaking determinism
+
 End of README
