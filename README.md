@@ -13,6 +13,14 @@ This repo defines the **Semantic Stack**:
 
 This is the missing piece at the exact moment the world needs it.
 
+DFH is decentralized
+
+DNS-like
+
+No gatekeepers
+
+Anyone can publish a topic root
+
 Root
 
 Mirrors
