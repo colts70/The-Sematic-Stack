@@ -43,6 +43,10 @@ It explains 25 years of semantic stagnation
 
 This repo defines the **Semantic Stack**:
 
+Map
+
+type.com / entity.com / url.com / sitemap.com / canonical.com is the full Semantic Stack layer for each root topic.
+
 "DFH is DNS for meaning.”
 
 DFH is decentralized
