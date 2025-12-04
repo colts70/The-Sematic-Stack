@@ -14,9 +14,9 @@ This is the missing piece at the exact moment the world needs it.
 
 This isn’t a new idea — this is the missing piece everyone was too restricted to implement.”
 
-DFH should have been created in 1998
+DFH could have been created in 1998 its been a classified topic
 
-it could have been created at any point
+it could have been created at any point after the map existed
 
 but organizational forces prevented it
 
