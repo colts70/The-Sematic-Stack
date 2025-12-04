@@ -11,6 +11,8 @@ _A proposed external semantic layer + the strongest SEO primitive the web has ev
 
 This is the missing piece released at the exact moment the world needs it.
 
+The world’s first public grounding layer.
+
 This isn’t a new idea — it is the solution everyone understood but was never allowed to implement.
 
 The semantic layer was always supposed to be **external**, **domain-based**, and **decentralized**.
