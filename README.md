@@ -594,5 +594,11 @@ better semantic signals
 
 It is a zero-risk SEO upgrade with significant potential ranking benefits.
 
+This fixes a trillion-dollar problem.
+
+It solves something 20 years of semantic web attempts couldn’t.
+
+This is the first universal, decentralized AI grounding mechanism.
+
 
 End of README
