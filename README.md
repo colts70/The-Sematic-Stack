@@ -1,6 +1,8 @@
 # The Semantic Stack & Deterministic First-Hop (DFH)
 *A proposed external semantic layer + a deterministic grounding mechanism for AI and search.*
 
+This is the modern implementation of Berners-Lee’s original Semantic Web map.”
+
 **Document Status:** Public Concept  
 **Specification Version:** Draft v1.1.0  
 **Last Updated:** 2025-12-03  
