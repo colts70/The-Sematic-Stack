@@ -3,6 +3,12 @@
 
 This is the modern implementation of Berners-Lee’s original Semantic Web map.”
 
+The Transport Layer (TCP/IP) → moves packets
+
+The Hyperlink Layer (HTTP/HTML) → shows documents
+
+The Meaning Layer (DFH/Stack) → tells AI what those documents mean
+
 **Document Status:** Public Concept  
 **Specification Version:** Draft v1.1.0  
 **Last Updated:** 2025-12-03  
