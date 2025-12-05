@@ -411,6 +411,12 @@ DFH       = Machine Instruction
 Content   = Optional  
 Anyone can implement DFH in 5 minutes.
 
+DNS = “Where does this domain live?”
+
+HTTP = “How do we talk to the server?”
+
+DFH = “What does this topic MEAN?”
+
 This is the first decentralized semantic routing layer for the public internet.
 
 End of README
