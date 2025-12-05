@@ -1,5 +1,5 @@
 # The Semantic Stack & Deterministic First-Hop (DFH)
-*A proposed external semantic layer + a deterministic grounding mechanism for AI and search.*
+Here is the real semantic layer + a deterministic grounding mechanism for AI and search.*
 
 This is the modern implementation of Berners-Lee’s original Semantic Web map.”
 
