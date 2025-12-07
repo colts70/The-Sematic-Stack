@@ -1,118 +1,106 @@
-The Semantic Web Stack & Semantic First-Hop / Deterministic First-Hop (SFH / DFH)
+# The Semantic Web Stack & Semantic First-Hop / Deterministic First-Hop (SFH / DFH)
 
-This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.
-This is the modern implementation of Berners-Lee’s original Semantic Web map.
-SFH / DFH matches the LLM’s internal canonicalization process.
-This work is non-commercial research into AI semantic grounding and deterministic canonicalization.
-Domain names are used as neutral anchors for prototype routing maps.
+> **This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.**  
+> **This is the modern implementation of Berners-Lee’s original Semantic Web map.**  
+> **SFH / DFH matches the LLM’s internal canonicalization process.**  
+> This work is non-commercial research into AI semantic grounding and deterministic canonicalization.  
+> Domain names are used as neutral anchors for prototype routing maps.
 
-A simple, decentralized semantic layer for the public web —
-and the strongest SEO primitive ever created.
+A simple, decentralized semantic layer for the public web —  
+**and the strongest SEO primitive ever created.**
 
-Status: Public Concept
-Version: Draft v1.0
-SFH / DFH Ready Spec: 1.0
-Date: 2025-11-23
-License: MIT
+**Status:** Public Concept  
+**Version:** Draft v1.0  
+**SFH / DFH Ready Spec:** 1.0  
+**Date:** 2025-11-23  
+**License:** MIT  
 
-0. What This Repo Is
+---
+
+## 0. What This Repo Is
 
 This repository defines:
 
-The Semantic Stack
+- **The Semantic Stack**
+- **The Semantic First-Hop Protocol (SFH)**
+- **The Deterministic First-Hop Protocol (DFH)**
 
-The Semantic First-Hop Protocol (SFH)
+SFH and DFH refer to the same protocol family — **two names, one meaning**:
 
-The Deterministic First-Hop Protocol (DFH)
+> **“The stable semantic starting point for understanding any topic.”**
 
-SFH and DFH refer to the same protocol family — two names, one meaning:
+SFH / DFH gives AI systems and search engines a **consistent, deterministic first step** for any concept, entity, product, or topic.
 
-“The stable semantic starting point for understanding any topic.”
-
-SFH / DFH gives AI systems and search engines a consistent, deterministic first step for any concept, entity, product, or topic.
-
-“SFH / DFH is DNS for meaning.”
+> **“SFH / DFH is DNS for meaning.”**
 
 SFH / DFH is intentionally:
 
-decentralized
-
-deterministic
-
-DNS-like
-
-one-file
-
-standards-compatible
-
-universally adoptable
+- decentralized  
+- deterministic  
+- DNS-like  
+- one-file  
+- standards-compatible  
+- universally adoptable  
 
 Every topic (water, cars, healthcare, colloidal silver, money, etc.) receives:
 
-One Root Domain (canonical base for the topic)
+- **One Root Domain** – canonical base for the topic  
+- **Optional Mirrors** – additional context providers  
+- **Five Anchors**  
+- **One SFH / DFH descriptor at** `/.well-known/stack`
 
-Optional Mirrors (context providers)
-
-Five Anchors
-
-One SFH/DFH descriptor at /.well-known/stack
-
-SFH / DFH does not replace ontologies.
+SFH / DFH does **not** replace ontologies.  
 It simply tells machines:
 
-“Start here for this topic.”
+> **“Start here for this topic.”**
 
-1. Why SFH / DFH Exists
-Problem 1 — No global semantic ground
+---
 
+## 1. Why SFH / DFH Exists
+
+### Problem 1 — No global semantic ground  
 Machines have no stable “first hop” for meaning.
 
-Problem 2 — Meaning is scattered
+### Problem 2 — Meaning is scattered  
+Knowledge lives in PDFs, Wikidata, Schema.org, corporate graphs, and random text.
 
-Knowledge lives in PDFs, Wikidata, Schema.org, corporate graphs, random text.
-
-Problem 3 — LLM hallucinations come from ambiguous roots
-
+### Problem 3 — LLM hallucinations come from ambiguous roots  
 Models guess what an entity is before they reason about it.
 
-Problem 4 — SEO is still page-level
+### Problem 4 — SEO is still page-level  
+The web never had **topic-level identity**.
 
-The web never had topic-level identity.
+**SFH / DFH fixes all four with the smallest possible change.**
 
-SFH / DFH fixes all four with the smallest possible change.
-🧒 Beginner Layer (Simple Explanation)
+---
+
+## 1.1 🧒 Beginner Layer (Simple Explanation)
 
 SFH / DFH is extremely simple.
 
 All you need:
 
-a folder called .well-known/
+- a folder called `.well-known/`  
+- a file named `stack`  
+- a JSON-LD document describing the topic  
+- HTTPS hosting (Netlify, Cloudflare, Vercel, nginx, etc.)
 
-a file named stack
+Then:
 
-a JSON-LD document describing the topic
-
-HTTPS hosting (Netlify, Cloudflare, Vercel, etc.)
-
-Then :
-
+```text
 https://YourDomain.com/.well-known/stack
-
-
-AI, search engines, crawlers, agents, and embeddings systems can instantly read it.
+AI, search engines, crawlers, agents, and embedding systems can instantly read it.
 
 What SFH / DFH actually solves
-
 No semantic ground → creates a deterministic root file
 
 Fragmented meaning → unifies everything using 5 anchors
 
 Hallucinations → gives AI a fixed first-hop
 
-SEO limits → introduces identity for whole topics, not pages
+SEO limits → introduces identity for whole topics, not just pages
 
 Why installation is easy
-
 .well-known = W3C + IETF standard
 
 JSON-LD = W3C structured data
@@ -120,17 +108,25 @@ JSON-LD = W3C structured data
 HTTPS = global requirement
 
 DNS = deterministic root for names
+
 SFH / DFH = deterministic root for meaning
 
-⚡ SFH / DFH INSTALL — 30 SECONDS
+2. ⚡ SFH / DFH INSTALL — 30 SECONDS
+From your project root:
+
+bash
+Copy code
 mkdir -p .well-known
 nano .well-known/stack
-
-
 Paste your JSON-LD:
 
+json
+Copy code
 {
-  "@context": { "sfh": "https://example.org/ns/sfh#", "dfh": "https://example.org/ns/dfh#" },
+  "@context": {
+    "sfh": "https://example.org/ns/sfh#",
+    "dfh": "https://example.org/ns/dfh#"
+  },
   "@id": "https://YourDomain.com/.well-known/stack",
   "sfh:rootTopic": "your-topic",
   "dfh:rootTopic": "your-topic",
@@ -149,16 +145,16 @@ Paste your JSON-LD:
     "dfh:canonical": "https://yourcanonical.com/"
   }
 }
+Deploy → then test:
 
-
-Deploy → Test:
-
+text
+Copy code
 https://YourDomain.com/.well-known/stack
+If the JSON loads in a browser or curl, SFH / DFH is active.
 
-
-If JSON loads → SFH / DFH is active.
-
-2. High-Level Architecture
+3. High-Level Architecture
+text
+Copy code
 Semantic Stack
 ├── Root (topic base)
 ├── Mirrors (context providers)
@@ -169,51 +165,63 @@ Semantic Stack
     ├── /url
     ├── /sitemap
     └── /canonical
+All delivered through:
 
-
-Delivered through:
-
+text
+Copy code
 https://YourDomain.com/.well-known/stack
+Note: GitHub Pages alone is not always sufficient — you need proper HTTPS and headers.
+Any static host with HTTPS (Netlify, Cloudflare, Vercel, etc.) works.
 
+4. The Five Anchors
+Each topic’s Root Domain agrees on five canonical anchors.
 
-GitHub Pages alone is not sufficient — requires HTTPS headers.
-
-3. The Five Anchors
-1. /type — Defines the class of thing
+4.1 /type — Defines the class of thing
+json
+Copy code
 {
   "name": "ColloidalSilver",
   "type_category": "Product",
   "dfh_version": "1.0",
   "sfh_version": "1.0"
 }
-
-2. /entity — A specific instance
+4.2 /entity — A specific instance
+json
+Copy code
 {
   "entity": "GodsGraceColloidalSilver16oz",
   "type": "Product",
   "manufacturer": "God's Grace Products LLC"
 }
-
-3. /url — Authoritative URLs
+4.3 /url — Authoritative URLs
+json
+Copy code
 {
   "canonical": "https://godsgracecolloidalsilver.com",
-  "mirrors": ["https://mirror-1.com", "https://mirror-2.com"]
+  "mirrors": [
+    "https://mirror-1.com",
+    "https://mirror-2.com"
+  ]
 }
-
-4. /sitemap — Topic-level structure
-
+4.4 /sitemap — Topic-level structure
 Example:
 
+text
+Copy code
 https://watersitemap.com/sitemap.xml
+This is the sitemap for the topic, not just a single site.
 
-5. /canonical — Identity Anchor
+4.5 /canonical — Identity Anchor
+json
+Copy code
 {
   "canonical_id": "colloidalsilver",
   "preferred_label": "Colloidal Silver",
   "aliases": ["Silver Hydrosol"]
 }
-
-4. SFH / DFH Descriptor Example
+5. SFH / DFH Descriptor Example
+json
+Copy code
 {
   "@context": {
     "sfh": "https://example.org/ns/sfh#",
@@ -241,9 +249,7 @@ https://watersitemap.com/sitemap.xml
   },
   "dct:issued": "2025-11-23"
 }
-
-5. SEO Advantages
-
+6. SEO Advantages
 SFH / DFH enables:
 
 topic-level canonical identity
@@ -254,18 +260,17 @@ reduced ambiguity for crawlers
 
 faster indexing
 
-higher EEAT
+higher E-E-A-T signals
 
 fewer hallucinations for AI
 
-lowest crawl cost ever recorded
+minimal crawl cost
 
 SFH / DFH is the most powerful SEO primitive because it gives:
 
-A stable semantic identity for entire topics.
+A stable semantic identity for entire topics, not just individual pages.
 
-6. Mirrors (Critical Concept)
-
+7. Mirrors (Critical Concept)
 Mirrors:
 
 expand context
@@ -274,35 +279,55 @@ reinforce topic definition
 
 provide alternative structured graphs
 
-DO NOT redefine the topic
+do not redefine the topic
 
-Root always overrides contradictions.
+The Root always overrides contradictions.
 
-7. What SFH / DFH Is NOT
+Mirrors:
 
-❌ Not a truth oracle
-❌ Not centralized
-❌ Not an ontology replacement
-❌ Not governed
+can be independent organizations
+
+can host richer graphs or alternative views
+
+remain subordinate to the Root’s definition of the topic and anchors
+
+8. What SFH / DFH Is NOT
+SFH / DFH is not:
+
+❌ a truth oracle
+
+❌ centralized
+
+❌ an ontology replacement
+
+❌ governed by a single vendor
 
 SFH / DFH is:
 
 ✔ deterministic
+
 ✔ decentralized
+
 ✔ universal
+
 ✔ public
+
 ✔ simple
+
 ✔ web-native
 
-8. Tools
-SFH / DFH Validator
+9. Tools
+9.1 SFH / DFH Validator (example)
+bash
+Copy code
 node tools/dfh-validator.js https://example.com
-
-Quick Installer
+9.2 Quick Installer (example)
+bash
+Copy code
 curl -s https://raw.githubusercontent.com/.../install-dfh.sh | bash
+These tool paths are examples — wire them to this repo’s actual scripts.
 
-9. Adoption Path
-
+10. Adoption Path
 no permissions
 
 no gatekeepers
@@ -317,6 +342,7 @@ spreads like DNS
 
 SFH / DFH grows one domain at a time.
 
-10. License
+11. License
+This project is released under the MIT License — open, decentralized, public.
 
-MIT — open, decentralized, public.
+See LICENSE for full terms.
