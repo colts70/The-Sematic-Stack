@@ -66,6 +66,26 @@ The web does not support **topic-level identity**.
 
 ### **DFH solves all four.**
 
+BEGINNER LAYER (simple explanation)
+
+It’s actually easy
+
+All DFH needs is:
+
+A folder called .well-known/
+
+A file called stack inside it
+
+JSON-LD describing the topic
+
+Hosting with HTTPS (Netlify, Cloudflare, Vercel, etc.)
+
+Once you upload that:
+
+👉 YourDomain.com/.well-known/stack
+loads instantly and any crawler, bot, or AI can read it.
+
+That means DFH works today.
 ---
 
 ## 2. High-Level Architecture
