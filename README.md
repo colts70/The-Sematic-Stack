@@ -65,6 +65,8 @@ LLMs guess what an entity or topic *is*.
 ### **Problem 4 — SEO is limited to page-level identity**
 The web has no notion of **topic-level identity**.
 
+The smallest possible change that fixes the largest possible failure.
+
 ### **DFH solves all four.**
 
 ---
