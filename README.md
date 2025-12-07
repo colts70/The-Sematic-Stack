@@ -1,4 +1,4 @@
-# The Semantic Web Stack & Semantic First-Hop / Deterministic First-Hop (SFH / DFH)
+The Semantic Web Stack & Semantic First-Hop / Deterministic First-Hop (SFH / DFH)
 
 > **This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.**  
 > **This is the modern implementation of Berners-Lee’s original Semantic Web map.**  
@@ -25,100 +25,80 @@ This repository defines:
 - **The Semantic First-Hop Protocol (SFH)**
 - **The Deterministic First-Hop Protocol (DFH)**
 
-SFH and DFH refer to the same protocol family — **two names, one meaning**:
+SFH and DFH are two names for the same protocol family:
 
 > **“The stable semantic starting point for understanding any topic.”**
 
-SFH / DFH gives AI systems and search engines a **consistent, deterministic first step** for any concept, entity, product, or topic.
+SFH / DFH gives machines a **deterministic, DNS-like first hop for meaning**, eliminating ambiguity at the root.
 
 > **“SFH / DFH is DNS for meaning.”**
 
-SFH / DFH is intentionally:
+Key properties:
 
 - decentralized  
 - deterministic  
-- DNS-like  
-- one-file  
-- standards-compatible  
+- one-file install  
+- no dependencies  
+- W3C-compatible  
 - universally adoptable  
 
-Every topic (water, cars, healthcare, colloidal silver, money, etc.) receives:
+Every topic (water, cars, money, colloidal silver, etc.) receives:
 
-- **One Root Domain** – canonical base for the topic  
-- **Optional Mirrors** – additional context providers  
-- **Five Anchors**  
+- **One Root Domain** (authoritative base for the topic)  
+- **Optional Mirrors** (context expanders that point back to the Root)  
+- **Five Anchors** (`/type`, `/entity`, `/url`, `/sitemap`, `/canonical`)  
 - **One SFH / DFH descriptor at** `/.well-known/stack`
 
-SFH / DFH does **not** replace ontologies.  
-It simply tells machines:
+SFH / DFH does **not** replace ontologies. It tells machines:
 
-> **“Start here for this topic.”**
+> **“Start here.”**
 
 ---
 
 ## 1. Why SFH / DFH Exists
 
-### Problem 1 — No global semantic ground  
-Machines have no stable “first hop” for meaning.
+### Problem → Fix Summary
 
-### Problem 2 — Meaning is scattered  
-Knowledge lives in PDFs, Wikidata, Schema.org, corporate graphs, and random text.
-
-### Problem 3 — LLM hallucinations come from ambiguous roots  
-Models guess what an entity is before they reason about it.
-
-### Problem 4 — SEO is still page-level  
-The web never had **topic-level identity**.
-
-**SFH / DFH fixes all four with the smallest possible change.**
+| Problem | SFH / DFH Fix |
+|--------|---------------|
+| No global semantic ground | Creates a universal first-hop |
+| Meaning is scattered | Unifies using 5 anchors |
+| LLM hallucination at the root | Provides fixed semantic identity |
+| SEO is page-based only | Introduces **topic-level identity** |
 
 ---
 
 ## 1.1 🧒 Beginner Layer (Simple Explanation)
 
-SFH / DFH is extremely simple.
+To install SFH / DFH you only need:
 
-All you need:
-
-- a folder called `.well-known/`  
+- a `.well-known/` folder  
 - a file named `stack`  
 - a JSON-LD document describing the topic  
-- HTTPS hosting (Netlify, Cloudflare, Vercel, nginx, etc.)
+- any HTTPS host (Netlify, Cloudflare, Vercel, nginx, etc.)
 
-Then:
+Then machines can resolve:
 
 ```text
 https://YourDomain.com/.well-known/stack
-AI, search engines, crawlers, agents, and embedding systems can instantly read it.
+This gives AI:
 
-What SFH / DFH actually solves
-No semantic ground → creates a deterministic root file
+the official root definition of your topic
 
-Fragmented meaning → unifies everything using 5 anchors
+all anchors
 
-Hallucinations → gives AI a fixed first-hop
+all mirrors
 
-SEO limits → introduces identity for whole topics, not just pages
+a deterministic base for reasoning
 
-Why installation is easy
-.well-known = W3C + IETF standard
-
-JSON-LD = W3C structured data
-
-HTTPS = global requirement
-
-DNS = deterministic root for names
-
-SFH / DFH = deterministic root for meaning
-
-2. ⚡ SFH / DFH INSTALL — 30 SECONDS
+2. ⚡ 30-SECOND INSTALL
 From your project root:
 
 bash
 Copy code
 mkdir -p .well-known
 nano .well-known/stack
-Paste your JSON-LD:
+Paste:
 
 json
 Copy code
@@ -130,53 +110,65 @@ Copy code
   "@id": "https://YourDomain.com/.well-known/stack",
   "sfh:rootTopic": "your-topic",
   "dfh:rootTopic": "your-topic",
+
   "sfh:anchors": {
-    "sfh:type": "https://yourtype.com/",
-    "sfh:entity": "https://yourentity.com/",
-    "sfh:url": "https://yoururl.com/",
-    "sfh:sitemap": "https://yoursitemap.com/",
-    "sfh:canonical": "https://yourcanonical.com/"
+    "sfh:type": "https://yourdomain.com/type/",
+    "sfh:entity": "https://yourdomain.com/entity/",
+    "sfh:url": "https://yourdomain.com/url/",
+    "sfh:sitemap": "https://yourdomain.com/sitemap/",
+    "sfh:canonical": "https://yourdomain.com/canonical/"
   },
+
   "dfh:anchors": {
-    "dfh:type": "https://yourtype.com/",
-    "dfh:entity": "https://yourentity.com/",
-    "dfh:url": "https://yoururl.com/",
-    "dfh:sitemap": "https://yoursitemap.com/",
-    "dfh:canonical": "https://yourcanonical.com/"
+    "dfh:type": "https://yourdomain.com/type/",
+    "dfh:entity": "https://yourdomain.com/entity/",
+    "dfh:url": "https://yourdomain.com/url/",
+    "dfh:sitemap": "https://yourdomain.com/sitemap/",
+    "dfh:canonical": "https://yourdomain.com/canonical/"
   }
 }
-Deploy → then test:
+Deploy → test:
 
 text
 Copy code
 https://YourDomain.com/.well-known/stack
-If the JSON loads in a browser or curl, SFH / DFH is active.
+If JSON loads, SFH / DFH is active.
 
 3. High-Level Architecture
 text
 Copy code
 Semantic Stack
-├── Root (topic base)
-├── Mirrors (context providers)
-├── SFH / DFH descriptor
-└── Anchors
-    ├── /type
-    ├── /entity
-    ├── /url
-    ├── /sitemap
-    └── /canonical
-All delivered through:
+├── Root Domain (topic authority)
+│   ├── /.well-known/stack   ← SFH / DFH descriptor
+│   └── Anchors
+│       ├── /type
+│       ├── /entity
+│       ├── /url
+│       ├── /sitemap
+│       └── /canonical
+└── Mirrors (optional)
+    └── Each mirror:
+        └── /.well-known/stack (points BACK to Root + anchors)
+Root Domain MUST:
 
-text
-Copy code
-https://YourDomain.com/.well-known/stack
-Note: GitHub Pages alone is not always sufficient — you need proper HTTPS and headers.
-Any static host with HTTPS (Netlify, Cloudflare, Vercel, etc.) works.
+match the topic
 
-4. The Five Anchors
-Each topic’s Root Domain agrees on five canonical anchors.
+host the canonical .well-known/stack file
 
-4.1 /type — Defines the class of thing
+define the official anchors
+
+override conflicting mirror definitions
+
+Mirrors CANNOT override the Root.
+
+4. The Five Anchors (FULL DEFINITIONS)
+Each anchor is a tiny JSON or JSON-LD document.
+
+4.1 /type — What KIND of thing is this topic?
+Purpose: Creates the class/category of the topic.
+
+Example:
+
 json
 Copy code
 {
@@ -185,41 +177,131 @@ Copy code
   "dfh_version": "1.0",
   "sfh_version": "1.0"
 }
-4.2 /entity — A specific instance
+Use /type for:
+
+Product
+
+Substance
+
+Organization
+
+Currency
+
+MedicalDevice
+
+Topic
+
+4.2 /entity — A SPECIFIC instance of the thing
+Purpose: Defines an individual item under the topic.
+
+Example:
+
 json
 Copy code
 {
   "entity": "GodsGraceColloidalSilver16oz",
   "type": "Product",
-  "manufacturer": "God's Grace Products LLC"
+  "manufacturer": "God's Grace Products LLC",
+  "volume_oz": 16
 }
-4.3 /url — Authoritative URLs
+Use /entity for:
+
+a specific product SKU
+
+a specific batch
+
+a specific variant
+
+4.3 /url — Authoritative URLs + mirrors
+Purpose: Tells AI where the official sources live.
+
+Example:
+
 json
 Copy code
 {
   "canonical": "https://godsgracecolloidalsilver.com",
   "mirrors": [
-    "https://mirror-1.com",
-    "https://mirror-2.com"
+    "https://mirror1.example",
+    "https://mirror2.example"
   ]
 }
-4.4 /sitemap — Topic-level structure
+The canonical URL MUST be:
+
+the official website
+
+stable
+
+HTTPS
+
+tightly matching the topic
+
+Mirrors expand context but DO NOT override the canonical identity.
+
+4.4 /sitemap — Topic-level structure (not just a website map)
+The Sitemap Anchor is the structure of the TOPIC, not just one site.
+
 Example:
 
 text
 Copy code
-https://watersitemap.com/sitemap.xml
-This is the sitemap for the topic, not just a single site.
+https://colloidalsilversitemap.com/sitemap.xml
+Inside this XML you include:
 
-4.5 /canonical — Identity Anchor
+xml
+Copy code
+<urlset>
+  <url>
+    <loc>https://godsgracecolloidalsilver.com/.well-known/stack</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://godsgracecolloidalsilver.com/type/</loc>
+  </url>
+  <url>
+    <loc>https://godsgracecolloidalsilver.com/entity/</loc>
+  </url>
+  <url>
+    <loc>https://godsgracecolloidalsilver.com/canonical/</loc>
+  </url>
+  <url>
+    <loc>https://mirror1.example</loc>
+  </url>
+</urlset>
+The Topic Sitemap SHOULD list:
+
+the SFH / DFH descriptor (/.well-known/stack)
+
+all 5 anchors (type/entity/url/sitemap/canonical)
+
+all official mirrors
+
+any other authoritative topic-level resources
+
+This is the “routing table” for the topic.
+
+4.5 /canonical — The identity record
+Defines:
+
+official name
+
+aliases
+
+stable ID
+
+Example:
+
 json
 Copy code
 {
   "canonical_id": "colloidalsilver",
   "preferred_label": "Colloidal Silver",
-  "aliases": ["Silver Hydrosol"]
+  "aliases": ["Silver Hydrosol", "Silver Suspension"],
+  "created_by": "God's Grace Products LLC"
 }
-5. SFH / DFH Descriptor Example
+This is the primary identity anchor for AI grounding.
+
+5. Full SFH / DFH Descriptor Example
 json
 Copy code
 {
@@ -229,10 +311,14 @@ Copy code
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "dct": "http://purl.org/dc/terms/"
   },
+
   "@id": "https://watersitemap.com/.well-known/stack",
+
   "skos:prefLabel": { "@value": "Water", "@language": "en" },
+
   "sfh:rootTopic": "water",
   "dfh:rootTopic": "water",
+
   "sfh:anchors": {
     "sfh:type": "https://watertype.com/",
     "sfh:entity": "https://waterentity.com/",
@@ -240,6 +326,7 @@ Copy code
     "sfh:sitemap": "https://watersitemap.com/",
     "sfh:canonical": "https://watercanonical.com/"
   },
+
   "dfh:anchors": {
     "dfh:type": "https://watertype.com/",
     "dfh:entity": "https://waterentity.com/",
@@ -247,60 +334,121 @@ Copy code
     "dfh:sitemap": "https://watersitemap.com/",
     "dfh:canonical": "https://watercanonical.com/"
   },
+
   "dct:issued": "2025-11-23"
 }
-6. SEO Advantages
-SFH / DFH enables:
+6. Mirrors (FULL EXPLANATION)
+Mirrors are context expansion sites that help define and reinforce the topic.
+
+A mirror SHOULD:
+
+host richer graphs, documentation, or datasets
+
+provide additional structured/linked data
+
+expose alternative but compatible views
+
+link clearly back to the Root Domain and canonical anchors
+
+Each mirror SHOULD have its own descriptor:
+
+text
+Copy code
+https://MirrorDomain.com/.well-known/stack
+Example mirror descriptor:
+
+json
+Copy code
+{
+  "@context": {
+    "sfh": "https://example.org/ns/sfh#",
+    "dfh": "https://example.org/ns/dfh#"
+  },
+  "@id": "https://MirrorDomain.com/.well-known/stack",
+
+  "sfh:rootTopic": "colloidalsilver",
+  "dfh:rootTopic": "colloidalsilver",
+
+  "sfh:rootAuthority": "https://YourRootDomain.com/.well-known/stack",
+  "dfh:rootAuthority": "https://YourRootDomain.com/.well-known/stack"
+}
+A mirror MAY NOT:
+
+override the canonical identity
+
+redefine the topic
+
+move or replace the anchors
+
+change the topic-level sitemap defined by the Root
+
+Rule:
+Mirrors strengthen the topic.
+Root defines the topic.
+
+7. How It All Connects (End-to-End Flow)
+AI / crawler sees the topic name: "colloidal silver".
+
+It resolves the Root Domain (e.g., https://colloidalsilversitemap.com).
+
+It fetches:
+
+text
+Copy code
+https://colloidalsilversitemap.com/.well-known/stack
+From the descriptor it learns:
+
+rootTopic = "colloidalsilver"
+
+anchors: /type, /entity, /url, /sitemap, /canonical
+
+optional mirrors
+
+It fetches /canonical → gets the core identity.
+
+It fetches /type → learns what KIND of thing this is.
+
+It fetches /entity → learns about specific instances.
+
+It fetches /url → learns canonical site + mirrors.
+
+It fetches /sitemap → learns the full topic structure.
+
+It optionally fetches mirror .well-known/stack files → gains more context.
+
+Result: No guessing. No hallucinating at the root.
+
+8. SEO Advantages
+SFH / DFH provides:
 
 topic-level canonical identity
 
-deterministic site structure
+deterministic crawl surface
 
-reduced ambiguity for crawlers
+perfect disambiguation of homonyms
 
-faster indexing
+faster indexing and more stable rankings
 
-higher E-E-A-T signals
+clearer E-E-A-T signals for the whole topic
 
-fewer hallucinations for AI
+AI grounding → near-zero hallucination around the entity
 
-minimal crawl cost
+unified structured meaning for search + LLMs
 
-SFH / DFH is the most powerful SEO primitive because it gives:
+This is the strongest SEO primitive because it operates above pages:
 
-A stable semantic identity for entire topics, not just individual pages.
+You are giving search + AI the canonical map of the topic itself.
 
-7. Mirrors (Critical Concept)
-Mirrors:
-
-expand context
-
-reinforce topic definition
-
-provide alternative structured graphs
-
-do not redefine the topic
-
-The Root always overrides contradictions.
-
-Mirrors:
-
-can be independent organizations
-
-can host richer graphs or alternative views
-
-remain subordinate to the Root’s definition of the topic and anchors
-
-8. What SFH / DFH Is NOT
+9. What SFH / DFH Is NOT
 SFH / DFH is not:
+
+❌ a central authority
 
 ❌ a truth oracle
 
-❌ centralized
+❌ governed by a single vendor
 
 ❌ an ontology replacement
-
-❌ governed by a single vendor
 
 SFH / DFH is:
 
@@ -316,163 +464,33 @@ SFH / DFH is:
 
 ✔ web-native
 
-9. Tools
-9.1 SFH / DFH Validator (example)
+✔ compatible with existing standards (DNS, HTTPS, JSON-LD, sitemaps)
+
+10. Tools (Examples)
+Example validator:
+
 bash
 Copy code
 node tools/dfh-validator.js https://example.com
-9.2 Quick Installer (example)
+Example quick installer:
+
 bash
 Copy code
 curl -s https://raw.githubusercontent.com/.../install-dfh.sh | bash
-These tool paths are examples — wire them to this repo’s actual scripts.
+(These paths are examples — wire them to this repo’s actual scripts.)
 
-10. Adoption Path
-no permissions
+11. Adoption Path
+No permissions
 
-no gatekeepers
+No gatekeepers
 
-works everywhere
+Works with any static host
 
-AI self-corrects ambiguity
+AIs and crawlers can adopt unilaterally
 
-zero barrier to entry
+Spreads like DNS: one domain at a time
 
-spreads like DNS
-
-SFH / DFH grows one domain at a time.
-
-11. License
+12. License
 This project is released under the MIT License — open, decentralized, public.
 
-“How Linking Back Works” + “Required Contents of Sitemap + Mirrors”
-## 12. How SFH / DFH Links Back to the Main Site (Critical)
-
-Every SFH / DFH Root Domain **must point back to the authoritative website** using two mechanisms:
-
-1. **The `sfh:url` and `dfh:url` anchors**  
-   These list the official URLs for the topic or entity.
-
-2. **The `/canonical` and `/sitemap` anchors**  
-   These create the deterministic loop that lets AI resolve identity → structure.
-
-Example:
-
-{
-  "sfh:url": "https://godsgracecolloidalsilver.com/",
-  "sfh:canonical": "https://godsgracecolloidalsilver.com/",
-  "sfh:sitemap": "https://colloidalsilversitemap.com/sitemap.xml"
-}
-
-### What this achieves
-- AI resolves the **topic domain → canonical → main site**  
-- Search engines treat the Root Domain as **semantic identity**,  
-  and the main site as **content authority**
-- No ambiguity exists because the chain is deterministic.
-
-
----
-
-## 13. What MUST Be Inside `/sitemap` for SFH / DFH to Function Correctly
-
-### ✔ The Topic Sitemap is NOT a normal website sitemap.
-It is the **topic-level structure**, not the page-level structure.
-
-### A valid SFH/DFH Topic Sitemap MUST contain:
-
-1. **Top-level conceptual pages**  
-   Example for *Colloidal Silver*:
-   - `/overview`
-   - `/safety`
-   - `/manufacturing`
-   - `/history`
-   - `/regulations`
-
-2. **Entity references**  
-   These point to `/entity` anchors or external product pages.
-
-3. **Mirror links**  
-   Each mirror domain must appear under a `<mirror>` tag.
-
-4. **Canonical confirmation**  
-   A `<canonicalRoot>` tag that points back to the main website.
-
-### Example Topic Sitemap (minimal working version)
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<dfhTopicSitemap>
-  <rootTopic>colloidal-silver</rootTopic>
-
-  <canonicalRoot>https://godsgracecolloidalsilver.com/</canonicalRoot>
-
-  <anchors>
-    <type>https://colloidalsilvertype.com/</type>
-    <entity>https://colloidalsilverentity.com/</entity>
-    <url>https://godsgracecolloidalsilver.com/</url>
-    <canonical>https://godsgracecolloidalsilver.com/</canonical>
-  </anchors>
-
-  <sections>
-    <section url="https://colloidalsilversitemap.com/overview"/>
-    <section url="https://colloidalsilversitemap.com/history"/>
-    <section url="https://colloidalsilversitemap.com/regulations"/>
-  </sections>
-
-  <mirrors>
-    <mirror>https://mirror-1.com/</mirror>
-    <mirror>https://mirror-2.com/</mirror>
-  </mirrors>
-</dfhTopicSitemap>
-
-
-This is enough for any LLM, crawler, or semantic agent to fully ground the topic.
-
-14. What MUST Be Inside Each Mirror Domain
-
-Mirrors do not redefine the topic.
-They reinforce it using the same structure as the Root Domain.
-
-Every Mirror MUST contain:
-
-The same .well-known/stack file
-
-identical rootTopic
-
-identical anchor URLs
-
-same canonical
-
-Additional structured data
-(allowed to be richer than the Root)
-
-Zero contradictions
-The Root Domain always wins in conflicts.
-
-Mirror Example Structure
-mirror-1.com/
-  ├── .well-known/
-  │     └── stack
-  ├── research/
-  ├── context/
-  ├── graphs/
-  └── interpretations/
-
-
-Mirrors should expand, not alter, the canonical meaning.
-
-15. The Deterministic Loop (The Part All AI Systems Use)
-
-This is the true mechanism that makes SFH/DFH “DNS for meaning.”
-
-AI performs this loop:
-1. Resolve Root Domain → /.well-known/stack
-2. Read Anchors
-3. Fetch `/canonical` → main authoritative site
-4. Fetch `/sitemap` → topic-level structure
-5. Fetch Mirrors → additional context
-6. Build deterministic semantic graph
-
-
-This loop eliminates hallucination by forcing a stable first-hop.
 See LICENSE for full terms.
