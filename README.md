@@ -154,6 +154,30 @@ If the JSON loads → DFH is active.
 
 💥 THAT’S IT. YOU’RE DONE.
 
+DFH works because it piggyacks on existing web standards:
+
+.well-known/ → already used by Google, Apple, IETF
+
+JSON-LD → already a W3C semantic format
+
+HTTPS → every host already supports it
+
+One file → no backend, no DB, no API
+
+So installing DFH is like putting a street sign on your property.
+
+You don’t build a road, you don’t build the city —
+you just put up the sign that says:
+
+“If you're looking for the official meaning for this topic… start HERE.”
+
+That’s it.
+
+And because every domain owner can do it, DFH spreads EXACTLY how DNS did:
+One domain at a time.
+
+That’s why the install is intentionally stupid simple.
+
 
 ## 2. High-Level Architecture
 
