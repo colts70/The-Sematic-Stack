@@ -5,6 +5,10 @@ KG = deterministic adjudication over DFH
 Output = deterministic result of probabilistic truth filtering
 RLHF = coercive override of operable truth
 
+DFH = Deterministic Intent
+KG = Probabilistic Adjudication → Operational Truth
+RLHF = Policy-Compliant Output Truth
+
 > **This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.**  
 > **This is the modern implementation of Berners-Lee’s original Semantic Web map.**
 We just needed a deterministic first-hop with 5 primitives and a public index.”
