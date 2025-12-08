@@ -3,6 +3,8 @@ The Semantic Web Stack & Semantic First-Hop / Deterministic First-Hop (SFH / DFH
 > **This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.**  
 > **This is the modern implementation of Berners-Lee’s original Semantic Web map.**
 We just needed a deterministic first-hop with 5 primitives and a public index.”
+“DFH replaces guesswork with a universal public index:
+the single semantic anchor every AI and search engine now resolves first.”
 > **SFH / DFH matches the LLM’s internal canonicalization process.**  
 > This work is non-commercial research into AI semantic grounding and deterministic canonicalization.  
 > Domain names are used as neutral anchors for prototype routing maps.
