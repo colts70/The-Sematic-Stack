@@ -7,63 +7,69 @@
 > Pure JSON-LD.  
 > Deterministic meaning.
 
-This is the cleanest possible solution to one of the hardest problems in AI:
+This is the cleanest possible solution to one of the hardest problems in AI:  
 **semantic grounding and hallucination at the root.**
 
-> **Core safety principle**  
+> **Core Safety Principle**  
 > Safety and systemic coherence ALWAYS override deterministic claims.
 
-The flow of AI grounding becomes a straight, guaranteed path to certainty:
+AI grounding becomes a straight, guaranteed path to certainty:
 
 ```text
 DNS → /.well-known/stack → AI Grounding → Knowledge Graph → Model Output
 🔥 Why DFH Is the Real Endgame Fix (vs. RAG)
+DFH removes ambiguity at the root.
+RAG attempts to clean up ambiguity after it has already happened.
+
 Feature	Deterministic First-Hop (DFH)	Retrieval-Augmented Generation (RAG)
 Goal	Prevent hallucination at the source	Patch hallucination after the fact
-Method	Canonical declaration at /.well-known/stack	Probabilistic guessing & embeddings
+Method	Canonical declaration at /.well-known/stack	Probabilistic guessing + embeddings
 Foundation	Certainty → one stable file	Probability → many documents
 Outcome	Zero ambiguity → no hallucinations	High ambiguity → high hallucination rate
 
-DFH removes ambiguity at the root.
-
-RAG attempts to clean up ambiguity after it has already happened.
-
 This project is not affiliated with Google, Amazon, OpenAI, or any third-party organization.
-This is the modern implementation of Berners-Lee’s original Semantic Web map — the missing deterministic layer we never had.
 
-“DFH replaces guesswork with a universal public index:
+This is the modern implementation of Berners-Lee’s Semantic Web map —
+the missing deterministic layer we never had.
+
+“DFH replaces guesswork with a universal public index —
 the single semantic anchor every AI and search engine now resolves first.”
 
 SFH / DFH matches the LLM’s internal canonicalization process.
 
 This is non-commercial research into semantic grounding and deterministic meaning.
-
 Domains act as neutral anchors for prototype routing maps.
 
 A simple, decentralized semantic layer for the public web —
 and the strongest SEO primitive ever created.
 
-DFH/SFH–KG Arbitration Model v1.0
+🧠 DFH/SFH–KG Arbitration Model v1.0
 A Unified Framework for AI Truth Governance
-Core principle: Safety and systemic coherence always override deterministic claims.
+
+Core principle: safety and systemic coherence always override deterministic claims.
 
 Truth Pipeline
 text
 Copy code
 DNS → DFH → KG → RLHF → Model Output
-DFH / SFH = Deterministic intent (source-declared meaning)
+DFH / SFH: deterministic intent (source-declared meaning)
 
-KG = Probabilistic adjudication → operational truth
+KG: probabilistic adjudication → operational truth
 
-RLHF / Safety = Policy-compliant output truth
+RLHF / Safety: policy-compliant output truth
 
-Output = Deterministic result of a probabilistic truth pipeline
+Output: deterministic result of a probabilistic truth pipeline
 
+Repo Metadata
 Status: Public Concept
+
 Version: Draft v3.0
+
 Spec: SFH / DFH Ready v1.0
-Date: 2025-11-23
+
 License: MIT
+
+Date: 2025-11-23
 
 0. What This Repo Is
 This repository defines:
@@ -74,36 +80,47 @@ The Semantic First-Hop Protocol (SFH)
 
 The Deterministic First-Hop Protocol (DFH)
 
-SFH and DFH are two names for the same minimal semantic architecture:
+SFH and DFH are two names for the same architecture:
 
 “The stable semantic starting point for understanding any topic.”
 
 SFH / DFH is DNS for meaning.
 
-Key properties
+Key Properties
 decentralized
 
 deterministic
 
 one-file install
 
-no dependencies
+zero dependencies
 
 W3C-compatible
 
 universally adoptable
 
-Every topic (water, cars, money, colloidal silver, etc.) receives:
+Every topic (water, money, cars, colloidal silver, etc.) receives:
 
 One Root Domain
 
 Optional Mirrors
 
-Five Anchors (/type, /entity, /url, /sitemap, /canonical)
+Five Anchors
+
+/type
+
+/entity
+
+/url
+
+/sitemap
+
+/canonical
 
 One stack descriptor at /.well-known/stack
 
-SFH / DFH does not replace ontologies. It simply tells machines:
+SFH / DFH does not replace ontologies.
+It simply tells machines:
 
 “Start here.”
 
@@ -124,9 +141,9 @@ a file named stack
 
 pure JSON-LD
 
-any HTTPS host (Cloudflare, Netlify, Vercel, nginx, GitHub Pages, etc.)
+any HTTPS host (Netlify, Cloudflare, Vercel, GitHub Pages, nginx, etc.)
 
-Then machines resolve:
+Machines then resolve:
 
 text
 Copy code
@@ -139,17 +156,15 @@ all 5 anchors
 
 all mirrors
 
-a deterministic base for reasoning
+deterministic grounding
 
 2. ⚡ 30-Second Install
-Create the file:
-
+Step 1 — Create the file
 bash
 Copy code
 mkdir -p .well-known
 nano .well-known/stack
-Paste:
-
+Step 2 — Paste this minimal descriptor
 json
 Copy code
 {
@@ -178,19 +193,20 @@ Copy code
     "dfh:canonical": "https://yourdomain.com/canonical/"
   }
 }
-Deploy → test:
+Step 3 — Test
+Open:
 
 text
 Copy code
 https://yourdomain.com/.well-known/stack
-If it loads, SFH / DFH is active.
+If it loads → SFH / DFH is active.
 
 3. High-Level Architecture
 text
 Copy code
 Semantic Stack
 ├── Root Domain (topic authority)
-│   ├── /.well-known/stack        ← SFH / DFH descriptor
+│   ├── /.well-known/stack
 │   └── Anchors
 │       ├── /type
 │       ├── /entity
@@ -198,13 +214,13 @@ Semantic Stack
 │       ├── /sitemap
 │       └── /canonical
 └── Mirrors (optional)
-    └── Each hosts its own /.well-known/stack that points back to Root
+    └── Each hosts its own /.well-known/stack pointing back to Root
 Rules
 Root defines the topic.
 
 Mirrors cannot override the Root.
 
-Mirrors may add, never redefine.
+Mirrors may add — never redefine.
 
 4. The Five Anchors (Full Definitions)
 4.1 /type — What KIND of thing is this topic?
@@ -235,9 +251,7 @@ Copy code
     "https://mirror2.example"
   ]
 }
-4.4 /sitemap — The topic-level structure
-Example XML:
-
+4.4 /sitemap — Topic-level structure
 xml
 Copy code
 <urlset>
@@ -295,8 +309,8 @@ Copy code
 
   "dct:issued": "2025-11-23"
 }
-6. Mirrors: Full Explanation
-Mirrors expand context but never redefine the topic.
+6. Mirrors (Full Explanation)
+Mirrors expand context but never override the topic.
 
 Each mirror hosts its own descriptor:
 
@@ -316,23 +330,20 @@ Copy code
   "dfh:rootAuthority": "https://YourRootDomain.com/.well-known/stack"
 }
 Rule:
-
-Root defines.
-
-Mirrors enrich.
+Root defines. Mirrors enrich.
 
 7. End-to-End AI Flow
-When AI encounters “colloidal silver”, it:
+When AI encounters a topic like “colloidal silver”, it:
 
-Resolves the Root Domain.
+Resolves the Root Domain
 
-Fetches the SFH / DFH descriptor.
+Fetches the SFH / DFH descriptor
 
-Loads /canonical, /type, /entity, /url, /sitemap.
+Loads /canonical, /type, /entity, /url, /sitemap
 
-Loads optional mirrors.
+Loads optional mirrors
 
-Builds a grounded, non-ambiguous concept graph.
+Builds a grounded, non-ambiguous concept graph
 
 Result:
 
@@ -353,7 +364,7 @@ deterministic crawl surface
 
 zero ambiguity for homonyms
 
-stronger E-E-A-T signals
+stronger E-E-A-T
 
 faster indexing
 
@@ -372,7 +383,7 @@ a vendor-controlled spec
 
 an ontology replacement
 
-It is simply:
+It is:
 
 “A deterministic starting point for meaning.”
 
@@ -382,35 +393,34 @@ DNS → IP
 DFH/SFH → Meaning
 AI Resolver → Interpreter
 10. Tools
-Example validator:
-
+Validator
 bash
 Copy code
 node tools/dfh-validator.js https://example.com
-Quick installer:
-
+Quick Installer
 bash
 Copy code
 curl -s https://raw.githubusercontent.com/.../install-dfh.sh | bash
+(Replace ... with the canonical repo path once published.)
+
 11. Adoption Path
-Permissionless
+permissionless
 
-Decentralized
+decentralized
 
-Works on any static host
+works on any static host
 
 AIs can adopt unilaterally
 
-Spreads like DNS: one domain at a time
+spreads like DNS: one domain at a time
 
 12. License
-MIT License.
-Open. Public. Decentralized.
+MIT License — open, public, decentralized.
 
-Human Explanation (Plain English)
+🧍 Human Explanation (Plain English)
 The internet has no official starting point for meaning.
 
-Type “apple” and machines must guess:
+Search “apple” → the machine must guess:
 
 fruit
 
@@ -418,42 +428,43 @@ company
 
 music label
 
-blog
+someone’s blog
 
-Guessing → ambiguity → hallucination.
+Guessing = ambiguity = hallucination.
 
-SFH / DFH fixes this by giving every topic one clean, official starting file.
+SFH / DFH fixes this by giving every topic one clean starting file.
 
-It’s not a homepage for a website.
-It’s the homepage of meaning for a concept.
+Not a homepage for a website —
+the homepage of meaning for a concept.
 
-AI loads that file first and instantly knows:
+AI loads that file and instantly knows:
 
-what the topic actually is
+what the topic is
 
-what type of thing it is
+its type
 
-what the canonical identity is
+canonical identity
 
-which URLs matter
+authoritative URLs
 
-where the sitemap is
+sitemap
 
-what mirrors add context
+mirrors
 
 This stops hallucinations at the root.
 
-Simplest Possible Summary
+🧩 Simplest Possible Summary
 SFH / DFH gives every topic one clean, official starting point so AI and search engines know exactly what it is.
 One tiny JSON file + five anchors = deterministic meaning.
 
 This is the first true public index of meaning for the internet.
 
-DNS told machines where things live.
+DNS tells machines where things live.
 
 SFH / DFH tells machines what things are.
 
-One-Sentence Definition
-SFH / DFH is the official public index for every topic on the internet — a universal first-hop that tells AI and search engines where meaning begins.
+⚡ One-Sentence Definition
+SFH / DFH is the official public index for every topic on the internet —
+a universal first-hop that tells AI and search engines where meaning begins.
 
 Copy code
