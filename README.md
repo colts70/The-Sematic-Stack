@@ -3,6 +3,10 @@
 ## Semantic First-Hop / Deterministic First-Hop Protocol
 ### (SFH / DFH Protocol Specification — Human Readable Version · Draft v3.0)
 
+“SFH / DFH is not an AI model and does not compete with models.
+It defines a deterministic semantic first hop — the point at which meaning and provenance are declared before any model inference, retrieval, or reasoning occurs.
+All existing grounding techniques operate downstream of this hop.”
+
 **One file. Ten anchors. Zero dependencies. Pure JSON-LD. Deterministic meaning + deterministic provenance.**
 
 SFH / DFH is **the missing layer the internet never had**:
