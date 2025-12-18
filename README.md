@@ -36,6 +36,8 @@ No amount of compute fixes that.
 
 “Nothing else occupies this layer”
 
+Once meaning is deterministically declared, everything downstream becomes arbitration, not guesswork.
+
 ---
 
 ## Semantic First-Hop / Deterministic First-Hop Protocol  
