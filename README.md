@@ -22,6 +22,12 @@
 - **Knowledge Graphs** → after ingestion & reconciliation  
 - **Safety / RLHF** → after reasoning already happened  
 
+If you control the first hop → you control semantic intent
+
+If you don’t → you are forever reconciling ambiguity
+
+No amount of compute fixes that.
+
 ---
 
 ## Semantic First-Hop / Deterministic First-Hop Protocol  
