@@ -28,6 +28,14 @@ If you don’t → you are forever reconciling ambiguity
 
 No amount of compute fixes that.
 
+“This can be adopted unilaterally”
+
+“AIs don’t need permission”
+
+“Domains already control this surface”
+
+“Nothing else occupies this layer”
+
 ---
 
 ## Semantic First-Hop / Deterministic First-Hop Protocol  
