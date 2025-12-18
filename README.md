@@ -24,7 +24,13 @@ Embeddings → after meaning is smeared
 
 Knowledge graphs → after ingestion & reconciliation
 
-Safety/RLHF → after reasoning already happened
+Safety/RLHF → after reasoning already happened.
+
+Determinism does not imply correctness.
+
+SFH / DFH guarantees a stable semantic starting point, not factual validity.
+
+All truth evaluation, contradiction handling, confidence scoring, and safety enforcement remain downstream responsibilities of AI systems, knowledge graphs, and policy layers.
 
 ## Semantic First-Hop / Deterministic First-Hop Protocol
 ### (SFH / DFH Protocol Specification — Human Readable Version · Draft v3.0)
