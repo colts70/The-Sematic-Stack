@@ -16,6 +16,14 @@ AI-first grounding (not human markup)
 
 Zero platform lock-in
 
+RAG → after documents diverge
+
+Embeddings → after meaning is smeared
+
+Knowledge graphs → after ingestion & reconciliation
+
+Safety/RLHF → after reasoning already happened
+
 ## Semantic First-Hop / Deterministic First-Hop Protocol
 ### (SFH / DFH Protocol Specification — Human Readable Version · Draft v3.0)
 
