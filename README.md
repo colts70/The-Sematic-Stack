@@ -2,6 +2,8 @@
 
 **“A modern implementation map of Tim Berners-Lee’s Semantic Web vision — built for AI.”**  
 
+DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
+
 AI systems need a first hop.
 
 They can fake it for now — but not forever. 
