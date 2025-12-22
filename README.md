@@ -569,6 +569,7 @@ json
 Keep it factual and boring. This is naming + identity, not marketing.
 
 6) /sitemap (Declared Crawl Entrypoints)
+/sitemap MUST declare sitemap entrypoints; it MUST NOT embed full URL lists.
 Important: this is NOT your XML sitemap.
 This anchor declares where the crawler should start, deterministically.
 
