@@ -1,6 +1,10 @@
 # 🌐 The Semantic Web Stack
 
 **“A modern implementation map of Tim Berners-Lee’s Semantic Web vision — built for AI.”**  
+
+AI systems need a first hop.
+They can fake it for now — but not forever.
+
 **“This is the first publicly released, installable deterministic first-hop semantic layer for the web, designed explicitly for AI grounding.”**
 
 **“DFH/SFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
