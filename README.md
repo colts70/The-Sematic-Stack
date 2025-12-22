@@ -20,6 +20,20 @@ lawyers show up
 
 That’s the historical pattern. No exceptions.
 
+Every major systems failure follows the same arc:
+
+ignored
+
+normalized
+
+externally audited
+
+regulated
+
+litigated
+
+AI grounding is already between steps 2 → 3.
+
 **“This is the first publicly released, installable deterministic first-hop semantic layer for the web, designed explicitly for AI grounding.”**
 
 **“DFH/SFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
