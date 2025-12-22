@@ -425,6 +425,209 @@ That single file gives AI:
 - optional mirrors  
 - deterministic grounding  
 
+# 🧱 SFH / DFH Pillars (The 5 Mandatory Meaning Anchors)
+**Professional implementer guide (short + readable)**  
+**Goal:** publish one deterministic “first hop” for meaning at `/.well-known/stack`, then expose **5 anchors** that machines can fetch immediately.
+
+> The web has DNS for *location*.  
+> SFH/DFH adds a first hop for *meaning*.
+
+---
+
+## ✅ The 5 Mandatory Pillars (Meaning Layer)
+
+| Anchor | Purpose (what it answers) | What you put inside |
+|---|---|---|
+| `/type` | “What kind of thing is this domain about?” | A small ontology/taxonomy declaration (JSON-LD) using stable vocabularies (Schema.org/W3C terms) |
+| `/entity` | “What is the primary entity identity?” | One or more **canonical entity records** (IDs, names, aliases, optional links) |
+| `/url` | “What URLs map to what entities?” | URL bindings: canonical URLs, alternates, language variants, key routes |
+| `/canonical` | “What is the canonical label/name?” | A canonical naming table: canonical label + aliases (helps disambiguation) |
+| `/sitemap` | “What is the crawl surface?” | A **machine-declared list of sitemap entrypoints** (not the whole sitemap contents) |
+
+**Rule:** These are *meaning anchors* (intent + identity), not “truth”. Downstream systems arbitrate truth and safety.
+
+---
+
+## 📌 Where Everything Lives (Minimal Structure)
+
+yourdomain.com/
+├─ .well-known/
+│ └─ stack <-- the root descriptor (JSON-LD)
+├─ type/ <-- meaning anchor 1
+│ └─ index.jsonld
+├─ entity/ <-- meaning anchor 2
+│ └─ index.jsonld
+├─ url/ <-- meaning anchor 3
+│ └─ index.jsonld
+├─ canonical/ <-- meaning anchor 4
+│ └─ index.jsonld
+├─ sitemap/ <-- meaning anchor 5
+│ └─ index.jsonld
+└─ sitemap.xml <-- standard XML sitemap (for crawlers)
+
+pgsql
+
+---
+
+## 1) `/.well-known/stack` (Root Descriptor)
+**This file is the “bootstrap.”** It points machines to the 5 anchors.
+
+```json
+{
+  "@context": {
+    "dfh": "https://example.org/ns/dfh#"
+  },
+  "@id": "https://yourdomain.com/.well-known/stack",
+  "@type": "dfh:DeterministicSemanticRoot",
+  "dfh:anchors": {
+    "dfh:type": "https://yourdomain.com/type/index.jsonld",
+    "dfh:entity": "https://yourdomain.com/entity/index.jsonld",
+    "dfh:url": "https://yourdomain.com/url/index.jsonld",
+    "dfh:canonical": "https://yourdomain.com/canonical/index.jsonld",
+    "dfh:sitemap": "https://yourdomain.com/sitemap/index.jsonld"
+  }
+}
+Keep it stable. This should almost never change except anchor URLs or root identity.
+
+2) /type (Ontology / Taxonomy)
+What goes here: a small, stable declaration of what this domain represents.
+
+json
+
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dfh": "https://example.org/ns/dfh#"
+  },
+  "@id": "https://yourdomain.com/type/index.jsonld",
+  "@type": "dfh:TypeAnchor",
+  "dfh:domainRepresents": [
+    { "@id": "schema:Organization" },
+    { "@id": "schema:WebSite" }
+  ],
+  "dfh:primaryTopic": "colloidalsilver"
+}
+Best practice: reference well-known vocabularies (Schema.org / W3C) and keep it minimal.
+
+3) /entity (Canonical Entity Record)
+What goes here: the primary entity (and optional secondary entities) with stable IDs.
+
+json
+
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dfh": "https://example.org/ns/dfh#"
+  },
+  "@id": "https://yourdomain.com/entity/index.jsonld",
+  "@type": "dfh:EntityAnchor",
+  "dfh:items": [
+    {
+      "@id": "urn:dfh:entity:root",
+      "@type": "schema:Organization",
+      "schema:name": "God’s Grace Colloidal Silver",
+      "schema:url": "https://yourdomain.com/"
+    }
+  ]
+}
+Rule: IDs must be stable. Don’t rotate identifiers.
+
+4) /url (URL Bindings)
+What goes here: canonical URL mapping for key pages and entity bindings.
+
+json
+
+{
+  "@context": { "dfh": "https://example.org/ns/dfh#" },
+  "@id": "https://yourdomain.com/url/index.jsonld",
+  "@type": "dfh:UrlAnchor",
+  "dfh:items": [
+    { "entity": "urn:dfh:entity:root", "url": "https://yourdomain.com/", "rel": "canonical" },
+    { "entity": "urn:dfh:entity:root", "url": "https://yourdomain.com/about", "rel": "about" },
+    { "entity": "urn:dfh:entity:root", "url": "https://yourdomain.com/products", "rel": "collection" }
+  ]
+}
+Use this to prevent ambiguity across slugs, parameters, mirrors, or alternate entrypoints.
+
+5) /canonical (Canonical Labels / Aliases)
+What goes here: the canonical name + known aliases (helps entity disambiguation).
+
+json
+
+{
+  "@context": { "dfh": "https://example.org/ns/dfh#" },
+  "@id": "https://yourdomain.com/canonical/index.jsonld",
+  "@type": "dfh:CanonicalAnchor",
+  "dfh:items": [
+    {
+      "entity": "urn:dfh:entity:root",
+      "canonicalLabel": "God’s Grace Colloidal Silver",
+      "aliases": ["Gods Grace Colloidal Silver", "GG Colloidal Silver"]
+    }
+  ]
+}
+Keep it factual and boring. This is naming + identity, not marketing.
+
+6) /sitemap (Declared Crawl Entrypoints)
+Important: this is NOT your XML sitemap.
+This anchor declares where the crawler should start, deterministically.
+
+json
+
+{
+  "@context": { "dfh": "https://example.org/ns/dfh#" },
+  "@id": "https://yourdomain.com/sitemap/index.jsonld",
+  "@type": "dfh:SitemapAnchor",
+  "dfh:items": [
+    "https://yourdomain.com/sitemap.xml"
+  ]
+}
+What goes in the actual sitemap.xml?
+Put standard URLs you want indexed (pages + products + posts). Example skeleton:
+
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourdomain.com/</loc>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/about</loc>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/products</loc>
+  </url>
+</urlset>
+🔗 How It All Links Up (Deterministic Flow)
+Client resolves https://yourdomain.com/.well-known/stack
+
+Stack returns the 5 anchor URLs
+
+Client fetches:
+
+/type → what it is
+
+/entity → what the entity is
+
+/url → where it lives
+
+/canonical → what to call it
+
+/sitemap → where to crawl
+
+Crawler uses sitemap.xml for URL discovery (normal web behavior), but now with a deterministic semantic root.
+
+✅ Professional Defaults (Keep It Clean)
+Use HTTPS only
+
+Keep the root descriptor tiny and stable
+
+Keep anchors minimal and machine-readable
+
+Prefer index.jsonld per anchor for predictable fetching
+
+Treat /url + /canonical as your anti-ambiguity layer
+
 ---
 
 # 10. ⚡ 30-Second Install
