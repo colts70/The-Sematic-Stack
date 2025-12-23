@@ -6,7 +6,7 @@ SFH/DFH is a deterministic discovery file at /.well-known/stack that declares a 
 
 DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
 
-**“This is the first publicly released, installable deterministic first-hop semantic layer for the web, designed explicitly for AI grounding.”**
+**“This is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI.”**
 
 **“DFH/SFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
 
