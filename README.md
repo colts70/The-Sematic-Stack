@@ -2,6 +2,8 @@
 
 **“A modern implementation map of Tim Berners-Lee’s Semantic Web vision — built for AI.”**  
 
+SFH/DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
+
 DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
 
 **“This is the first publicly released, installable deterministic first-hop semantic layer for the web, designed explicitly for AI grounding.”**
