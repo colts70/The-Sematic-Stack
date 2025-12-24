@@ -1,110 +1,109 @@
 # 🌐 Hierarchical Expressed Semantic Stack (HESS)
 
-HESS is a proposed, open, installable semantic first-hop stack designed to solve AI grounding.”
+> **A deterministic, installable semantic first-hop for the web — built for AI.**
 
-> **A deterministic, installable public owned first-hop, the (Semantic Layer Public Index) SLPI for the web — built for AI.**
+**HESS** is a proposed, open, domain-owned **Semantic Layer Public Index (SLPI)** designed to solve the core AI systems problem: **lack of grounding**.
 
-HESS applies JSON-style hierarchical structure to the web itself — with a declared semantic root instead of inferred meaning.
+HESS introduces a **deterministic semantic first hop**—a publicly discoverable, machine-readable declaration of meaning—published directly by domain owners.
 
-HESS is a modern, AI-era continuation of **Tim Berners-Lee’s original Semantic Web vision**, implemented not as an inferred graph, but as a **deterministic, domain-owned first hop**.
+---
 
-It defines a single discovery file published at:
+## What HESS Is
+
+HESS applies **JSON-style hierarchical structure to the web itself**, replacing inferred meaning with **explicitly declared semantic roots**.
+
+It is a modern, AI-era continuation of the original Semantic Web vision—implemented **not as a probabilistic graph**, but as a **deterministic, domain-owned first hop**.
+
+Each domain publishes a single discovery file at:
 
 /.well-known/stack
 
-That file declares a domain’s **semantic identity and crawl entrypoints** using a minimal set of **JSON-LD anchors**, allowing machines to ground meaning from an explicit root instead of probabilistic inference.
+yaml
+Copy code
+
+This file declares:
+- Semantic identity  
+- Intent  
+- Crawl and grounding entry points  
+
+using a minimal, structured set of **JSON-LD anchors**.
+
+---
+
+## The Grounding Flow
 
 DNS (location)
 ↓
 HESS / DFH (declared meaning)
 ↓
-Retrieval / Knowledge Graph (probabilistic)
+Retrieval / Knowledge Graphs (probabilistic)
 ↓
 Safety / Policy
 ↓
 Model Output
 
-**“HESS defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
+yaml
+Copy code
 
- HESS doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
+> **HESS defines semantic intent — not factual correctness.**  
+> Downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.
 
----AI systems need a first hop.
+---
 
-They can fake it for now — but not forever. 
+## Why AI Needs a First Hop
 
-What “AI with no grounding” actually is
+Without grounding, AI does not *know* or *verify*—it performs:
 
-At its core, it’s just:
+- Pattern completion  
+- Statistical plausibility  
+- Synthetic consensus  
 
-pattern completion
+Where:
+- Confidence ≠ correctness  
+- Repetition ≠ truth  
+- Popularity ≠ authority  
 
-statistical plausibility
+AI grounding is **not a user-visible bug**.  
+It is a **systems-integrity failure**.
 
-vibes over verification
+---
 
-It doesn’t know.
-It doesn’t check.
-It doesn’t anchor.
+## What No Other System Provides
 
-So it fills gaps with whatever looks right on average.
-
-Without grounding:
-
-confidence ≠ correctness
-
-repetition ≠ truth
-
-popularity ≠ authority
-
-You don’t get answers.
-You get synthetic consensus.
-
-AI grounding is not a user-visible bug.
-
-It’s a systems integrity failure.
-
-
-## What No Other System Simultaneously Provides
-
-- A deterministic semantic starting point  
+- Deterministic semantic starting point  
 - Public, web-native discoverability  
 - Domain-owner control of meaning  
 - AI-first grounding (not human markup)  
 - Zero platform lock-in  
 
-### Why Other Systems Are Different
+---
+
+## Why Existing Systems Cannot Solve This
 
 - **RAG** → after documents diverge  
 - **Embeddings** → after meaning is smeared  
 - **Knowledge Graphs** → after ingestion & reconciliation  
 - **Safety / RLHF** → after reasoning already happened  
 
-If you control the first hop → you control semantic intent
-
-If you don’t → you are forever reconciling ambiguity
+If you do not control the first hop, you are forever reconciling ambiguity.
 
 No amount of compute fixes that.
 
-“This can be adopted unilaterally”
+---
 
-“AIs don’t need permission”
+## Why HESS Can Exist
 
-“Domains already control this surface”
+- It can be adopted unilaterally  
+- AIs do not need permission  
+- Domains already control this surface  
+- Nothing else occupies this layer  
 
-“Nothing else occupies this layer”
+Once meaning is deterministically declared, everything downstream becomes **arbitration, not guesswork**.
 
-Once meaning is deterministically declared, everything downstream becomes arbitration, not guesswork.
+---
 
-Any alternative must either
-
-move the first semantic decision earlier (impossible), or
-
-reintroduce probability at the root (worse), or
-
-centralize control (politically dead), or
-
-require coordination (never scales)
-
+**AI systems need a first hop.**  
+They can fake it for now — but not forever.
 ---
 
 HESS / Deterministic First-Hop Protocol  
