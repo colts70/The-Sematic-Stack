@@ -4,6 +4,8 @@
 
 **HESS** is a proposed, open, domain-owned **Semantic Layer Public Index (SLPI)** designed to solve the core AI systems problem: **lack of grounding**.
 
+“HESS / DFH does not assert truth. It asserts semantic intent and provenance at the earliest possible machine-resolvable point.”
+
 HESS introduces a **deterministic semantic first hop**—a publicly discoverable, machine-readable declaration of meaning—published directly by domain owners.
 
 Core property:
