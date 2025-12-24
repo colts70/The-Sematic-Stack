@@ -2,22 +2,15 @@
 
 “This protocol is a modern, AI-era continuation of Tim Berners-Lee’s original Semantic Web vision—implemented as a deterministic, installable first-hop rather than an inferred graph.”
 
-A deterministic, domain-owned semantic first-hop layer for AI and web systems.
-
-HESS defines a public, machine-readable semantic root published at:
-
-HESS defines semantic intent — not factual correctness.
-Downstream systems arbitrate truth, safety, and policy.
-
 HESS/ DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
 
-DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
+DNS → /.well-known/stack (HESS) → retrieval + KG arbitration + safety → output
 
 **“HESS is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI.”**
 
-**“DFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
+**“HESS defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
 
- DFH doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
+ HESS doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
 
 ---AI systems need a first hop.
 
@@ -53,30 +46,6 @@ You get synthetic consensus.
 AI grounding is not a user-visible bug.
 
 It’s a systems integrity failure.
-
-And systems integrity problems are always ignored until:
-
-auditors show up
-
-regulators show up
-
-lawyers show up
-
-That’s the historical pattern. No exceptions.
-
-Every major systems failure follows the same arc:
-
-ignored
-
-normalized
-
-externally audited
-
-regulated
-
-litigated
-
-AI grounding is already between steps 2 → 3.
 
 
 ## What No Other System Simultaneously Provides
@@ -123,7 +92,7 @@ require coordination (never scales)
 ---
 
 HESS / Deterministic First-Hop Protocol  
-### (SFH / DFH Protocol Specification — Human Readable Version · Draft v3.0)
+### (HESS / DFH Protocol Specification — Human Readable Version · Draft v3.0)
 
 > **“HESS / DFH is not an AI model and does not compete with models.  
 > It defines a deterministic semantic first hop — the point at which meaning and provenance are declared before any model inference, retrieval, or reasoning occurs.  
@@ -152,7 +121,7 @@ This document contains:
 Implementers are only required to follow the structural rules defined in **Sections 9–13**.
 
 The web has **DNS for location**.  
-SFH / DFH is **DNS for meaning**.
+HESS / DFH is **DNS for meaning**.
 
 This protocol addresses one of the hardest problems in AI and the web:  
 **semantic grounding and hallucination at the root of meaning.**
@@ -177,12 +146,12 @@ DNS
 → Model Output
 
 
-- **DFH removes ambiguity at the root.**
+- **HESS removes ambiguity at the root.**
 - **RAG attempts to clean up ambiguity after it already happened.**
 
 ---
 
-## 2. Why DFH Is the Endgame Fix (vs. RAG)
+## 2. Why HESS Is the Endgame Fix (vs. RAG)
 
 | Feature | Deterministic First-Hop (DFH) | Retrieval-Augmented Generation (RAG) |
 |------|-------------------------------|--------------------------------------|
@@ -210,7 +179,7 @@ This creates a **public semantic layer** for the web — simple, decentralized, 
 
 ---
 
-# 4. DFH KG Arbitration Model (v1.0)
+# 4. HESS KG Arbitration Model (v1.0)
 
 A unified framework for how AI systems integrate deterministic grounding with probabilistic reasoning and safety.
 
