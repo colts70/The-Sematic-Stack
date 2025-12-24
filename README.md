@@ -1,6 +1,6 @@
 # 🌐 Hierarchical Expressed Semantic Stack (HESS)
 
-> **A deterministic, installable first-hop semantic layer for the web — built for AI.**
+> **A deterministic, installable public owned first-hop, the (Semantic Layer Public Index) SLPI for the web — built for AI.**
 
 HESS is a modern, AI-era continuation of **Tim Berners-Lee’s original Semantic Web vision**, implemented not as an inferred graph, but as a **deterministic, domain-owned first hop**.
 
@@ -20,9 +20,14 @@ Safety / Policy
 ↓
 Model Output
 
+**HESS/DFH is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI systems.**
+
+HESS defines **semantic intent, not factual correctness**.  
+
 **HESS is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI systems.**
 
 All downstream systems may accept, reject, weight, or override declarations according
+
 **“HESS defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
 
  HESS doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
@@ -116,7 +121,7 @@ HESS / Deterministic First-Hop Protocol
 > **“The model is difficult to beat because it fixes the first semantic decision point.  
 > Anything else is downstream enrichment.”**
 
-**One file. Ten anchors. Zero dependencies. Pure JSON-LD.  
+**One file. 5 mandatory anchors for light to moderate topics, and an optional Ten anchor system for the heavy topics. Zero dependencies. Pure JSON-LD.  
 Deterministic meaning + deterministic provenance.**
 
 HESS / DFH is **the missing layer the internet never had**:  
