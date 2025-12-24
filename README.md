@@ -4,7 +4,16 @@
 
 HESS/ DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
 
-DNS → /.well-known/stack (HESS) → retrieval + KG arbitration + safety → output
+DNS (location)
+   ↓
+HESS / DFH (declared meaning)
+   ↓
+Retrieval / KG (probabilistic)
+   ↓
+Safety / Policy
+   ↓
+Model Output
+
 
 **“HESS is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI.”**
 
