@@ -6,7 +6,8 @@
 
 HESS introduces a **deterministic semantic first hop**—a publicly discoverable, machine-readable declaration of meaning—published directly by domain owners.
 
----
+Core property:
+• DFH — Deterministic First Hop-
 
 ## What HESS Is
 
@@ -17,9 +18,6 @@ It is a modern, AI-era continuation of the original Semantic Web vision—implem
 Each domain publishes a single discovery file at:
 
 /.well-known/stack
-
-yaml
-Copy code
 
 This file declares:
 - Semantic identity  
@@ -41,9 +39,6 @@ Retrieval / Knowledge Graphs (probabilistic)
 Safety / Policy
 ↓
 Model Output
-
-yaml
-Copy code
 
 > **HESS defines semantic intent — not factual correctness.**  
 > Downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.
