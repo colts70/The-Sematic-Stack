@@ -892,7 +892,7 @@ Resolve Root Domain
 
 Fetch DFH/SFH descriptor
 
-Load 10 anchors
+Load 5 OR 10 anchors
 
 Load mirrors (optional)
 
@@ -948,15 +948,7 @@ It is:
 
 a deterministic starting point for meaning and provenance
 
-18. Tools
-Validator
-
-
-node tools/dfh-validator.js https://example.com
-Quick Installer
-
-curl -s https://raw.githubusercontent.com/.../install-dfh.sh | bash
-19. Adoption Path
+18. Adoption Path
 Permissionless
 
 Decentralized
@@ -967,14 +959,12 @@ AIs can adopt unilaterally
 
 Spreads like DNS
 
-20. License
+19. License
 MIT — open, public, decentralized.
 
 The internet has no official starting point for meaning.
 
 Example:
-
-nginx
 
 apple → fruit? company? musician? blog?
 Guessing → ambiguity → hallucination.
@@ -998,8 +988,8 @@ DFH → meaning
 One-Sentence Definition
 SFH / DFH is the official public semantic and provenance index for any topic on the internet — a universal first-hop where meaning begins.
 
-🌐 DFH / SLPI: Optional 10-Anchor Extension for High-Trust Domains
-Why Most Companies Only Need 5 Anchors — And Why Some Need All 10
+🌐 DFH / SLPI: Most Companies Only Need 5 Anchors — 
+
 ✅ The 5-Anchor Meaning Layer (Default)
 Anchor	Purpose
 /type	What kind of thing this domain represents
@@ -1010,38 +1000,5 @@ Anchor	Purpose
 
 Minimal. Universal. Deterministic.
 
-🔐 The Optional 10-Anchor Provenance Layer
-Adds:
-
-/authority
-
-/source
-
-/timestamp
-
-/license
-
-/integrity
-
-Recommended for:
-
-scientific institutions
-
-academic research
-
-finance & regulation
-
-journalism
-
-legal systems
-
-archives
-
-🧩 Layered by Design
-Layer 1: Meaning (Anchors 1–5)
-
-Layer 2: Provenance (Anchors 6–10)
-
-One protocol. Two layers. Universal adoption. Optional trust.
 
 Please refer to the other repositories regarding AI grounding.
