@@ -1,9 +1,15 @@
-# 🌐 Hierarchical Expressed Semantic Stack (HESS)
+🌐 Hierarchical Expressed Semantic Stack (HESS)
+
 A deterministic, domain-owned semantic first-hop layer for AI and web systems.
+
+HESS defines a public, machine-readable semantic root published at:
+
+HESS defines semantic intent — not factual correctness.
+Downstream systems arbitrate truth, safety, and policy.
 
 **“A modern implementation map of Tim Berners-Lee’s Semantic Web vision — built for AI.”**  
 
-SFH/DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
+HESS/SFH/DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
 
 DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
 
