@@ -2,6 +2,8 @@
 
 > **A deterministic, installable public owned first-hop, the (Semantic Layer Public Index) SLPI for the web — built for AI.**
 
+HESS applies JSON-style hierarchical structure to the web itself — with a declared semantic root instead of inferred meaning.
+
 HESS is a modern, AI-era continuation of **Tim Berners-Lee’s original Semantic Web vision**, implemented not as an inferred graph, but as a **deterministic, domain-owned first hop**.
 
 It defines a single discovery file published at:
