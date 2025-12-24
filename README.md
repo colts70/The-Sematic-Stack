@@ -7,17 +7,17 @@ HESS defines a public, machine-readable semantic root published at:
 HESS defines semantic intent — not factual correctness.
 Downstream systems arbitrate truth, safety, and policy.
 
-**“A modern implementation map of Tim Berners-Lee’s Semantic Web vision — built for AI.”**  
+“This protocol is a modern, AI-era continuation of Tim Berners-Lee’s original Semantic Web vision—implemented as a deterministic, installable first-hop rather than an inferred graph.”
 
-HESS/SFH/DFH is a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
+HESS/ DFHis a deterministic discovery file at /.well-known/stack that declares a domain’s semantic identity and crawl entrypoints via a small set of JSON-LD anchors, enabling machines to start grounding from an explicit root instead of inference.
 
 DNS → /.well-known/stack (DFH) → retrieval + KG arbitration + safety → output
 
-**“This is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI.”**
+**“HESS is the first publicly released, installable deterministic first-hop semantic machine layer for the web, designed explicitly for AI.”**
 
-**“DFH/SFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
+**“DFH defines semantic intent, not factual correctness; downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”**
 
-SFH / DFH doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
+ DFH doesn’t replace anything. It amplifies everything that already exists by fixing the one decision none of them can fix alone.
 
 ---AI systems need a first hop.
 
@@ -122,10 +122,10 @@ require coordination (never scales)
 
 ---
 
-## Semantic First-Hop / Deterministic First-Hop Protocol  
+HESS / Deterministic First-Hop Protocol  
 ### (SFH / DFH Protocol Specification — Human Readable Version · Draft v3.0)
 
-> **“SFH / DFH is not an AI model and does not compete with models.  
+> **“HESS / DFH is not an AI model and does not compete with models.  
 > It defines a deterministic semantic first hop — the point at which meaning and provenance are declared before any model inference, retrieval, or reasoning occurs.  
 > All existing grounding techniques operate downstream of this hop.”**
 
@@ -135,7 +135,7 @@ require coordination (never scales)
 **One file. Ten anchors. Zero dependencies. Pure JSON-LD.  
 Deterministic meaning + deterministic provenance.**
 
-SFH / DFH is **the missing layer the internet never had**:  
+HESS / DFH is **the missing layer the internet never had**:  
 a universal, deterministic **semantic + provenance first-hop** published at:
 
 https://<domain>/.well-known/stack
@@ -193,13 +193,13 @@ DNS
 
 *This project is not affiliated with Google, Amazon, OpenAI, or any third party.*
 
-DFH/SFH was created by the public for the public.
+HESS/DFH was created by the public for the public.
 
 ---
 
 # 3. Background & Motivation
 
-SFH / DFH is the modern deterministic extension of Berners-Lee’s Semantic Web:  
+HESS / DFH is the modern deterministic extension of Berners-Lee’s Semantic Web:  
 a universal *first-hop* that tells machines:
 
 > **“Start here. This is the deterministic meaning and provenance root.”**
@@ -210,16 +210,16 @@ This creates a **public semantic layer** for the web — simple, decentralized, 
 
 ---
 
-# 4. DFH / SFH–KG Arbitration Model (v1.0)
+# 4. DFH KG Arbitration Model (v1.0)
 
 A unified framework for how AI systems integrate deterministic grounding with probabilistic reasoning and safety.
 
 **Truth Pipeline**
 
-DNS → DFH → KG → RLHF → Model Output
+DNS → HESS → KG → RLHF → Model Output
 
 
-- **DFH / SFH:** deterministic intent  
+- **HESS:** deterministic intent  
 - **KG:** probabilistic adjudication  
 - **RLHF / Safety:** policy-aligned output  
 - **Final Output:** controlled resolution of a probabilistic truth pipeline  
@@ -241,14 +241,14 @@ DNS → DFH → KG → RLHF → Model Output
 ### 6.1 Components
 
 - **The Semantic Web Stack**  
-- **The Semantic First-Hop Protocol (SFH)**  
+**-**Hierarchical-Expressed-Semantic-Stack**
 - **The Deterministic First-Hop Protocol (DFH)**  
-
-SFH and DFH refer to the same system:
+'
+HESS and DFH refer to the same system:
 
 > **“The stable semantic starting point for understanding any topic.”**
 
-SFH / DFH is **DNS for meaning**.
+HESS / DFH is **DNS for meaning**.
 
 ---
 
@@ -277,12 +277,12 @@ All served from:
 /.well-known/stack
 
 
-**SFH / DFH does not replace ontologies.**  
+**HESS / DFH does not replace ontologies.**  
 It simply defines the *first-hop*.
 
 ---
 
-# 8. Why SFH / DFH Exists
+# 8. Why HESS / DFH Exists
 
 ## What the handicap actually is
 
@@ -303,7 +303,7 @@ That’s the handicap.
 
 ### Problem → Fix Summary
 
-| Current Problem | SFH / DFH Fix |
+| Current Problem | HESS / DFH Fix |
 |-----------------|---------------|
 | No global semantic ground | Creates a universal first-hop |
 | Meaning is scattered | Unifies with deterministic anchors |
@@ -313,14 +313,14 @@ That’s the handicap.
 
 ---
 
-## 🚀 Why SFH / DFH Is the Strongest SEO Primitive Ever Created
+## 🚀 Why HESS / DFH Is the Strongest SEO Primitive Ever Created
 
-SFH / DFH does not compete with traditional SEO.  
+HESS / DFH does not compete with traditional SEO.  
 It supersedes its weakest assumption:
 
 > Search engines must infer what a domain represents.
 
-SFH / DFH replaces inference with deterministic declaration.
+HESS / DFH replaces inference with deterministic declaration.
 
 ### The Shift
 
@@ -341,7 +341,7 @@ They are told — once, cleanly, at the first hop.
 ## 🔑 Topic-Level Authority (The Missing SEO Primitive)
 
 Traditional SEO ranks documents.  
-SFH / DFH establishes domains as topics.
+HESS / DFH establishes domains as topics.
 
 By publishing a deterministic semantic root at:
 
@@ -358,7 +358,7 @@ No meta tag, schema snippet, or sitemap alone can do this.
 
 ## 🧭 Deterministic Crawl Geometry (No More Guessing)
 
-SFH / DFH gives crawlers an explicit, deterministic crawl surface:
+HESS / DFH gives crawlers an explicit, deterministic crawl surface:
 
 - `/sitemap` → declared crawl entrypoints  
 - `/url` → authoritative URL bindings  
@@ -381,7 +381,7 @@ Classic SEO fails hardest at entity ambiguity:
 - Apple → fruit? company? label?  
 - Mercury → planet? element? god?  
 
-SFH / DFH resolves this **before crawling even begins**.
+HESS / DFH resolves this **before crawling even begins**.
 
 - `/type` fixes ontology  
 - `/entity` fixes identity  
@@ -400,7 +400,7 @@ This dramatically improves:
 ## 🏗️ E-E-A-T, But Deterministic
 
 E-E-A-T today is inferred.  
-SFH / DFH declares it:
+HESS / DFH declares it:
 
 - `/authority` → who controls this topic  
 - `/source` → where the data comes from  
@@ -421,7 +421,7 @@ AI systems require:
 - a stable identity  
 - a grounding point  
 
-SFH / DFH provides exactly that.
+HESS / DFH provides exactly that.
 
 Domains with DFH:
 - are easier to summarize  
@@ -443,7 +443,7 @@ This is SEO for the AI indexing era.
 | Backlinks | Indirect authority |
 | Knowledge Graphs | Platform-owned |
 
-**SFH / DFH:**
+**HESS/ DFH:**
 - is domain-owned  
 - is topic-scoped  
 - is machine-first  
@@ -457,7 +457,7 @@ It is the first SEO primitive that operates at the same layer as DNS.
 
 ## 🧩 Summary (SEO View)
 
-SFH / DFH gives search engines what they never had:
+HESS/ DFH gives search engines what they never had:
 
 - a deterministic semantic root  
 - a canonical topic authority  
@@ -470,13 +470,13 @@ Ranking stabilizes.
 Authority compounds.
 
 DNS told machines **where** to go.  
-SFH / DFH tells them **what it means** when they get there.
+HESS / DFH tells them **what it means** when they get there.
 
 ---
 
 # 9. Beginner Layer (Simple Explanation)
 
-To install SFH / DFH you only need:
+To install HESS / DFH you only need:
 
 - a `.well-known/` directory  
 - a file named `stack`  
@@ -493,12 +493,12 @@ That single file gives AI:
 - optional mirrors  
 - deterministic grounding  
 
-# 🧱 SFH / DFH Pillars (The 5 Mandatory Meaning Anchors)
+# 🧱 HESS / DFH Pillars (The 5 Mandatory Meaning Anchors)
 **Professional implementer guide (short + readable)**  
 **Goal:** publish one deterministic “first hop” for meaning at `/.well-known/stack`, then expose **5 anchors** that machines can fetch immediately.
 
 > The web has DNS for *location*.  
-> SFH/DFH adds a first hop for *meaning*.
+> HESS/DFH adds a first hop for *meaning*.
 
 ---
 
@@ -710,20 +710,20 @@ json
 
 {
   "@context": {
-    "sfh": "https://example.org/ns/sfh#",
+    "hess": "https://example.org/ns/sfh#",
     "dfh": "https://example.org/ns/dfh#"
   },
   "@id": "https://yourdomain.com/.well-known/stack",
 
-  "sfh:rootTopic": "your-topic",
+  "hess:rootTopic": "your-topic",
   "dfh:rootTopic": "your-topic",
 
-  "sfh:anchors": {
-    "sfh:type": "https://yourdomain.com/type/",
-    "sfh:entity": "https://yourdomain.com/entity/",
-    "sfh:url": "https://yourdomain.com/url/",
-    "sfh:sitemap": "https://yourdomain.com/sitemap/",
-    "sfh:canonical": "https://yourdomain.com/canonical/"
+  "hess:anchors": {
+    "hess:type": "https://yourdomain.com/type/",
+    "hess:entity": "https://yourdomain.com/entity/",
+    "hess:url": "https://yourdomain.com/url/",
+    "hess:sitemap": "https://yourdomain.com/sitemap/",
+    "hess:canonical": "https://yourdomain.com/canonical/"
   },
 
   "dfh:anchors": {
@@ -738,7 +738,7 @@ Step 3 — Test
 arduino
 
 https://yourdomain.com/.well-known/stack
-If it loads → your SFH / DFH root is active.
+If it loads → your HESS / DFH root is active.
 
 11. High-Level Architecture
 pgsql
@@ -905,7 +905,7 @@ json
 
 {
   "@context": {
-    "sfh": "https://example.org/ns/sfh#",
+    "hess": "https://example.org/ns/hess#",
     "dfh": "https://example.org/ns/dfh#"
   },
   "@id": "https://MirrorDomain.com/.well-known/stack",
@@ -913,7 +913,7 @@ json
   "sfh:rootTopic": "colloidalsilver",
   "dfh:rootTopic": "colloidalsilver",
 
-  "sfh:rootAuthority": "https://YourRootDomain.com/.well-known/stack",
+  "hess:rootAuthority": "https://YourRootDomain.com/.well-known/stack",
   "dfh:rootAuthority": "https://YourRootDomain.com/.well-known/stack"
 }
 Rule: The Root defines. Mirrors enrich.
@@ -945,7 +945,7 @@ Minimal hallucinations at the root
 SFH / DFH is not just an AI grounding primitive —
 it is also the strongest possible SEO identity primitive.
 
-SFH / DFH provides:
+HESS / DFH provides:
 
 Topic-level authority
 
@@ -964,7 +964,7 @@ AI-index readiness
 Search stops guessing what your domain represents —
 and starts treating it as the canonical topic root.
 
-17. What SFH / DFH Is NOT
+17. What HESS / DFH Is NOT
 It is not:
 
 a truth oracle
@@ -986,8 +986,6 @@ Validator
 node tools/dfh-validator.js https://example.com
 Quick Installer
 
-bash
-Copy code
 curl -s https://raw.githubusercontent.com/.../install-dfh.sh | bash
 19. Adoption Path
 Permissionless
