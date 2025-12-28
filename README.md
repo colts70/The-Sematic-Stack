@@ -120,7 +120,7 @@ They can fake it for now — but not forever.
 HESS / DFH is the missing layer the internet never had:  
 a universal, deterministic semantic + provenance first-hop published at:
 
-https://<domain>/.well-known/stack
+https://<yourdomain>/.well-known/stack
 
 ---
 
