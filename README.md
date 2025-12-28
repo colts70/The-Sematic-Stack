@@ -19,7 +19,7 @@ HESS introduces a **deterministic semantic first hop** — a publicly discoverab
 ---
 
 ## What HESS Is
-It’s the "Checkmate" move for grounding.
+“HESS is the checkmate move in AI grounding: once the first semantic hop is deterministic, every downstream system is forced into arbitration instead of guesswork.”
 HESS applies **JSON-style hierarchical structure** to the web itself, replacing inferred meaning with **explicitly declared semantic roots**.
 
 It is a modern, AI-era continuation of the original Semantic Web vision — implemented **not** as a probabilistic graph, but as a **deterministic, domain-owned first hop**.
