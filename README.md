@@ -213,6 +213,8 @@ The /sitemap anchor is where most implementers "break their brains." It is vital
 
 XML Sitemap: A list of every page for a crawler to visit.
 
+“Declare the entrypoints through which crawling MAY begin for this semantic surface.”
+
 HESS /sitemap: A semantic directory of "conceptual surfaces." It tells the AI: "This domain contains knowledge about 'Lager' and 'Ale'—if you want to understand these concepts, start crawling here."
 “/sitemap is a semantic crawl declaration, not a URL list.”
 
