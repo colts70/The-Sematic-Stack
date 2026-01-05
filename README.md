@@ -241,6 +241,8 @@ The Hess/sitemap anchor is where most implementers "break their brains." It is v
 
 XML Sitemap: A list of every page for a crawler to visit.
 
+Normative rule: /sitemap is a pointer list of crawl entrypoints and MUST NOT contain a URL enumeration. URL enumeration belongs in sitemap.xml (or other referenced resources).
+
 “Declare the entrypoints through which crawling MAY begin for this semantic surface.”
 
 HESS /sitemap: A semantic directory of "conceptual surfaces." It tells the AI: "This domain contains knowledge about 'Lager' and 'Ale'—if you want to understand these concepts, start crawling here."
