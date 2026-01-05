@@ -7,7 +7,7 @@ How HESS Gives Every Topic a Stack (Root + Mirrors)
 **Every topic has exactly ONE authoritative HESS stack.**  
 **All variants (plurals, aliases, translations, sub-domains) are MIRRORS and MUST NOT replace the root.**
 
-In HESS, pillars are implemented as domains. Registrars sell domains, and these domains are intentionally purchased to serve as semantic pillars. Pillar-domains are required, but they are non-authoritative and MUST link back to a single main website root domain of the same topic.
+In HESS, pillars are implemented as domains. Registrars sell domains, and these domains are intentionally purchased to serve as semantic pillars. Pillar-domains are required, but they are non-authoritative and MUST link back to a single main website root domain of the same topic. Pillar-domains do not define the topic. They only bind to the topic. The root domain defines the topic.
 
 HESS is deterministic because it collapses meaning to **one domain-owned semantic root**.
 
@@ -16,9 +16,11 @@ HESS is deterministic because it collapses meaning to **one domain-owned semanti
 
 This is an example only lets say you sell light bulbs and your main website is classicbulbsusa.com. You would need to purchase the light bulb topic stack, You would buy these 5 domains they become the semantic pilliars.
 
-lightbubtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
+Pillars create deterministic, human-auditable “semantic routing lanes” (domain-level signals) that converge on one root authority.
 
-These will be linked with your main site. All domains can purchased from what ever register you prefer. Porkbun seems to be the best ive found overall. 
+lightbulbtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
+
+These will be linked with your main site. All domains can purchased from what ever registrar you prefer. Porkbun seems to be the best ive found overall. 
 
 Recommended free Hosting, I recommend hosting HESS stacks on:
 
