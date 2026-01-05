@@ -14,7 +14,7 @@ HESS is deterministic because it collapses meaning to **one domain-owned semanti
 -
 ## 1) Every Topic Gets a HESS Stack 5 mandatory pilliar domains.
 
-For exampe lets say you sell light bulbs and your main website is classicbulbsusa.com. You need to purchase the light bulb stack, You would buy these 5 domain pilliars
+This is an example only lets say you sell light bulbs and your main website is classicbulbsusa.com. You would need to purchase the light bulb topic stack, You would buy these 5 domains they become the semantic pilliars.
 
 lightbubtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
 
