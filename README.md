@@ -141,6 +141,7 @@ They can fake it for now — but not forever.
 **5 mandatory anchors** for light to moderate topics, and an optional **10-anchor system** for heavy topics.  
 **Zero dependencies. Pure JSON-LD.**  
 **Deterministic meaning + deterministic provenance.**
+“Like robots.txt and ads.txt, DFH is designed to become de facto through adoption before formal standardization.”
 
 HESS / DFH is the missing layer the internet never had:  
 a universal, deterministic semantic + provenance first-hop published at:
