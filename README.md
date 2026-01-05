@@ -3,6 +3,9 @@
 
 ## How HESS Gives Every Topic a Stack + Mirrors
 
+HESS has ONE website (the root).
+HESS has FIVE pillar domains (machine-facing anchors).
+
 ### Core Rule (Read Once)
 **Every topic has exactly ONE authoritative HESS stack.**  
 **All variants (plurals, aliases, translations, sub-domains) are MIRRORS and MUST NOT replace the root.**
@@ -10,6 +13,9 @@
 ---
 
 ## Root vs Pillars (Do Not Confuse These)
+
+HESS DFH is deterministic only when the 5 anchors are served from 5 pillar domains.
+If you don’t own/control the pillars, you don’t have deterministic first-hop.
 
 ⚠️ IMPORTANT — READ THIS ONCE:
 In HESS, pillar domains are NOT websites.
@@ -376,10 +382,10 @@ Your main website domain is the authoritative semantic root because you control 
 
 The 5 mandatory anchors
 
-Both of these must be included in each pilliar, 
+If the root domain is not referenced inside a pillar, that pillar is invalid.
 
 Root domain: https://example.com
-Stack file:  https://example.com/.well-known/stack
+
 
 
 ✅ /type
