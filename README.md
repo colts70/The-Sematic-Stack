@@ -241,6 +241,17 @@ The /sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
 
 /sitemap = declared crawl geometry
 
+⚡ 30-Second Implementation Checklist
+Create Directory: Ensure /.well-known/ exists on your server.
+
+Deploy Stack: Upload the stack file (JSON-LD) pointing to your anchors.
+
+Define Anchors: Create minimal JSON-LD files for /type, /entity, /url, /canonical, and /sitemap.
+
+Test: Ensure https://yourdomain.com/.well-known/stack resolves via HTTPS.
+
+HESS is to Meaning what DNS is to Location. It is decentralized, permissionless, and fixes the "hallucination at the root" problem that currently plagues AI systems.
+
 ---
 
 ## Specification Status
