@@ -140,6 +140,68 @@ a universal, deterministic semantic + provenance first-hop published at:
 
 https://<yourdomain>/.well-known/stack
 
+The 5 mandatory anchors
+
+
+✅ /type
+
+Answers: what class of thing
+
+ keep it minimal
+
+✅ /entity
+
+Answers: what noun
+
+Stable IDs
+
+Root entity first
+
+Optional expansion later
+
+✅ /url
+
+Answers: where meaning lives
+
+Must be a domain you control
+
+You bind entity ↔ URL
+
+✅ /canonical
+
+Answers: what to call it
+
+Alias handling
+
+Ambiguity collapse
+
+Non-marketing, boring, factual
+
+✅ /sitemap (this is where people break their brains)
+
+“/sitemap is a semantic crawl declaration, not a URL list.”
+
+What it IS
+
+conceptual surface declaration
+
+crawl geometry
+
+“start here”
+
+What it IS NOT
+
+XML sitemap
+
+navigation
+
+SEO structure
+
+page list
+
+This anchor is not redundant.
+It’s the bridge between meaning and crawl behavior.
+
 ---
 
 ## Specification Status
