@@ -223,9 +223,15 @@ Non-marketing, boring, factual
 
 ✅ /sitemap (this is where people break their brains)
 
+/sitemap (DFH) vs sitemap.xml (SEO)
+
+This single sentence is the anchor truth:
+
+HESS/sitemap declares crawl permission and geometry.
+sitemap.xml enumerates URLs.
 
 🧠 Solving the "Sitemap" Mental Block
-The /sitemap anchor is where most implementers "break their brains." It is vital to remember: HESS sitemaps are conceptual, not navigational.
+The Hess/sitemap anchor is where most implementers "break their brains." It is vital to remember: HESS sitemaps are conceptual, not navigational.
 
 XML Sitemap: A list of every page for a crawler to visit.
 
