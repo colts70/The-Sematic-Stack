@@ -257,6 +257,36 @@ HESS / DFH is DNS for meaning.
 
 This sentence is important:
 
+🧭 /sitemap (DFH Anchor) — Final Clarification
+
+What it IS
+
+A semantic crawl declaration
+
+A directory of conceptual surfaces
+
+The official “start here” instruction for machines
+
+The first crawl geometry, not the full map
+
+What it is NOT
+
+❌ Not an XML sitemap
+
+❌ Not navigation
+
+❌ Not a URL list
+
+❌ Not SEO structure
+
+/sitemap answers “What concepts exist here that are safe and intended to be crawled?”
+
+Not:
+
+“Here are all the pages.”
+
+That’s why it points to sitemap(s) — it never is one.
+
 /sitemap is NOT an XML sitemap. It is a semantic crawl declaration.
 
 Think of it as:
