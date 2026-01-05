@@ -7,6 +7,9 @@ HESS is a proposed, open, **domain-owned Semantic Layer Public Index (SLPI)** de
 
 HESS introduces a **deterministic semantic first hop** — a publicly discoverable, machine-readable declaration of meaning — published directly by domain owners.
 
+HESS / DFH is built specifically for AI.
+If you have any questions, confusion, or concerns, copy-paste this spec into a chat to get unstuck and understand it quickly.
+
 ---
 
 ## Core Terms (keep these straight)
