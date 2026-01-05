@@ -38,6 +38,13 @@ By placing the "source of truth" for meaning at the /.well-known/stack endpoint,
 
 With HESS: The AI immediately checks /.well-known/stack. It is told exactly what the entity is before it reads a single word of content.
 
+Server Configuration
+Path: Ensure the directory /.well-known/ is accessible and not blocked by robots.txt or a firewall.
+
+Header: The file /.well-known/stack MUST be served with Content-Type: application/ld+json.
+
+CORS: To allow browser-based AI agents to read the stack, set Access-Control-Allow-Origin: *.
+
 HESS / DFH has one job:
 
 Declare semantic intent and provenance at the first machine-resolvable hop.
