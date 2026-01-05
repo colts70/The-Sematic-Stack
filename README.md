@@ -591,6 +591,7 @@ HESS / DFH declares it:
 
 Trust becomes machine-verifiable.
 
+🏗️ The Grounding Flow: How AI Sees Your SiteHESS creates a structured pipeline that ensures an AI agent knows exactly what your domain represents before it processes a single paragraph of content.LayerResponsibilityStateDNSLocates the server IPPhysical LocationHESS/DFHDeclares the entity, intent, and crawl entry pointsDeterministic MeaningRAG/KGRetrieves specific documents and reconciles factsProbabilistic KnowledgeInferenceGenerates the response based on the aboveReasoning
 ---
 
 ## 🤖 AI-First Indexing Readiness
