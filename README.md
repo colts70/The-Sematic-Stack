@@ -228,6 +228,8 @@ It’s the bridge between meaning and crawl behavior.
 /sitemap is NOT PAGES
 /sitemap is NOT SEO
 
+The /sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
+
 /sitemap = declared crawl geometry
 
 ---
