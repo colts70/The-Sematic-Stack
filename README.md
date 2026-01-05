@@ -7,7 +7,7 @@ How HESS Gives Every Topic a Stack (Root + Mirrors)
 **Every topic has exactly ONE authoritative HESS stack.**  
 **All variants (plurals, aliases, translations, sub-domains) are MIRRORS and MUST NOT replace the root.**
 
-In HESS, pillars are implemented as domains. Registrars sell domains, and these domains are intentionally purchased to serve as semantic pillars. Pillar-domains are required, but they are non-authoritative and MUST bind back to a single root domain.
+In HESS, pillars are implemented as domains. Registrars sell domains, and these domains are intentionally purchased to serve as semantic pillars. Pillar-domains are required, but they are non-authoritative and MUST link back to a single main website root domain of the same topic.
 
 HESS is deterministic because it collapses meaning to **one domain-owned semantic root**.
 
@@ -18,7 +18,7 @@ For exampe lets say you sell light bulbs and your main website is classicbulbsus
 
 lightbubtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
 
-These will be tied together with your main site. All domains can purchased from what ever register you prefer. Porkbun seems to be the best ive found overall. 
+These will be linked with your main site. All domains can purchased from what ever register you prefer. Porkbun seems to be the best ive found overall. 
 
 Recommended free Hosting, I recommend hosting HESS stacks on:
 
@@ -46,7 +46,7 @@ Easy headers + redirects if needed
 
 Good for: most people, simplest setup
 
-A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control**. A topic in HESS is a semantic surface bound to a main website domain that already represents that same topic.
+A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control**. A topic in HESS is a semantic surface linked to a main website domain that already represents that same topic.
 
 The topic and the domain MUST match.
 
@@ -81,8 +81,7 @@ https://beer.com/.well-known/stack
 
 “HESS / DFH is built specifically for machine grounding — with AI as the primary consumer.”
 
-Domains MAY include an X-HESS-Stack HTTP response header pointing to the stack root. X-HESS-Stack: https://example.com/.well-known/stack
-
+The main website becomes rhe root and mAY include an X-HESS-Stack HTTP response header pointing to the stack root. X-HESS-Stack: https://example.com/.well-known/stack
 
 Agents SHOULD treat this as a discovery hint only and MUST verify the referenced stack resource directly.
 Absence of the header MUST NOT be interpreted as absence of DFH support.
@@ -146,7 +145,7 @@ It only pins meaning before guessing begins.
 
 HESS introduces a **deterministic semantic first hop** — a publicly discoverable, machine-readable declaration of meaning — published directly by domain owners.
 
-🧭 The "Missing Index" (SLPI)By publishing a stack, you are contributing to a Domain-Owned Semantic Layer Public Index.Current Web: Google and OpenAI own the "Index of Meaning."HESS Web: The domain owners own the index. AI agents simply "hop" from one deterministic root to another.
+🧭 The "Missing Index" (SLPI) By publishing a stack, you are contributing to a Domain-Owned Semantic Layer Public Index.Current Web: Google and OpenAI own the "Index of Meaning."HESS Web: The domain owners own the index. AI agents simply "hop" from one deterministic root to another.
 
 Pro-Tip for Implementers: > While the specification allows for all 10 anchors in a single file (Section 12), the distributed 5-anchor model is superior for large-scale enterprise sites. It allows the /integrity and /timestamp anchors to be updated by automated CI/CD processes without touching the more static /type or /entity declarations.
 
