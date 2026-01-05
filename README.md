@@ -22,6 +22,8 @@ HESS introduces a **deterministic semantic first hop** — a publicly discoverab
 “HESS is the checkmate move in AI grounding: once the first semantic hop is deterministic, every downstream system is forced into arbitration instead of guesswork.”
 HESS applies **JSON-style hierarchical structure** to the web itself, replacing inferred meaning with **explicitly declared semantic roots**.
 
+“A domain can only be authoritative for topics it controls at the root.”
+
 It is a modern, AI-era continuation of the original Semantic Web vision — implemented **not** as a probabilistic graph, but as a **deterministic, domain-owned first hop**.
 
 Each domain publishes a single discovery file at:
@@ -669,7 +671,7 @@ HTTPS:///yourdoain .well-known/stack
 TYPE: consumable-beverage
 ENTITY: beer
 URL: https://yourdomain.com
-SITEMAP: lager, ale, stout,
+SITEMAP: lager, ale, stout, /sitemap → “declared conceptual crawl surface (not exhaustive)”
 CANONICAL: brand beer ≠ brewery beer ≠ medical substance beer ≠ legal or health advice beer ≠ ranking or opinion.
 
 
