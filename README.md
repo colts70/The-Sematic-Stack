@@ -7,6 +7,9 @@ HESS is a proposed, open, **domain-owned Semantic Layer Public Index (SLPI)** de
 
 🔒 Final Mental Model (Read This Once)
 
+DNS tells machines where to go.
+DFH tells machines what it means when they get there — before guessing starts.
+
 HESS / DFH has one job:
 
 Declare semantic intent and provenance at the first machine-resolvable hop.
@@ -201,6 +204,12 @@ page list
 
 This anchor is not redundant.
 It’s the bridge between meaning and crawl behavior.
+
+/sitemap is NOT CONTENT
+/sitemap is NOT PAGES
+/sitemap is NOT SEO
+
+/sitemap = declared crawl geometry
 
 ---
 
