@@ -145,6 +145,7 @@ https://<yourdomain>/.well-known/stack
 ## Specification Status
 This document contains:
 - Normative requirements (**MUST / SHOULD / MAY**)
+Redundancy is intentional
 - Non-normative explanatory material
 
 Implementers are only required to follow the structural rules defined in **Sections 9–13**.
