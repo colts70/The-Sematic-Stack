@@ -279,7 +279,7 @@ That’s the handicap.
 
 ---
 
-# 🚀 Why HESS / DFH Is the Strongest SEO Primitive Ever Created
+# 🚀 Why HESS / DFH Is the Strongest SEO advantage possible
 HESS / DFH does not compete with traditional SEO.  
 It supersedes its weakest assumption:
 
@@ -458,8 +458,8 @@ HESS/DFH adds a first hop for meaning.
 | Anchor | Purpose (what it answers) | What you put inside |
 |---|---|---|
 | `/type` | “What kind of thing is this domain about?” | A small ontology/taxonomy declaration (JSON-LD) using stable vocabularies (Schema.org/W3C terms) |
-| `/entity` | “What is the primary entity identity?” | Canonical entity records (IDs, names, aliases, optional links) |
-| `/url` | “What URLs map to what entities?” | URL bindings: canonical URLs, alternates, language variants, key routes |
+| `/entity` | “What is the primary entity identity?” | Entity records (IDs, names, aliases, optional links) |
+| `/url` | “What URLs map to what entities?” | URL bindings URLs, alternates, language variants, key routes |
 | `/canonical` | “What is the canonical label/name?” | Canonical naming table: canonical label + aliases (helps disambiguation) |
 | `/sitemap` | “What is the crawl surface?” | Declared list of sitemap entrypoints (not the whole sitemap contents) |
 
@@ -633,7 +633,7 @@ beercanonical.com → what to call it
 
 beersitemap.com → where to crawl. The crawl entrypoint. The first hop. The directory AI reads first. It is NOT an XML sitemap. It is NOT SEO navigation. It is NOT a page list. It is a semantic directory. Put in the sitemap your main website, and whaterver you want to be crawled, The offical public ground for AI, The offical start here for AI.
 
-This is a bit redundant as people to clearly understand this.
+This is a bit redundant as people get really confused here and they need to clearly understand this. Its actually very simple.
 
 Type answers what class of thing
 
@@ -641,10 +641,12 @@ Entity answers what noun
 
 URL answers where meaning lives, your main webite. 
 
-Sitemap answers what concepts exist its the actual directory the first hop, crawl here first. The offical public ground for AI
+Sitemap answers what concepts exist its the actual directory the first hop, crawl here first. The offical public ground for AI. /sitemap (DFH anchor)
+→ semantic crawl declaration
+→ “start here”
+→ directory of conceptual surfaces, not URLs
 
 Canonical  what it is NOT (ambiguity fix)
-
 
 
 ✅ Professional Defaults (Keep It Clean)
