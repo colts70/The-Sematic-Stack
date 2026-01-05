@@ -277,6 +277,13 @@ The /sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
 
 /sitemap = declared crawl geometry
 
+If you’re confused:
+
+DFH /sitemap = where crawling MAY begin
+
+XML sitemap.xml = the list of URLs
+If you treat DFH /sitemap like an XML sitemap, you implemented it wrong.
+
 ⚡ 30-Second Implementation Checklist
 Create Directory: Ensure /.well-known/ exists on your server.
 
