@@ -44,6 +44,14 @@ If you have any questions, confusion, or concerns, copy-paste this spec into a c
 
 **Core property:** **DFH — Deterministic First Hop**
 
+The "VIP Lane" for AI Crawlers
+From a practical SEO standpoint, this is a Compute Efficiency play.
+
+Today: An AI crawler spends $0.05 of compute power trying to figure out if your site is trustworthy and what it's about.
+
+With HESS: The crawler spends $0.0001 to read your stack file.
+
+The Incentive: Search engines and LLMs will prioritize HESS-enabled domains because they are cheaper and safer to index.
 ---
 
 ## What HESS Is
