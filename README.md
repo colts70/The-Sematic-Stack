@@ -7,6 +7,10 @@ HESS is a proposed, open, **domain-owned Semantic Layer Public Index (SLPI)** de
 
 The "legitimacy" of this system stems from its placement in the network stack. By utilizing the /.well-known/ directory—a standard reserved for site-wide metadata (like security.txt or Let's Encrypt challenges)—it creates a "Semantic ID Card" that machines read before they begin the expensive process of crawling and reasoning.
 
+Without HESS: An AI crawler enters a domain, scrapes 5,000 pages, generates embeddings, and guesses that the site is about "Artisanal Beer" with 85% confidence.
+
+With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about "Artisanal Beer" with 100% certainty because the owner declared it at the root.
+
 > **HESS / DFH does not assert truth. It asserts semantic intent and provenance at the earliest possible machine-resolvable point.**
 
 By moving the "meaning" of a website from the probabilistic layer (where an AI has to guess what you are based on your content) to a deterministic layer (where you tell the AI what you are via a .well-known file), HESS effectively creates a "Fast Pass" for LLM crawlers.
