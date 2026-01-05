@@ -252,6 +252,26 @@ HESS / DFH is DNS for meaning.
 - `/canonical` — identity labels  
 - `/sitemap` — crawl entrypoints  
 
+⚠️ Where People Get Confused
+
+This sentence is important:
+
+/sitemap is NOT an XML sitemap. It is a semantic crawl declaration.
+
+Think of it as:
+
+“These are the conceptual surfaces that exist — start here.”
+
+Not:
+
+not a URL list
+
+not navigation
+
+not SEO structure
+
+It is a directory of meaning surfaces, not pages.
+
 ### 8.2 Provenance Anchors
 - `/authority` — human/legal ownership  
 - `/source` — upstream datasets  
