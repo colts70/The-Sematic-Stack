@@ -541,7 +541,7 @@ HESS / DFH establishes domains as topics.
 
 By publishing a deterministic semantic root at:
 
-/.well-known/stack
+yourdomain.com/.well-known/stack
 
 A domain becomes:
 - the canonical authority for a topic
@@ -599,8 +599,6 @@ HESS / DFH declares it:
 
 Trust becomes machine-verifiable.
 
-🏗️ The Grounding Flow: How AI Sees Your SiteHESS creates a structured pipeline that ensures an AI agent knows exactly what your domain represents before it processes a single paragraph of content.LayerResponsibilityStateDNSLocates the server IPPhysical LocationHESS/DFHDeclares the entity, intent, and crawl entry pointsDeterministic MeaningRAG/KGRetrieves specific documents and reconciles factsProbabilistic KnowledgeInferenceGenerates the response based on the aboveReasoning
----
 
 ## 🤖 AI-First Indexing Readiness
 Search engines are becoming AI systems.
@@ -1119,6 +1117,7 @@ One-Sentence Definition
 DFH is the official public semantic and provenance index for any topic on the internet — a universal first-hop where meaning begins.
 
 🌐 DFH / SLPI: Most Companies Only Need 5 Anchors
+
 ✅ The 5-Anchor Meaning Layer (Default)
 Anchor	Purpose
 /type	What kind of thing this domain represents
