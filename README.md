@@ -1,52 +1,236 @@
 # 🌐 Hierarchical Expressed Semantic Stack (HESS)
-> **A deterministic, installable semantic first-hop for the web a 7 Layer Semantic Protocol.— built for AI.**
+> **A deterministic, installable semantic first-hop for the web — a 7-layer semantic protocol built for AI.**
 
-How HESS Gives Every Topic a Stack (Root + Mirrors)
+## How HESS Gives Every Topic a Stack (Root + Mirrors)
 
 ### Core Rule (Read Once)
-**Every topic has exactly ONE authoritative HESS stack.**  
+**Every topic has exactly ONE authoritative HESS root stack.**  
 **All variants (plurals, aliases, translations, sub-domains) are MIRRORS and MUST NOT replace the root.**
 
-In HESS, pillars are implemented as domains. Registrars sell domains, and these domains are intentionally purchased to serve as semantic pillars. Pillar-domains are required, but they are non-authoritative and MUST link back to a single main website root domain of the same topic. Pillar-domains do not define the topic. They only bind to the topic. The root domain defines the topic.
+---
 
-HESS is deterministic because it collapses meaning to **one domain-owned semantic root**.
+## Root vs Pillars (Do Not Confuse These)
 
--
-## 1) Every Topic Gets a HESS Stack 5 mandatory pilliar domains.
+### ✅ Root Domain (Authoritative)
+The **root domain is your real website** that already represents the topic.
 
-This is an example only lets say you sell light bulbs and your main website is classicbulbsusa.com. You would need to purchase the light bulb topic stack, You would buy these 5 domains they become the semantic pilliars.
+- The **root domain defines the topic**
+- The root domain publishes the authoritative stack file at:
 
-Pillars create deterministic, human-auditable “semantic routing lanes” (domain-level signals) that converge on one root authority.
+**`https://<root-domain>/.well-known/stack`**
 
-lightbulbtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
+This file is the **root semantic identity** for that topic.
 
-These will be linked with your main site. All domains can purchased from what ever registrar you prefer. Porkbun seems to be the best ive found overall. 
+### ✅ Pillar Domains (Required but Non-Authoritative)
+In HESS, “pillars” are implemented as **domains** (because registrars sell domains — not “pillars”).
 
-Recommended free Hosting, I recommend hosting HESS stacks on:
+- Pillar domains are **required** for the deterministic 5-anchor model
+- Pillar domains are **NOT the topic authority**
+- Pillar domains **do not define the topic**
+- Pillar domains **only bind back to the root domain**
+- Pillar domains create deterministic, human-auditable “semantic routing lanes” (domain-level signals) that converge on one root authority
 
-✅ Vercel
+> **The root defines the topic. Pillars only point home.**
 
-Free tier supports custom domains
+---
 
-Serves /.well-known/stack correctly
+## 1) Every Topic Gets a HESS Stack + 5 Mandatory Pillar Domains
 
-Great for static JSON / Markdown
+### Example Topic (Light Bulbs)
+Let’s say your real website is:
 
-GitHub-based deploys
+- Root (authoritative): **classicbulbsusa.com**
 
-Good for: clean, fast HESS installs
+To implement HESS for the topic “light bulb”, you buy 5 pillar domains:
 
-✅ Netlify
+- **lightbulbtype.com**
+- **lightbulbentity.com**
+- **lightbulburl.com**
+- **lightbulbsitemap.com**
+- **lightbulbcanonical.com**
 
-Free tier supports custom domains
+All five pillars MUST bind back to the one root:
 
-Fully supports /.well-known/
+- **classicbulbsusa.com**
+- `https://classicbulbsusa.com/.well-known/stack`
 
-Simple drag-and-drop or GitHub deploy
+Domains can be purchased from any registrar (Porkbun is solid in practice).
 
-Easy headers + redirects if needed
+---
 
-Good for: most people, simplest setup
+## Recommended Free Hosting (for stacks + pillar files)
+
+✅ **Vercel**
+- Free tier supports custom domains  
+- Serves `/.well-known/stack` correctly  
+- Great for static JSON / Markdown  
+- GitHub-based deploys  
+- Good for: clean, fast installs  
+
+✅ **Netlify**
+- Free tier supports custom domains  
+- Fully supports `/.well-known/`  
+- Simple drag-and-drop or GitHub deploy  
+- Easy headers + redirects if needed  
+- Good for: simplest setup  
+
+---
+
+## What a “Topic” Means in HESS
+
+A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control.**
+
+### The One Rule That Matters
+**You cannot declare a HESS topic on a domain that is not already about that topic.**  
+If the domain is not relevant, the stack is invalid.
+
+### What This Means in Practice
+- The **root domain is the topic authority**
+- The stack describes what the domain **already is**
+- HESS does not let you “redefine” a domain
+- HESS does not let you “claim” unrelated topics
+- The stack can clarify meaning — it cannot change meaning
+
+---
+
+## Example: Topic = “Beer”
+Root stack (authoritative):
+
+- `https://beer.com/.well-known/stack`
+
+---
+
+## Discovery Hint Header (Optional)
+The main website MAY include an HTTP response header pointing to its root stack:
+
+**`X-HESS-Stack: https://<root-domain>/.well-known/stack`**
+
+Agents:
+- SHOULD treat this as a discovery hint only  
+- MUST verify the referenced stack directly over HTTPS  
+- MUST NOT interpret absence of the header as absence of HESS/DFH support  
+
+---
+
+## Why HESS Exists (In One Paragraph)
+HESS does not replace RAG; it **grounds** it.  
+Without HESS, an AI enters a domain in semantic fog and must scrape thousands of pages and guess what the site is about.  
+With HESS, the AI reads one small JSON-LD root file and knows the domain-owner-declared semantic intent immediately.
+
+> **HESS / DFH does not assert truth. It asserts semantic intent and provenance at the earliest possible machine-resolvable point.**
+
+---
+
+## Server Requirements (Minimum)
+- `/.well-known/` MUST be accessible (not blocked by robots.txt or firewall)
+- `/.well-known/stack` MUST be served as:
+  - `Content-Type: application/ld+json`
+
+---
+
+## The 5 Mandatory Meaning Anchors (Pillars)
+
+| Anchor | Answers | What it contains |
+|---|---|---|
+| `/type` | what class of thing | minimal classification / ontology type |
+| `/entity` | what noun / identity | stable IDs + root entity |
+| `/url` | where meaning lives | binds identity to the root domain you control |
+| `/canonical` | what to call it | boring factual canonical label + aliases |
+| `/sitemap` | where crawling MAY begin | declared crawl entrypoints (NOT URL enumeration) |
+
+---
+
+## The Sitemap Mental Block (Read This Twice)
+
+### DFH `/sitemap` vs `sitemap.xml`
+**This single sentence is the anchor truth:**
+
+> **HESS `/sitemap` declares crawl permission and crawl geometry.**  
+> **`sitemap.xml` enumerates URLs.**
+
+Normative rule:
+- `/sitemap` MUST be a pointer list of crawl entrypoints  
+- `/sitemap` MUST NOT contain a URL enumeration  
+- URL enumeration belongs in `sitemap.xml` (or referenced sitemap resources)
+
+Think of `/sitemap` like:
+- “Start here”
+- “These are the conceptual crawl surfaces”
+- “These entrypoints are intended to be crawled”
+
+Not:
+- a page list
+- navigation
+- SEO structure
+- XML sitemap contents
+
+---
+
+## Anchor Locality Requirement (Non-Negotiable)
+All mandatory meaning anchors  
+(`/type`, `/entity`, `/url`, `/canonical`, `/sitemap`)  
+MUST be served from the **same domain as the stack root**.
+
+They MAY reference external identifiers, but MUST NOT relocate authority off-domain.
+
+### 🔒 The Invariant
+**Every pillar must point home.**
+
+If any pillar:
+- does NOT reference the root domain explicitly, and
+- does NOT bind back to the root entity or root URL
+
+then:
+🚨 DFH grounding is invalid for that pillar  
+→ agent MUST degrade to probabilistic inference for that aspect.
+
+---
+
+## Caching + Degradation + Integrity (Defaults)
+
+### Caching
+`/.well-known/stack` SHOULD be served with:
+- `Cache-Control: public, max-age=3600`
+- validators: `ETag` and/or `Last-Modified`
+- `stale-while-revalidate` is RECOMMENDED
+
+### Degradation
+If `/.well-known/stack` exists but any mandatory anchor is unreachable (404/timeout):
+- agent MUST treat that anchor as UNDECLARED and continue
+
+If `/entity` or `/url` is missing:
+- agent MUST NOT treat identity as bound  
+- MUST degrade to probabilistic inference
+
+### Integrity
+`/integrity` SHOULD provide signed hashes of root + anchors.  
+Implementations MAY use:
+- Linked Data Proofs / Data Integrity
+- JWS
+
+Agents SHOULD verify signatures when keys are available and downgrade trust when verification fails.
+
+---
+
+## Core Terms
+- **HESS** = the stack (installable semantic layer pattern)
+- **DFH** = the protocol (**Deterministic First Hop**)
+- **SLPI** = the resulting public layer (semantic + provenance index that emerges as adoption grows)
+
+---
+
+## Final Mental Model (Lock This In)
+
+DNS tells machines where to go.  
+HESS/DFH tells machines what it means when they get there — before guessing starts.
+
+HESS/DFH does not tell machines what is true.  
+It tells machines where meaning officially begins.
+
+**HESS / DFH has one job:**
+Declare semantic intent and provenance at the first machine-resolvable hop.
+
+Nothing more. Nothing less.
 
 A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control**. A topic in HESS is a semantic surface linked to a main website domain that already represents that same topic.
 
