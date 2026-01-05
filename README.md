@@ -1,6 +1,7 @@
 # 🌐 Hierarchical Expressed Semantic Stack (HESS)
 > **A deterministic, installable semantic first-hop for the web a 7 Layer Semantic Protocol.— built for AI.**
 
+
 “HESS / DFH is built specifically for machine grounding — with AI as the primary consumer.”
 
 Domains MAY include an X-HESS-Stack HTTP response header pointing to the stack root. X-HESS-Stack: https://example.com/.well-known/stack
@@ -33,6 +34,19 @@ DFH does not tell machines what is true.
 It tells machines where meaning officially begins.
 
 This protocol represents a significant structural evolution for the web, moving from unstructured content that machines must guess at, to a deterministic semantic layer that domain owners control.
+
+It is a finished protocol proposal that meets the same maturity bar as things like:
+
+robots.txt
+
+ads.txt
+
+security.txt
+
+/.well-known/* conventions
+
+Those all started exactly like this:
+small, precise, permissionless, adopted before standardized.
 
 By placing the "source of truth" for meaning at the /.well-known/stack endpoint, HESS effectively creates a pre-flight check for AI agents.
 
