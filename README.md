@@ -620,17 +620,32 @@ Stack returns the anchor URLs
 
 Client fetches:
 
-/type → what it is
+example we will use Beer as the topic 
 
-/entity → what the entity is
+beertype.com → what it is. A categorical classification of beer based on brewing method, fermentation style, ingredients, and characteristic flavor profile.
 
-/url → where it lives
 
-/canonical → what to call it
+beerentity.com → what the entity is Beer is a fermented malt beverage produced from cereal grains, water, hops, and yeast, containing alcohol by volume as defined by applicable law.
 
-/sitemap → where to crawl
+beerurl.com → where it lives becomes Your main domain.com DFH grounding must resolve to a domain you control, because meaning cannot be authoritative if it lives somewhere you don’t own. The DFH URL is your main website, because DFH only works if the first hop lands on a domain you own.
 
-Crawler uses sitemap.xml for URL discovery (normal web behavior), but now with a deterministic semantic root.
+beercanonical.com → what to call it 
+
+beersitemap.com → where to crawl. The crawl entrypoint. The first hop. The directory AI reads first. It is NOT an XML sitemap. It is NOT SEO navigation. It is NOT a page list. It is a semantic directory. Put in the sitemap your main website, and whaterver you want to be crawled, The offical public ground for AI, The offical start here for AI.
+
+This is a bit redundant as people to clearly understand this.
+
+Type answers what class of thing
+
+Entity answers what noun
+
+URL answers where meaning lives, your main webite. 
+
+Sitemap answers what concepts exist its the actual directory the first hop, crawl here first. The offical public ground for AI
+
+Canonical  what it is NOT (ambiguity fix)
+
+
 
 ✅ Professional Defaults (Keep It Clean)
 Use HTTPS only
@@ -645,26 +660,17 @@ Treat /url + /canonical as your anti-ambiguity layer
 
 10. ⚡ 30-Second Install
 Step 1 — Create the file
-mkdir -p .well-known
-nano .well-known/stack
-Step 2 — Paste this minimal descriptor
-json
+mkdir -p .well-known already exist 
+create a tiny root descriptor a file named stack
+HTTPS:///yourdoain .well-known/stack
 
-{
-  "@context": {
-    "dfh": "https://example.org/ns/dfh#"
-  },
-  "@id": "https://yourdomain.com/.well-known/stack",
-  "@type": "dfh:DeterministicSemanticRoot",
-  "dfh:rootTopic": "your-topic",
-  "dfh:anchors": {
-    "dfh:type": "https://yourdomain.com/type/index.jsonld",
-    "dfh:entity": "https://yourdomain.com/entity/index.jsonld",
-    "dfh:url": "https://yourdomain.com/url/index.jsonld",
-    "dfh:canonical": "https://yourdomain.com/canonical/index.jsonld",
-    "dfh:sitemap": "https://yourdomain.com/sitemap/index.jsonld"
-  }
-}
+TYPE: consumable-beverage
+ENTITY: beer
+URL: https://yourdomain.com
+SITEMAP: lager, ale, stout,
+CANONICAL: brand beer ≠ brewery beer ≠ medical substance beer ≠ legal or health advice beer ≠ ranking or opinion.
+
+
 Step 3 — Test
 text
 https://yourdomain.com/.well-known/stack
@@ -672,7 +678,7 @@ If it loads → your HESS / DFH root is active.
 
 11. High-Level Architecture
 text
-Copy code
+
 /
 ├─ .well-known/
 │  └─ stack
