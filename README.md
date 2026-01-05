@@ -10,7 +10,13 @@ How HESS Gives Every Topic a Stack (Root + Mirrors)
 HESS is deterministic because it collapses meaning to **one domain-owned semantic root**.
 
 -
-## 1) Every Topic Gets a Root Stack 5 mandatory domains to bind to your exiting website of the same topic. For exampe lets say you sell light bulbs and your main website is classicbulbsusa.com. You need to purchase the light bulb stack, You would buy these 5 domains lightbubtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com.  These will be tied to gether with your main site. So HESS/DFH requires 6 domains to function including the main site you already have. All domains can purchased from what ever register you prefer. Porkbun seems to be the best ive found overall. 
+## 1) Every Topic Gets a Root Stack 5 mandatory domains to bind to your exiting website of the same topic.
+
+For exampe lets say you sell light bulbs and your main website is classicbulbsusa.com. You need to purchase the light bulb stack, You would buy these 5 domains
+
+lightbubtype.com, lightbulbentity.com, lightbulburl.com, lightbulbsitemap.com and lightbulbcanonical.com. 
+
+These will be tied to gether with your main site. So HESS/DFH requires 6 domains to function including the main site you already have. All domains can purchased from what ever register you prefer. Porkbun seems to be the best ive found overall. 
 
 Recommended free Hosting
 
