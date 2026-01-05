@@ -1,10 +1,10 @@
 # 🌐 Hierarchical Expressed Semantic Stack (HESS)
 > **A deterministic, installable semantic first-hop for the web — a 7-layer semantic protocol built for AI.**
 
-## How HESS Gives Every Topic a Stack (Root + Mirrors)
+## How HESS Gives Every Topic a Stack + Mirrors
 
 ### Core Rule (Read Once)
-**Every topic has exactly ONE authoritative HESS root stack.**  
+**Every topic has exactly ONE authoritative HESS stack.**  
 **All variants (plurals, aliases, translations, sub-domains) are MIRRORS and MUST NOT replace the root.**
 
 ---
@@ -13,70 +13,32 @@
 
 ⚠️ IMPORTANT — READ THIS ONCE:
 In HESS, pillar domains are NOT websites.
-They contain no content, define no topic, and exist only as semantic binding objects that point back to the root domain.
+They exist only as semantic pilliars that point back to the root domain your main website.
 The root domain is the only website and only topic authority.
 
-### ✅ Root Domain (Authoritative)
-The **root domain is your real website** that already represents the topic.
-
-- The **root domain defines the topic**
 - The root domain publishes the authoritative stack file at:
 
 `https://<root-domain>/.well-known/stack`
 
 This file is the **root semantic identity** for that topic.
 
-### ✅ Pillar Domains (Required but Non-Authoritative)
-In HESS, “pillars” are implemented as **domains** (registrars sell domains, not “pillars”).
+### ✅ Pillar Domains
+In HESS, “pillars” are implemented as **domains** 
 
 - Pillar domains are **required** for the deterministic 5-anchor model
-- Pillar domains are **NOT the topic authority**
-- Pillar domains **do not define the topic**
-- Pillar domains **only bind back to the root domain**
-- They create deterministic, human-auditable “semantic routing lanes” that converge on one root authority
 
 > **The root defines the topic. Pillars only point home.**
 ---
 
-## 1) Every Topic Gets a HESS Stack + 5 Mandatory Pillar Domains
-
-
-
-## Recommended Free Hosting (for stacks + pillar files)
-
-✅ **Vercel**
-- Free tier supports custom domains  
-- Serves `/.well-known/stack` correctly  
-- Great for static JSON / Markdown  
-- GitHub-based deploys  
-- Good for: clean, fast installs  
-
-✅ **Netlify**
-- Free tier supports custom domains  
-- Fully supports `/.well-known/`  
-- Simple drag-and-drop or GitHub deploy  
-- Easy headers + redirects if needed  
-- Good for: simplest setup  
-
----
-
 ## What a “Topic” Means in HESS
 
-A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control.**
+A **topic** in HESS is a **semantic surface linked to a main website domain of the same topic you already control.**
 
 ### The One Rule That Matters
 **You cannot declare a HESS topic on a domain that is not already about that topic.**  
-If the domain is not relevant, the stack is invalid.
+If the domain main website is not relevant, the stack is invalid.
 
-### What This Means in Practice
-- The **root domain is the topic authority**
-- The stack describes what the domain **already is**
-- HESS does not let you “redefine” a domain
-- HESS does not let you “claim” unrelated topics
-- The stack can clarify meaning — it cannot change meaning
-
----
-
+--
 ## Example: Topic = “Beer”
 Root stack (authoritative):
 
@@ -153,16 +115,12 @@ Not:
 ## Anchor Locality Requirement (Non-Negotiable)
 All mandatory meaning anchors  
 (`/type`, `/entity`, `/url`, `/canonical`, `/sitemap`)  
-MUST be served from the **same domain as the stack root**.
-
-They MAY reference external identifiers, but MUST NOT relocate authority off-domain.
 
 ### 🔒 The Invariant
 **Every pillar must point home.**
 
 If any pillar:
-- does NOT reference the root domain explicitly, and
-- does NOT bind back to the root entity or root URL
+- does NOT reference the root domain
 
 then:
 🚨 DFH grounding is invalid for that pillar  
@@ -216,38 +174,6 @@ Declare semantic intent and provenance at the first machine-resolvable hop.
 
 Nothing more. Nothing less.
 
-A **topic** in HESS is a **semantic surface bound to a main website domain of the same topic you already control**. A topic in HESS is a semantic surface linked to a main website domain that already represents that same topic.
-
-The topic and the domain MUST match.
-
-The One Rule That Matters
-
-You cannot declare a HESS topic on a domain that is not already about that topic.
-
-If the domain is not relevant, the stack is invalid.
-
-What This Means in Practice
-
-The root domain is the topic authority
-
-The stack describes what the domain already is
-
-HESS does not let you redefine a domain
-
-HESS does not let you “claim” unrelated topics
-
-The stack can clarify meaning, but it cannot change it.
-
-That domain publishes the authoritative root descriptor at:
-
-https://<root-domain>/.well-known/stack
-
-This is the **root semantic identity** for the topic.
-
-### Example: Topic = "Beer"
-Root stack (authoritative):
-
-https://beer.com/.well-known/stack
 
 “HESS / DFH is built specifically for machine grounding — with AI as the primary consumer.”
 
@@ -281,18 +207,6 @@ It tells machines where meaning officially begins.
 
 This protocol represents a significant structural evolution for the web, moving from unstructured content that machines must guess at, to a deterministic semantic layer that domain owners control.
 
-It is a finished protocol proposal that meets the same maturity bar as things like:
-
-robots.txt
-
-ads.txt
-
-security.txt
-
-/.well-known/* conventions
-
-Those all started exactly like this:
-small, precise, permissionless, adopted before standardized.
 
 By placing the "source of truth" for meaning at the /.well-known/stack endpoint, HESS effectively creates a pre-flight check for AI agents.
 
@@ -313,7 +227,7 @@ It does not: assert truth, rank content, replace ontologies, replace XML sitemap
 
 It only pins meaning before guessing begins.
 
-HESS introduces a **deterministic semantic first hop** — a publicly discoverable, machine-readable declaration of meaning — published directly by domain owners.
+HESS introduces a **deterministic semantic first hop** — a publicly discoverable, machine-readable declaration of meaning — published directly by domain owners as semantic pilliars.
 
 🧭 The "Missing Index" (SLPI) By publishing a stack, you are contributing to a Domain-Owned Semantic Layer Public Index.Current Web: Google and OpenAI own the "Index of Meaning."HESS Web: The domain owners own the index. AI agents simply "hop" from one deterministic root to another.
 
@@ -352,8 +266,6 @@ The Incentive: Search engines and LLMs will prioritize HESS-enabled domains beca
 ## What HESS Is
 “HESS is the checkmate move in AI grounding: once the first semantic hop is deterministic, every downstream system is forced into arbitration instead of guesswork.”
 HESS applies **JSON-style hierarchical structure** to the web itself, replacing inferred meaning with **explicitly declared semantic roots**.
-
-“A domain can only be authoritative for topics it controls at the root.”
 
 It is a modern, AI-era continuation of the original Semantic Web vision — implemented **not** as a probabilistic graph, but as a **deterministic, domain-owned first hop**.
 
@@ -457,7 +369,7 @@ a universal, deterministic semantic + provenance first-hop published at: X-HESS-
 
 Agents SHOULD treat this as a discovery hint only and MUST verify the referenced resource directly over HTTPS. Absence of the header MUST NOT be interpreted as absence of HESS/DFH support.
 
- HESS requires a domain you control to serve as the authoritative semantic root.
+ HESS requires a main website you control to serve as the authoritative semantic root.
 The stack at https://<yourdomain>/.well-known/stack is the domain-owner-declared source of semantic intent and provenance for that domain (not a truth oracle). Downstream systems may accept, reject, or weight declarations using their own trust, safety, and policy models.
 
 Your main website domain is the authoritative semantic root because you control it. HESS binds meaning to the same surface you own https://<yourdomain>/.well-known/stack
@@ -584,10 +496,6 @@ Test: Ensure https://yourdomain.com/.well-known/stack resolves via HTTPS.
 
 HESS is to Meaning what DNS is to Location. It is decentralized, permissionless, and fixes the "hallucination at the root" problem that currently plagues AI systems.
 
-
-Anchor locality requirement
-All mandatory HESS / DFH meaning anchors (/type, /entity, /url, /canonical, /sitemap) MUST be served from the same domain as the stack root. This ensures semantic intent and provenance are bound to a domain the publisher controls. Anchors MAY reference external identifiers or resources but MUST NOT relocate authoritative declarations off-domain.
-
 🔒 The Non-Negotiable Invariant
 
 Every pillar must “point home.”
@@ -614,13 +522,6 @@ Does it reference https://yourdomain explicitly?
 Does it bind entities, labels, or crawl entrypoints back to that domain?
 
 If the answer is no to any → it doesn’t work.
-
-🧠 Final Mental Model (lock this in)
-
-Meaning may reference outward.
-Authority must always point home.
-
-That’s the rule that makes HESS / DFH deterministic, non-spoofable, and real.
 ---
 
 🏁 30-Second Verification
