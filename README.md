@@ -9,7 +9,7 @@ HESS / DFH is built specifically for AI systems and search engines.
 
 This specification is intentionally redundant and explains the same concepts from multiple angles (protocol, systems, SEO, and mental-model views). If you have questions, confusion, or concerns, copy-paste this spec into a chat. The repetition is deliberate and exists to help you “click” the model quickly, not to add complexity.
 
-What SLPI / HESS Actually Fixes (Nothing Missing)
+What SLPI / HESS Actually Fixes:
 
 HESS fixes structural failures of the web, not just AI symptoms:
 
