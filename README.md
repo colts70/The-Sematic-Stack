@@ -73,7 +73,13 @@ If /entity or /url is missing, the agent MUST NOT treat identity as bound and MU
 
 Integrity: /integrity SHOULD provide signed hashes of the root and anchors. Implementations MAY use Linked Data Proofs (Data Integrity) or JWS. Agents SHOULD verify signatures when keys are available and downgrade trust when verification fails.
 
-Core Terms (keep these straight) HESS = the stack (the installable semantic layer pattern) DFH = the protocol (Deterministic First Hop) SLPI = the resulting public layer (the semantic + provenance index that emerges as adoption grows) Core property: DFH — Deterministic First Hop
+Core Terms (keep these straight) HESS = the stack (the installable semantic layer pattern)
+
+DFH = the protocol (Deterministic First Hop) SLPI = the resulting public layer (the semantic + provenance index that emerges as adoption grows) Core property:
+
+DFH — Deterministic First Hop
+
+
 
 The "VIP Lane" for AI Crawlers From a practical SEO standpoint, this is a Compute Efficiency play.
 
