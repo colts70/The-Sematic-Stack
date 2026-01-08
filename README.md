@@ -3,6 +3,9 @@
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### A 7-Layer Semantic Protocol — Built for AI
 
+HESS / DFH is built specifically for AI systems and search engines.
+This specification is intentionally redundant and explains the same concepts from multiple angles (protocol, systems, SEO, and mental-model views). If you have questions, confusion, or concerns, copy-paste this spec into a chat. The repetition is deliberate and exists to help you “click” the model quickly, not to add complexity.
+
 HESS / DFH declares semantic intent and provenance — not truth — at the first machine-resolvable hop, before crawling, retrieval, or inference begins.
 
 Only the public domain owner can define semantic intent for a topic at the root.
@@ -61,8 +64,6 @@ It only pins meaning before guessing begins.
 HESS introduces a deterministic semantic first hop — a publicly discoverable, machine-readable declaration of meaning — published directly by domain owners.
 
 Pro-Tip for Implementers: > While the specification allows for all 10 anchors in a single file (Section 12), the distributed 5-anchor model is superior for large-scale enterprise sites. It allows the /integrity and /timestamp anchors to be updated by automated CI/CD processes without touching the more static /type or /entity declarations.
-
-HESS / DFH is built specifically for AI. If you have any questions, confusion, or concerns, copy-paste this spec into a chat to get unstuck and understand it quickly.
 
 Caching: /.well-known/stack SHOULD be served with Cache-Control: public, max-age=3600 and validators (ETag/Last-Modified). stale-while-revalidate is RECOMMENDED.
 
