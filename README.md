@@ -33,7 +33,7 @@ The "legitimacy" of this system stems from its placement in the network stack. B
 
 Without HESS: An AI crawler enters a domain, scrapes 5,000 pages, generates embeddings, and guesses that the site is about "Artisanal Beer" with 85% confidence.
 
-With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about "Artisanal Beer" with 100% certainty because the owner declared it at the root.
+With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about "Artisanal Beer" with much higher certainty because the owner declared it at the root.
 
 HESS / DFH does not assert truth. It asserts semantic intent and provenance at the earliest possible machine-resolvable point.
 
