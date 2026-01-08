@@ -29,8 +29,7 @@ HESS does not replace current AI techniques like RAG (Retrieval-Augmented Genera
 
 HESS is a proposed, open, domain-owned Semantic Layer Public Index (SLPI) designed to solve a core AI systems problem: lack of grounding.
 
-The "legitimacy" of this system stems from its placement in the network stack. By utilizing the https://yourdomain.com/.well-known/stack  —a standard reserved for site-wide metadata (like security.txt or Let's Encrypt challenges)—it creates a "Semantic ID Card" that machines read before they begin the expensive process of crawling and reasoning.
-
+The legitimacy of this system stems from its placement in the network stack. By using the /.well-known/ directory—a standard reserved for site-wide metadata—and publishing a stack descriptor at /.well-known/stack, it creates a “Semantic ID Card” that machines read before crawling or inference begins.
 Without HESS: An AI crawler enters a domain, scrapes 5,000 pages, generates embeddings, and guesses that the site is about with 80% confidence.
 
 With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about with much higher certainty because the owner declared it at the root.
