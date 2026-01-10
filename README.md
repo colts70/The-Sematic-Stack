@@ -22,6 +22,8 @@ HESS / DFH lets a domain owner declare what a topic is at the root, before AI or
 
 Whoever does this first becomes the semantic starting point everyone else is compared against.
 
+“HESS defines the claim surface, not the winner.”
+
 🚀 Why exacty does this matter to you?
 
 Why do You Need HESS / DFH ?
