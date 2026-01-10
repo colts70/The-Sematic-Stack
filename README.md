@@ -19,7 +19,7 @@ Result: The first mover defines the "truth" that others must then argue against.
 
 ## ⚠️ First-Mover Risk (HESS / DFH)
 
-Again if a competitor adopts **HESS / DFH** first, they will lock in **topic-level authority at the root**.
+If you don’t act first, a competitor can adopt HESS / DFH and lock in topic-level authority at the root.
 
 This is a topic-ownership primitive loss.
 
