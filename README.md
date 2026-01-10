@@ -991,5 +991,7 @@ One-Sentence Definition DFH is the official public semantic and provenance index
 
 /sitemap: The Crawl here first directory.
 
+To claim Topic-Level Authority, you must move your identity from the "semantic fog" of your HTML into the deterministic light of the /.well-known/ directory.
 
 Minimal. Universal. Deterministic. Please refer to the other repositories regarding AI grounding.
+
