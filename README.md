@@ -4,6 +4,36 @@
 #### A 7-Layer Semantic Protocol — Built for AI
 Status: Draft v3.0 — Conceptually stable
 
+🚀 Why exacty does this matter to you?
+
+Why do You Need HESS / DFH ?
+
+What’s in It for You?
+
+This is a topic-ownership primitive.
+
+
+If a competitor adopts HESS / DFH first, they lock in topic-level authority at the root. Search engines and AI systems treat their domain as the canonical source for that topic — the place meaning officially begins.
+
+Once that happens:
+
+They become the default answer for AI and search
+
+Demand is siphoned upstream before users ever reach you
+
+Your content is evaluated relative to them, not independently
+
+You are pushed into permanent catch-up mode
+
+You spend more on SEO, content, and ads trying to recover traffic that does not come back
+
+This is not a ranking loss you can optimize around.
+
+It is an authority loss at the first semantic hop.
+
+By the time you react, the starting position is already taken.
+
+
 ## 🔒 Core Semantics (Frozen)
 
 > **Clarifications only unless versioned.**
@@ -12,10 +42,27 @@ Status: Draft v3.0 — Conceptually stable
 
 ## 🌐 Root Descriptor
 
-https://yourdomain.com/.well-known/stack   Your websitye Domain becomes the root athority, the root website needs to be of the same topic as the 5 anchors / pilliars.
+## 🧩 Root Authority & Topic Alignment
 
+https://yourdomain.com/.well-known/stack
 
+Core Rule
 
+Your website domain is the ROOT AUTHORITY for the topic.
+
+The root website MUST be about the same topic as its five semantic anchors (pillars).
+
+Mandatory Requirements (Normative)
+The root domain MUST publish the authoritative stack at:
+https://yourdomain.com/.well-known/stack
+
+The root domain MUST be the primary website for the topic.
+
+The five anchors/pillars MUST match the root topic exactly.
+(Same topic, same entity scope — no unrelated subjects.)
+
+The anchors/pillars MUST NOT define a different topic than the root.
+They exist only to bind, ground, and reinforce the root authority.
 ---
 
 ## 🧱 The 5 Mandatory Anchors
@@ -35,15 +82,8 @@ topic sitemap = where crawling may begin
 
 HESS / DFH is built specifically for AI systems and search engines.
 
-🚀 Why exacty does this matter to you?
-
-Why do You Need HESS / DFH ?
-
-What’s in It for You?
 
 ## SEO Advantages (Why This Changes the Game)
-
-This is a topic-ownership primitive.
 
 Traditional SEO works **after discovery**.  
 Search engines crawl pages, guess what they mean, compare signals, and *then* decide where you rank.
@@ -142,25 +182,6 @@ You either own the first hop — or you don’t.
 
 **SEO has always been about telling search engines what your pages mean.  
 HESS / DFH lets you tell them what your *domain* means — before guessing starts.**
-
-If a competitor adopts HESS / DFH first, they lock in topic-level authority at the root. Search engines and AI systems treat their domain as the canonical source for that topic — the place meaning officially begins.
-
-Once that happens:
-
-They become the default answer for AI and search
-
-Demand is siphoned upstream before users ever reach you
-
-Your content is evaluated relative to them, not independently
-
-You are pushed into permanent catch-up mode
-
-You spend more on SEO, content, and ads trying to recover traffic that does not come back
-
-This is not a ranking loss you can optimize around.
-It is an authority loss at the first semantic hop.
-
-By the time you react, the starting position is already taken.
 
 
 This specification is intentionally redundant and explains the same concepts from multiple angles (protocol, systems, SEO, and mental-model views). If you have questions, confusion, or concerns, copy-paste this spec into an AI chat and ask away. The repetition is deliberate and exists to help you “click” the model quickly, not to add complexity.
