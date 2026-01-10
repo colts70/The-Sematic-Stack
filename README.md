@@ -7,6 +7,8 @@ Status: Draft v3.0 — Conceptually stable
 
 This specification is intentionally redundant it explains as the first-hop SEO + protocol + AI grounding + web architecture + provenance + crawl geometry + safety + future adoption + implementation details all from different angles.
 
+“If this sounds too strong, paste it into an AI and ask whether the logic holds.”
+
 HESS / DFH lets a domain owner declare what a topic is at the root, before AI or search engines guess.
 Whoever does this first becomes the semantic starting point everyone else is compared against.
 
