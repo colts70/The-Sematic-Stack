@@ -4,6 +4,9 @@
 #### A 7-Layer Semantic Protocol — Built for AI
 Status: Draft v3.0 — Conceptually stable
 
+HESS / DFH lets a domain owner declare what a topic is at the root, before AI or search engines guess.
+Whoever does this first becomes the semantic starting point everyone else is compared against.
+
 🚀 Why exacty does this matter to you?
 
 Why do You Need HESS / DFH ?
