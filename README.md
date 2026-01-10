@@ -17,6 +17,7 @@ This specification is intentionally redundant it explains as the first-hop SEO +
 “If this sounds too strong, paste it into an AI and ask whether the logic holds.”
 
 HESS / DFH lets a domain owner declare what a topic is at the root, before AI or search engines guess.
+
 Whoever does this first becomes the semantic starting point everyone else is compared against.
 
 🚀 Why exacty does this matter to you?
@@ -60,9 +61,6 @@ Once the root position is claimed, the starting position is gone.
 ### One-Line Lock
 
 > **HESS / DFH is not about ranking higher — it decides who gets to start first.**
-
-## 🔒 Core Semantics
-
 
 ## 🧩 Root Authority & Topic Alignment
 
@@ -203,6 +201,7 @@ You either own the first hop — or you don’t.
 ### One-Line SEO Summary
 
 **SEO has always been about telling search engines what your pages mean.  
+
 HESS / DFH lets you tell them what your *domain* means — before guessing starts.**
 
 
@@ -212,7 +211,9 @@ What SLPI / HESS Actually Fixes:
 
 HESS fixes structural failures of the web, not just AI symptoms:
 
-HESS/DFH collapses many long-standing problems at the same architectural choke point. Most proposals fix one symptom downstream. This fixes the decision point where everything downstream is forced to guess.
+HESS/DFH collapses many long-standing problems at the same architectural choke point. Most proposals fix one symptom downstream.
+
+This fixes the decision point where everything downstream is forced to guess.
 
 Meaning had no address → Meaning now lives at a stable, public, machine-readable root
 
@@ -239,7 +240,9 @@ AI hallucination pressure → Grounding becomes structural, not inferential
 The web’s missing “what” layer → Completes the original web architecture
 
 This is not an AI patch.
+
 Its a structural upgrade to the internet's discovery layer.
+
 It is a missing internet layer.
 
 HESS / DFH declares semantic intent and provenance — not truth — at the first machine-resolvable hop, before crawling, retrieval, or inference begins.
@@ -277,7 +280,7 @@ HESS / DFH does not assert truth. It asserts semantic intent and provenance at t
 
 By moving the "meaning" of a website from the probabilistic layer (where an AI has to guess what you are based on your content) to a deterministic layer (where you tell the AI what you are via a .well-known file), HESS effectively creates a "Fast Pass" for LLM crawlers.
 
-🔒 Final Mental Model (Read This Once)
+🔒 Final Mental Model 
 
 It addresses the "garbage in, garbage out" problem of LLM indexing by moving the point of resolution from the model's inference to the domain owner's declaration.
 
