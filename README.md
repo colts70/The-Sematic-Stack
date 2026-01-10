@@ -197,6 +197,8 @@ What SLPI / HESS Actually Fixes:
 
 HESS fixes structural failures of the web, not just AI symptoms:
 
+HESS/DFH collapses many long-standing problems at the same architectural choke point. Most proposals fix one symptom downstream. This fixes the decision point where everything downstream is forced to guess.
+
 Meaning had no address → Meaning now lives at a stable, public, machine-readable root
 
 Authority was inferred from popularity → Authorship replaces ranking as the starting signal
