@@ -12,6 +12,8 @@ HESS / DFH is built specifically for AI systems and search engines.
 
 What’s in It for You: 
 
+This is a topic-ownership primitive.
+
 ## SEO Advantages (Why This Changes the Game)
 
 Traditional SEO works **after discovery**.  
