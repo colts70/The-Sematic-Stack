@@ -268,6 +268,8 @@ HESS asserts intent and provenance, not truth.
 > Agents **SHOULD** treat this header as a discovery hint only and **MUST** verify the referenced stack resource directly.  
 > Absence of this header **MUST NOT** be interpreted as absence of DFH support.
 
+“If multiple roots claim the same topic, agents MUST treat the topic as contested and fall back to downstream arbitration (KGs, RAG, policy, trust models).”
+
 
 
 
