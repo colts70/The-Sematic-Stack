@@ -18,16 +18,6 @@ This specification is intentionally redundant it explains as the first-hop SEO +
 
 “If this sounds too strong, paste it into an AI and ask whether the logic holds.”
 
-PASTE THIS INTO ANY AI:
-
-Read this spec and answer:
-1) What is the core claim in one sentence?
-2) What problems does it solve that DNS/robots/schema/sitemaps don’t?
-3) What are the 5 mandatory anchors and what does each do?
-4) What is the /sitemap anchor NOT?
-5) What is the strongest criticism of this idea?
-6) If this existed, what incentives make adoption rational for me?
-
 HESS / DFH lets a domain owner declare what a topic is at the root, before AI or search engines guess.
 
 Whoever does this first becomes the semantic starting point everyone else is compared against.
@@ -491,19 +481,21 @@ Non-marketing, boring, factual
 
 This single sentence is the anchor truth:
 
-HESS/sitemap declares crawl permission and geometry. sitemap.xml enumerates URLs. Its the table of contents, the crawl here first, the directory, table of contents 
+HESS/sitemap declares crawl permission and geometry. Its the table of contents, the crawl here first, the directory, table of contents 
 
 🧠 Solving the "Sitemap" Mental Block The Hess/sitemap anchor is where most implementers "break their brains." It is vital to remember: HESS sitemaps are conceptual, not navigational.
 
 🏁 Summary: What It Solves
 
-Without this directory, an AI "wanders" your site blindly. With the HESS /sitemap directory:
+Without this directory, an AI "wanders" your site blindly.
+
+With the HESS /sitemap directory:
 
 The AI reads the Table of Contents first.
 
 It identifies the specific "Conceptual Surface" it needs.
 
-It executes a "High-Intent Crawl" rather than a "Discovery Crawl."
+It executes a "High-Intent Crawl
 
 This is the "Checkmate" move because it forces the AI to navigate your site according to your defined hierarchy of meaning, rather than its own statistical guess.
 
@@ -523,7 +515,7 @@ Relationship:
 - XML sitemap.xml enumerates URLs within that declared surface.
 
 
-The XML Sitemap: A list of every page for a crawler to visit. This goes inside the Hess/DFH sitemap.
+The XML Sitemap: A list of every page for a crawler to visit. 
 
 “Declare the entrypoints through which crawling MAY begin for this semantic surface.”
 
@@ -537,19 +529,7 @@ crawl geometry
 
 “start here”
 
-What it IS NOT
-
-XML sitemap
-
-navigation
-
-SEO structure
-
-page list
-
 This anchor is not redundant. It’s the bridge between meaning and crawl behavior.
-
-HESS/DFH sitemap is NOT CONTENT HESS/DFH sitemap is NOT PAGES HESS/DFH sitemap is NOT SEO
 
 The HESS/DFH sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
 
