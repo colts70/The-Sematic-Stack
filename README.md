@@ -3,7 +3,14 @@
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### A 7-Layer Semantic Protocol — Built for AI
 
-Status: Draft v3.0 — Conceptually stable
+
+Status: Draft v3.0 — Conceptually Stable
+
+## ♟️ HESS: Checkmate at the First Semantic Hop
+
+“If DNS tells machines where to go, HESS / DFH tells machines what it means when they get there — before inference begins.”
+
+**HESS is the checkmate move in SEO and AI grounding:** once the first semantic hop is **deterministically owned and implemented**, every downstream system is forced into **arbitration instead of guesswork**.
 
 This specification is intentionally redundant it explains as the first-hop SEO + protocol + AI grounding + web architecture + provenance + crawl geometry + safety + future adoption + implementation details all from different angles.
 
