@@ -22,7 +22,7 @@ PASTE THIS INTO ANY AI:
 
 Read this spec and answer:
 1) What is the core claim in one sentence?
-2) What problemS does it solve that DNS/robots/schema/sitemaps don’t?
+2) What problems does it solve that DNS/robots/schema/sitemaps don’t?
 3) What are the 5 mandatory anchors and what does each do?
 4) What is the /sitemap anchor NOT?
 5) What is the strongest criticism of this idea?
