@@ -481,11 +481,39 @@ Non-marketing, boring, factual
 
 This single sentence is the anchor truth:
 
-HESS/sitemap declares crawl permission and geometry. sitemap.xml enumerates URLs.
+HESS/sitemap declares crawl permission and geometry. sitemap.xml enumerates URLs. Its the table of contents, the crawl here first, the directory, table of contents 
 
 🧠 Solving the "Sitemap" Mental Block The Hess/sitemap anchor is where most implementers "break their brains." It is vital to remember: HESS sitemaps are conceptual, not navigational.
 
-XML Sitemap: A list of every page for a crawler to visit.
+🏁 Summary: What It Solves
+
+Without this directory, an AI "wanders" your site blindly. With the HESS /sitemap directory:
+
+The AI reads the Table of Contents first.
+
+It identifies the specific "Conceptual Surface" it needs.
+
+It executes a "High-Intent Crawl" rather than a "Discovery Crawl."
+
+This is the "Checkmate" move because it forces the AI to navigate your site according to your defined hierarchy of meaning, rather than its own statistical guess.
+
+✅ XML sitemap
+- A complete list of URLs a crawler may visit.
+- Enumerates pages.
+- Used after crawl permission and scope are understood.
+
+✅ HESS /sitemap (DFH anchor)
+- A semantic crawl declaration.
+- Declares *where crawling MAY begin*.
+- References XML sitemaps or conceptual entrypoints.
+- MUST NOT embed URL lists.
+
+Relationship:
+- HESS /sitemap defines crawl intent and geometry.
+- XML sitemap.xml enumerates URLs within that declared surface.
+
+
+The XML Sitemap: A list of every page for a crawler to visit. This goes inside the Hess/DFH sitemap.
 
 “Declare the entrypoints through which crawling MAY begin for this semantic surface.”
 
@@ -511,11 +539,11 @@ page list
 
 This anchor is not redundant. It’s the bridge between meaning and crawl behavior.
 
-/sitemap is NOT CONTENT /sitemap is NOT PAGES /sitemap is NOT SEO
+HESS/DFH sitemap is NOT CONTENT HESS/DFH sitemap is NOT PAGES HESS/DFH sitemap is NOT SEO
 
-The /sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
+The HESS/DFH sitemap anchor MUST declare crawl entrypoints and MUST NOT embed URL lists.
 
-/sitemap = declared crawl geometry
+HESS/DFH sitemap = declared crawl geometry
 
 ⚡ 30-Second Implementation Checklist Create Directory: Ensure /.well-known/ exists on your server.
 
