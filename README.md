@@ -34,7 +34,7 @@ This specification is intentionally redundant, as average people struggle to und
 
 ~4 restatements of DNS analogy
 
-“If this sounds too strong, or confusing just copyand paste it into an AI and ask whether the logic holds.”
+“If this sounds too strong, or confusing just copy and paste it into an AI and ask whether the logic holds.”
 
 HESS / DFH lets the root-domain website owner declare the site’s topic upfront — before AI systems or search engines have to guess.
 
