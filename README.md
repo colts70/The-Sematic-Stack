@@ -28,6 +28,8 @@ Establishes the default semantic starting point unless contested or overridden b
 
 The "Checkmate" is Real
 
+If an agent looks for a first-hop semantic declaration, and your competitor has one and you don’t, the agent gets a cleaner answer from them.
+
 In SEO, whoever defines the entity usually wins. If your domain becomes the "Primary Source" for a topic via a deterministic HESS root, every other site on that topic becomes "Secondary." They are essentially writing "comments" on a topic that you defined at the root.
 
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
