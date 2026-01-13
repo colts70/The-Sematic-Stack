@@ -350,6 +350,10 @@ HESS asserts intent and provenance, not truth.
 
 HESS does not replace current AI techniques like RAG (Retrieval-Augmented Generation); it grounds them. Without HESS, AI enters a domain in a "semantic fog." With HESS, the AI has a clear, domain-owner-authorized map of intent.
 
+All grounding systems today operate after ingestion, not before identity resolution.
+
+RAG, embeddings, KGs, safety layers — they all assume the system already knows what it’s looking at. That assumption is often wrong, and hallucination starts there.
+
 HESS is a proposed, open, domain-owned Semantic Layer Public Index (SLPI) designed to solve a core AI systems problem: lack of grounding.
 
 The legitimacy of this system stems from its placement in the network stack. By using the /.well-known/ directory—a standard reserved for site-wide metadata—and publishing a stack descriptor at /.well-known/stack, it creates a “Semantic ID Card” that machines read before crawling or inference begins.
