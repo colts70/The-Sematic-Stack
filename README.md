@@ -26,8 +26,6 @@ Establishes the default semantic starting point unless contested or overridden b
 
 **HESS is the checkmate move in SEO and AI grounding:** once the first semantic hop is **deterministically owned and implemented**, every downstream system is forced into **arbitration instead of guesswork**.
 
-The "Checkmate" is Real
-
 If an agent looks for a first-hop semantic declaration, and your competitor has one and you don’t, the agent gets a cleaner answer from them.
 
 In SEO, whoever defines the entity usually wins. If your domain becomes the "Primary Source" for a topic via a deterministic HESS root, every other site on that topic becomes "Secondary." They are essentially writing "comments" on a topic that you defined at the root.
@@ -35,14 +33,6 @@ In SEO, whoever defines the entity usually wins. If your domain becomes the "Pri
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
 
 This specification is intentionally redundant, as average people struggle to understand this. It explains as the first-hop SEO + protocol + AI grounding + web architecture + provenance + crawl geometry + safety + future adoption + implementation details all from different angles.
-
-~7 different explanations of “first hop”
-
-~6 explanations of /sitemap
-
-~5 explanations of “not truth”
-
-~4 restatements of DNS analogy
 
 “If this sounds too strong, or confusing just copy and paste it into an AI and ask whether the logic holds.”
 
@@ -60,40 +50,14 @@ The root domain is the only authoritative semantic root.
 
 You’re not claiming correctness — you’re claiming authorship of intent.
 
-## 🚀 What’s in It for You?
-### Because Whoever Claims the First Semantic Hop Gets to Define the Starting Line
 
-## 🚀 Why This Actually Matters
-### The Risk Isn’t Falling Behind — It’s Someone Else Starting First
-
-## 🚀 What Happens If Your Competition Implements HESS / DFH?
-### You Don’t Lose Rankings. You Lose the Starting Position.
-
-## 🚀 The Real Risk
-### Once a Competitor Claims the Semantic Root, You’re Forever Downstream
-
-## 🚀 This Isn’t Optional SEO
-### It’s a One-Time Decision About Who Gets to Declare Meaning First
-
-## 🚀 Why You Can’t “Catch Up” Later
-### Authority Claimed at the First Hop Becomes the Frame Everyone Else Is Judged Against
-
-## 🚀 The Uncomfortable Truth
-### If Your Competitor Implements HESS / DFH First, You Don’t Compete — You Respond
-
-## 🚀 What You’re Actually Buying
-### Not Rankings. Not Traffic. The Right to Start First.
-
-## 🚀 One-Line Reality Check
-### HESS / DFH Doesn’t Decide Who’s Right — It Decides Who Goes First.
-
-HESS transforms SEO from a marketing tactic into digital real estate ownership. You aren't just "optimizing content"; you are registering the semantic deed to your niche.
+HESS transforms SEO from a marketing tactic into digital real estate ownership. You aren't just "optimizing content"; you are registering the semantic deed to your TOPIC.
 
 "Land Grab" for the web’s conceptual real estate.
 
 If a competitor claims the Semantic Root for "Best Espresso Machines," any content you produce later is merely an "opinion" relative to their "definition."
 
-By implementing this, you aren't just improving your SEO—you are becoming a Primary Source in a world where AI agents are the new gatekeepers.
+By implementing this, you aren't just improving your SEO—you are becoming a Primary Root Source in a world where AI agents are the new gatekeepers.
 
 Whoever does this first becomes the semantic starting point everyone else is compared against.
 
