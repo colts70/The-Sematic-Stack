@@ -1243,3 +1243,32 @@ So identity acceptance is binary, but system operation continues.
 5) Provenance vs Truth (Satire edge case)
 
 HESS should separate authority-of-voice from truth-of-claims. A site declaring itself “Primary Technical Source” is an intent claim that must be weighed against /authority + /integrity, and agents should also ingest a content-intent classification (e.g., satire, opinion, documentation, news, fiction) as a first-hop constraint. If a satirical site self-labels as technical, it won’t gain trust unless it can supply verifiable authority attestations—and even then, agents should treat the label as provenance metadata, not factual validation. The model can say: “This source asserts X,” while keeping truth evaluation downstream via cross-source corroboration and integrity-weighted arbitration.
+
+
+1) Collision & Semantic Squatting
+
+How does an agent choose when two domains claim the same /entity?
+A HESS root claim is not ownership by declaration; it is an intent assertion that becomes eligible only when backed by verifiable signals. In collisions, agents MUST evaluate a deterministic signal set rather than “pick a winner” arbitrarily. The recommended rule is: integrity is a hard gate, authority is weighted, timestamp is a tie-breaker. Concretely: (1) reject roots that cannot pass /integrity verification and continuity checks; (2) weight /authority attestations (third-party verifiable credentials, institutional proofs, or endorsements from already-trusted roots); (3) use /timestamp (earliest verifiable first-publication of that specific entity claim) as a tie-breaker among otherwise comparable candidates; (4) if scores remain close, treat both as parallel primaries and fall back to downstream arbitration rather than enforcing a false singular “truth.”
+
+Does the protocol require an external Entity URI for uniqueness?
+It SHOULD. To prevent generic squatting and enforce granularity, /entity SHOULD be expressed as a globally unique URI when available (e.g., Wikidata, Schema.org URI, or another stable registry), plus an explicit /type and scope. If no external URI exists, the publisher MAY mint a domain-scoped URI, but agents SHOULD down-weight claims on broad common nouns unless typed and scoped (e.g., “Coffee” is ambiguous; Coffee (Topic) or a stable URI + type is eligible). This makes “land-grabbing” generic nouns non-advantageous because unscoped claims carry low authority by default.
+
+2) Semantic Drift and Pivots
+
+How does HESS handle a domain that radically pivots?
+HESS should treat “identity” as versioned state, not a mutable label. The stack SHOULD include a Semantic Version / Sequence Number and lifecycle states (e.g., active, deprecated, migrated, retired). A pivot is communicated via a Migration signal (e.g., /migrate) pointing to the successor identity, accompanied by continuity proof (signature chaining old → new). If an agent detects a radical change in /type or /entity without a version bump and continuity proof, it SHOULD treat the stack as suspect, suspend the VIP-lane trust, trigger a deep re-crawl / re-validation, and degrade until trust is re-established. This prevents models trained on prior semantics from grounding on silently overwritten identities.
+
+3) Scaling for Massive Domains
+
+Can HESS scale to Amazon/NYTimes-sized sites?
+Yes—by supporting Nested Stacks. The root /.well-known/stack should remain minimal (publisher identity + delegation map) and point to sub-stacks for conceptual surfaces (e.g., /technology/stack, /health/stack, /product/stack, etc.). Agents resolve semantics hierarchically: domain root → surface stack → entity anchors. This allows millions of entities to be expressed without bloating a single file and avoids turning HESS into its own compute tax.
+
+4) Machine Compliance: Fail-Open vs Fail-Closed
+
+What if JSON-LD is malformed or anchors are insecure (HTTP)?
+Identity must be fail-closed for trust and fail-open for availability. If the manifest fails schema validation, signature verification, or requires insecure transport, an agent MUST NOT accept any HESS identity claims (fail-closed). However, the agent SHOULD continue operation by reverting to probabilistic discovery / normal crawling (fail-open) and MAY record the source as “low integrity.” In other words: do not partially accept identity; either the declaration is valid and verified, or it is ignored and the system degrades.
+
+5) Provenance vs Intent-Fraud
+
+How do agents acknowledge intent without validating truth (or letting intent become fraud)?
+HESS must explicitly separate Semantic Classification (what a publisher claims) from Truth / Reliability Arbitration (what the agent concludes). The stack declares intent via /type and related anchors, but the agent computes a separate reliability label during ingestion based on integrity verification, authority attestations, cross-source corroboration, and observed behavior over time. Agents should be able to say, in a standardized way: “Publisher asserts intent X; agent arbitration classifies this source as Y for reliability.” This prevents a propaganda site from “becoming academic” by self-labeling, because intent claims are treated as metadata, while reliability is derived from verifiable signals and downstream arbitration.
