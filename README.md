@@ -1293,3 +1293,33 @@ Identity acceptance must be fail-closed, while site operation remains fail-open.
 5) Intent-Fraud vs Truth Verification and Third-Party Authority
 
 HESS explicitly separates Semantic Classification (what a publisher claims) from Reliability Arbitration (what agents conclude). A misinformation site may self-label as “Scientific Research,” but that label is treated as metadata unless supported by verifiable /authority attestations and integrity continuity. The /authority anchor SHOULD support linking to third-party Verification Nodes (e.g., verifiable credentials or signed attestations from professional bodies, governments, registries, or other trusted roots), allowing agents to say: “Publisher asserts intent X; arbitration classifies reliability as Y.” This prevents “first-mover advantage” for bad actors because intent does not grant trust—trust is earned through cryptographic integrity, continuity, and external authority signals evaluated deterministically.
+
+
+From Conceptually Stable to Installable
+
+The audit correctly identifies the remaining friction points as operational, not conceptual. HESS / DFH already resolves semantic ambiguity at the correct layer; what remains is formalizing arbitration, scaling, and caching so the protocol can be safely automated at internet scale.
+
+Conflict Arbitration (Deterministic Tie-Breaker)
+
+When multiple domains claim the same semantic root, HESS treats claims as eligible candidates, not ownership by declaration. Agents MUST apply deterministic arbitration in a fixed order:
+
+Integrity Gate — a valid, continuity-preserving /integrity signature is required for eligibility.
+
+Authority Weighting — third-party attestations and recognized institutional proofs referenced via /authority are weighted.
+
+Timestamp Tie-Breaker — the earliest verifiable /timestamp for the same typed entity breaks ties.
+If candidates remain near-equal, agents SHOULD retain parallel primaries and defer to downstream arbitration rather than inventing a false singular truth.
+
+Semantic Squatting & Enterprise Scale
+
+To prevent monopolization of generic terms, /entity SHOULD be a typed, scoped identifier (preferably a stable external URI when available). Unscoped common nouns are treated as low-authority by default unless backed by exceptional authority signals. For large enterprises, HESS supports Multi-Entity Expansion via Nested Stacks: a minimal root stack identifies the publisher and delegates to surface-specific stacks (e.g., /products/stack, /news/stack), avoiding both semantic squatting and single-entity overload.
+
+Compute Caching & First-Hop Performance
+
+To function as “DNS for meaning,” /.well-known/stack is intentionally small and aggressively cacheable. Static anchors SHOULD be served with Cache-Control: public, max-age=31536000, immutable, while integrity-bearing fields rely on signature continuity rather than frequent revalidation. This enables near-zero marginal cost for repeated ingestion while preserving safety: any signature break or authority change forces immediate trust degradation.
+
+Ordered Deterministic Pipeline
+
+Agents MUST resolve anchors in a strict order (type → entity → integrity/authority → sitemap) and MUST NOT fall back to probabilistic inference unless verification fails. If verification fails, agents fail-closed on identity and fail-open on availability, reverting to legacy crawling without granting semantic authority.
+
+Net result: the protocol remains cache-friendly, squatting-resistant, enterprise-scalable, and economically aligned. HESS does not replace truth arbitration—it moves ambiguity out of the crawl and into explicit, inspectable signals, where machines can reason deterministically instead of guessing.
