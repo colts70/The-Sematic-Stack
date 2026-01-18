@@ -847,6 +847,20 @@ The web has DNS for location. HESS/DFH adds a first hop for meaning.
 
 /sitemap “What is the crawl surface?” entrypoints the table of contents, the directory.
 
+{
+  "@context": { "dfh": "https://example.org/ns/dfh#" },
+  "@id": "https://yourdomain.com/.well-known/stack",
+  "@type": "dfh:DeterministicSemanticRoot",
+  "dfh:anchors": {
+    "dfh:type": "https://yourdomain.com/type/index.jsonld",
+    "dfh:entity": "https://yourdomain.com/entity/index.jsonld",
+    "dfh:url": "https://yourdomain.com/url/index.jsonld",
+    "dfh:canonical": "https://yourdomain.com/canonical/index.jsonld",
+    "dfh:sitemap": "https://yourdomain.com/sitemap/index.jsonld"
+  }
+}
+
+
 Rule: These are meaning anchors (intent + identity), not “truth”.
 
 Downstream systems arbitrate truth and safety.
