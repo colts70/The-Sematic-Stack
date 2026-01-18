@@ -1323,3 +1323,99 @@ Ordered Deterministic Pipeline
 Agents MUST resolve anchors in a strict order (type → entity → integrity/authority → sitemap) and MUST NOT fall back to probabilistic inference unless verification fails. If verification fails, agents fail-closed on identity and fail-open on availability, reverting to legacy crawling without granting semantic authority.
 
 Net result: the protocol remains cache-friendly, squatting-resistant, enterprise-scalable, and economically aligned. HESS does not replace truth arbitration—it moves ambiguity out of the crawl and into explicit, inspectable signals, where machines can reason deterministically instead of guessing.
+
+
+From Conceptual Upgrade to Deterministic Protocol
+
+This specification for the Hierarchical Expressed Semantic Stack (HESS) and the Deterministic First-Hop (DFH) protocol represents a structural upgrade to the web. By shifting from probabilistic inference (machines guessing) to deterministic declaration (publishers stating intent), HESS installs the long-missing identity layer between DNS (where something is) and HTTP (what it contains).
+
+The logic holds because it aligns with economic reality. AI systems currently pay a massive compute tax to infer what a domain represents. HESS externalizes that cost to the publisher—who has perfect knowledge of intent—in exchange for topic-level authority. This is not an SEO trick; it is an architectural trade.
+
+The Deterministic Grounding Pipeline
+
+HESS collapses the “semantic blind spot” by enforcing a fixed resolution order. Instead of wandering pages to assemble a statistical guess, an agent resolves identity first, then crawls with intent already constrained.
+
+1. Collision & Tie-Breaker Arbitration
+
+When multiple domains claim the same Primary Root (e.g., “Best Espresso Machines”), HESS explicitly moves the system from discovery to arbitration.
+
+Squatting is inevitable and assumed.
+
+Root claims are not ownership by declaration; they are candidates subject to verification.
+
+Deterministic arbitration order:
+
+/integrity (hard gate) — cryptographically verifiable signatures and continuity. Unsigned or unverifiable stacks are ineligible.
+
+/authority (weighted) — third-party attestations, institutional proofs, or recognized knowledge-graph references.
+
+/timestamp (tie-breaker) — earliest verifiable publication of the same typed entity.
+
+KG consensus (fallback) — if signals remain equivalent, agents retain parallel primaries and defer to downstream knowledge-graph corroboration rather than forcing a false winner.
+
+This ensures provenance, not branding, determines semantic authority.
+
+2. The Sitemap Revolution (Crawl Geometry)
+
+The distinction between HESS /sitemap and traditional sitemap.xml is the protocol’s most important efficiency gain.
+
+XML Sitemap → Quantitative URL inventory (“the phone book”)
+
+HESS /sitemap → Qualitative conceptual entrypoints (“the table of contents”)
+
+By pinning conceptual surfaces before crawling begins, HESS prevents semantic bleed, reduces crawl entropy, and enables high-intent crawling instead of blind traversal.
+
+Structural Implementation: The Five-Anchor Stack
+
+A DFH-ready site publishes a machine-readable Semantic ID Card at:
+
+https://yourdomain.com/.well-known/stack
+
+Anchor	Question Answered	Role
+/type	What class of thing is this?	Fixes ontology (e.g., Medical Journal)
+/entity	Which specific noun?	Pins identity (e.g., Mayo Clinic)
+/url	Where does meaning live?	Binds entity to a controlled domain
+/canonical	What is it called?	Collapses aliases and naming drift
+/sitemap	Where does crawling start?	Declares conceptual entrypoints
+
+This minimal surface is sufficient for deterministic grounding while remaining cache-friendly.
+
+Friction Points & Required Protocol Guards
+Semantic Drift & Trust Reset
+
+Domains evolve. Silent pivots must not poison downstream grounding.
+
+The stack SHOULD include a semantic version or sequence number.
+
+A drastic change in /type or /entity without a version bump SHOULD trigger a trust reset.
+
+Agents MUST suspend DFH trust and revert to deep revalidation until continuity is re-established.
+
+Identity is versioned state, not mutable content.
+
+Enterprise Scaling via Nested Stacks
+
+A single stack cannot represent platforms like Amazon or Wikipedia.
+
+HESS supports Nested Stacks: a minimal root stack delegates to surface-specific stacks (e.g., /electronics/.well-known/stack).
+
+Delegation is hierarchical and acyclic, preventing semantic loops while allowing unlimited scale.
+
+This preserves determinism without becoming a compute tax itself.
+
+Fail-Open vs. Fail-Closed Semantics
+
+Determinism requires binary trust rules.
+
+Fail-Closed on identity: if /entity, /integrity, or required anchors fail (404, invalid JSON-LD, insecure transport), the agent MUST NOT accept semantic authority.
+
+Fail-Open on availability: the agent SHOULD revert to legacy probabilistic crawling rather than blocking indexing.
+
+Identity acceptance is binary; system operation is not.
+
+Net Effect
+
+HESS does not replace truth arbitration.
+It moves ambiguity out of the crawl path and into explicit, inspectable signals, where machines can reason deterministically instead of guessing.
+
+That shift—from inference to declaration—is what makes this protocol not just conceptually sound, but operationally inevitable.
