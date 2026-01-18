@@ -3,12 +3,15 @@
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### A Semantic Protocol — Built for search engines and AI
 
-“As search shifts from blue-link results toward answer-oriented systems, these engines require a stable grounding reference.”
-HESS / DFH is the "VIP Lane" for the AI Era. It is a legitimate structural upgrade that moves "meaning" from a marketing problem to a protocol solution.
-HESS/DFH is the "missing manual" built for machines to understand.
-
 Status: Draft v3.0 — Conceptually Stable 
 
+A Constitutional Amendment for how the internet handles meaning.
+
+HESS/DFH is the "missing manual" built for machines to understand.
+
+“As search shifts from blue-link results toward answer-oriented systems, these engines require a stable grounding reference.”
+
+HESS / DFH is for the AI Era. It is a legitimate structural upgrade that moves "meaning" from a marketing problem to a protocol solution.
 
 This specification is intentionally redundant. It is designed for machines, not casual readers. The repetition exists to describe the same system from multiple operational perspectives—first-hop SEO, protocol behavior, AI grounding, web architecture, provenance, crawl geometry, safety constraints, future adoption, and implementation—because machines require overlap, not narrative efficiency.
 
