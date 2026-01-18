@@ -1188,3 +1188,58 @@ If JSON-LD/schema is invalid or signature verification fails, the agent MUST NOT
 
 The agent SHOULD revert to degraded mode: ignore the broken stack and fall back to probabilistic crawling/arbitration (fail-open on availability).
 This avoids granting authority to malformed or compromised declarations while still allowing the web to function.
+1) Collision & Squatting
+
+Two domains claiming the same root: HESS treats root claims as eligible candidates, not automatic ownership. When two domains claim the same /entity, agents either (a) select a winner via deterministic scoring, or (b) maintain parallel primaries and fall back to arbitration rather than inventing a single “truth.”
+
+Generic land-grab (e.g., “Coffee”): The protocol should require typed, scoped identifiers for roots, not bare nouns. The cleanest mechanism is: /entity MUST include a globally unique Entity ID (preferred: a stable URI such as Wikidata/Schema.org/other registry; or a domain-defined URI if no registry exists) plus an explicit type and scope. Agents SHOULD down-rank or treat as non-authoritative any root that claims an unscoped common noun without a stable ID and type (i.e., “Coffee” by itself is not a valid monopoly claim; “Coffee (Topic)” or wd:Q... + type is). This forces granularity by making “generic squat claims” low-weight by default.
+
+Deterministic tie-breakers: Use a gated signal stack:
+
+/integrity (hard gate): cryptographically verifiable signature + continuity (signature chaining / consistent key history). Unsigned/unverifiable roots cannot win.
+
+/authority (weighted): third-party attestations, institutional verification, cross-root endorsements from already-trusted roots.
+
+Timestamp anchor (weighted): earliest verifiable first-publication of the root claim (not just “domain age”).
+
+Stability signals (weighted): identity continuity, low-churn manifests, consistent scope/type over time.
+If scores are close, keep parallel primaries and let downstream arbitration handle it.
+
+2) Security & Tamper-Resistance
+
+Signing standard for /integrity: Yes—mandate a baseline. The most practical baseline is JWS (or COSE) signing a canonical “root manifest” (fast, widely implemented, easy to validate). You can allow optional Linked Data Proofs for graph-native use cases, but interoperability improves massively if every agent can validate one required signature format.
+
+Verification latency / TTL: Treat identity like security policy: cacheable, but revalidated on a tight window. The stack SHOULD publish:
+
+Cache-Control + explicit Semantic TTL field (e.g., hours to 1 day), and
+
+an ETag (or content hash) for efficient revalidation.
+Agents SHOULD re-verify at TTL expiry and MUST immediately distrust if: signature fails, signing key changes without continuity proof, or /authority materially changes. If a site is hacked, the protocol’s TTL bounds the damage window, and continuity rules stop silent identity swaps from being accepted.
+
+3) Structural Scaling & Evolution
+
+Multi-topic domains: Yes—support Nested Stacks. The root stack identifies the publisher and delegates to sub-stacks for conceptual surfaces (sections, product taxonomies, knowledge bases). This prevents “one /entity to rule them all” and makes large portals machine-navigable without flattening meaning.
+
+Pivot protocol / semantic drift: Don’t overwrite identity silently. Add lifecycle + migration:
+
+root manifest supports active, deprecated, migrated, retired
+
+a /history (or version log) anchor records prior identities/scopes
+
+a /migrate anchor points to successor stacks and is continuity-signed (signature chaining old → new).
+Agents SHOULD depreciate deprecated identities over time and follow verifiable migration pointers. This communicates pivots explicitly and prevents models/agents from treating a new topic as the old identity.
+
+4) Machine Compliance & Compute Tax
+
+Payload constraints: Yes—keep the VIP lane small. /.well-known/stack SHOULD be ≤ 10KB (or another strict ceiling) and MUST be “pointer-heavy”: minimal manifest + links to larger documents. This preserves sub-millisecond parsing and prevents abuse.
+
+Fail-open vs fail-closed: Do both—depending on what you mean by “identity”:
+
+Fail-closed for trust: if malformed JSON-LD or signature invalid, the agent MUST NOT accept the identity claim.
+
+Fail-open for availability: the agent SHOULD revert to probabilistic discovery / normal crawling (degraded mode).
+So identity acceptance is binary, but system operation continues.
+
+5) Provenance vs Truth (Satire edge case)
+
+HESS should separate authority-of-voice from truth-of-claims. A site declaring itself “Primary Technical Source” is an intent claim that must be weighed against /authority + /integrity, and agents should also ingest a content-intent classification (e.g., satire, opinion, documentation, news, fiction) as a first-hop constraint. If a satirical site self-labels as technical, it won’t gain trust unless it can supply verifiable authority attestations—and even then, agents should treat the label as provenance metadata, not factual validation. The model can say: “This source asserts X,” while keeping truth evaluation downstream via cross-source corroboration and integrity-weighted arbitration.
