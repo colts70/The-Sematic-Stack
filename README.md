@@ -68,9 +68,11 @@ The root domain is the only authoritative semantic root.
 • Anchors MAY NOT define a broader or different topic.
 • Anchors exist only to bind and reinforce the root — never to replace it.
 
+Keep it simple:
+
 You buy 1 root domain (the real site).
 
-You buy 5 pillar domains (tiny “anchor” domains).
+You buy 5 pillars
 
 Each pillar domain hosts one tiny JSON file.
 
@@ -78,15 +80,23 @@ The root publishes one stack file that points to those five pillar files.
 
 That’s it.
 
-/type prevents class confusion (“what kind of thing is this?”)
+Example:
 
-/entity pins the actual noun/ID (“which thing exactly?”)
+The 5 Anchors of your topic say beer. You would purchase these 5 domains through the dns regeristry of your choice. They are hosted later as semantic anchors using one tiny JSON file. Each anchor must include your domain inside so it can link back to the root.
 
-/url binds the entity to the domain you control (“where does the official meaning live?”)
+“For a topic like ‘beer’, you would purchase five Anchor Domains through the DNS registry of your choice.”
 
-/canonical collapses naming drift + aliases (“what is it called, consistently?”)
+“Each anchor must explicitly include and bind back to the Root Domain, so agents can verify that all five anchors belong to the same topic owner.”
 
-/sitemap declares crawl geometry (“where should machines start, on purpose?”)
+beertype.com   prevents class confusion (“what kind of thing is this?”) include your root domain dont forget 
+
+beerentity.com   pins the actual noun/ID (“which thing exactly?”) include your root domain dont forget 
+
+beerurl.com   binds the entity to the domain you control (“where does the official meaning live?”) include your root domain dont forget 
+
+beercanonical.com   collapses naming drift + aliases (“what is it called, consistently?”) include your root domain dont forget 
+
+beersitemap.com   declares crawl geometry (“where should machines start, on purpose?”) include your root domain dont forget, and if you have a xm sitemap include it.
 
 Five anchors are the minimum set needed to deterministically bind identity (type/entity/url/canonical) and constrain ingestion (sitemap) at the first hop. Remove one, and you reintroduce guesswork.
 
