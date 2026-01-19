@@ -5,8 +5,6 @@
 
 Status: Draft v3.0 — Conceptually Stable 
 
-A Constitutional Amendment for how the internet handles meaning.
-
 HESS/DFH is the "missing manual" built for machines to understand.
 
 “As search shifts from blue-link results toward answer-oriented systems, these engines require a stable grounding reference.”
@@ -53,6 +51,7 @@ Establishes the default semantic starting point unless contested or overridden b
 
 If an agent looks for a first-hop semantic declaration, and your competitor has one and you don’t, the agent gets a cleaner answer from them.
 
+“Declarations are not trusted by default; they are only a candidate input to arbitration, gated by verifiable integrity + authority signals. Otherwise, agents ignore it and fall back to normal crawling.”
 
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
 
