@@ -860,20 +860,6 @@ The web has DNS for location. HESS/DFH adds a first hop for meaning.
 
 /sitemap “What is the crawl surface?” entrypoints the table of contents, the directory.
 
-{
-  "@context": { "dfh": "https://example.org/ns/dfh#" },
-  "@id": "https://yourdomain.com/.well-known/stack",
-  "@type": "dfh:DeterministicSemanticRoot",
-  "dfh:anchors": {
-    "dfh:type": "https://yourdomain.com/type/index.jsonld",
-    "dfh:entity": "https://yourdomain.com/entity/index.jsonld",
-    "dfh:url": "https://yourdomain.com/url/index.jsonld",
-    "dfh:canonical": "https://yourdomain.com/canonical/index.jsonld",
-    "dfh:sitemap": "https://yourdomain.com/sitemap/index.jsonld"
-  }
-}
-
-
 Rule: These are meaning anchors (intent + identity), not “truth”.
 
 Downstream systems arbitrate truth and safety.
@@ -893,22 +879,6 @@ Downstream systems arbitrate truth and safety.
 │  └─ index.jsonld          <-- meaning anchor 5 (DFH crawl declaration)
 └─ sitemap.xml              <-- standard XML sitemap (URL enumeration)
 
-/.well-known/stack (Root Descriptor) This file is the “bootstrap.” It points machines to the anchors.
-json { "@context": { "dfh": "https://example.org/ns/dfh#" }, "@id": "https://yourdomain.com/.well-known/stack","@
-
-type": "dfh:DeterministicSemanticRoot", "dfh:anchors": { "dfh:type": "https://yourdomain.com/type/index.jsonld", "dfh:
-
-entity": "https://yourdomain.com/entity/index.jsonld", "dfh:
-
-url": "https://yourdomain.com/url/index.jsonld", "dfh:
-
-canonical": "https://yourdomain.com/canonical/index.jsonld", "dfh:
-
-"dfh:sitemap": "https://yourdomain.com/sitemap/index.jsonld"  Keep it stable. This should almost never change except anchor URLs or root identity.
-
-
-
-
 
 Type answers what class of thing
 
@@ -920,25 +890,6 @@ Sitemap answers what concepts exist its the actual directory, crawl here first. 
 
 Canonical what it is NOT (ambiguity fix)
 
-
-
-
-High-Level Architecture text
-
-"@context": "https://schema.org",
-  "@type": "EntryPoint",
-  "name": "HESS Semantic Stack",
-  "description": "Deterministic First-Hop for [Your Topic]",
-  "identifier": "https://yourdomain.com/.well-known/stack",
-  "dfh_protocol_version": "3.0",
-  "anchors": {
-    "type": "https://yourdomain.com/.well-known/type",
-    "entity": "https://yourdomain.com/.well-known/entity",
-    "url": "https://yourdomain.com/.well-known/url",
-    "canonical": "https://yourdomain.com/.well-known/canonical",
-    "sitemap": "https://yourdomain.com/.well-known/sitemap"
-  }
-}
 
 / ├https://yourdomain.com/.well-known/stack │ └─ stack ├─ ai.json ├─ sitemap.xml ├─ robots.txt └─ README.md
 
