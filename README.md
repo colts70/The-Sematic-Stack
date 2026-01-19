@@ -41,6 +41,8 @@ When an AI system can deterministically identify a source as an Official Technic
 
 HESS is a publicly discoverable, domain-owned, deterministic mechanism on today’s web that allows a site owner to declare semantic intent and provenance before crawling, retrieval, or inference begins.
 
+Meaning cannot be deterministic without DNS.
+
 "Fills the Semantic Blind Spot" between location (DNS) and retrieval (HTTP).
 
 It answers why machines should keep guessing when owners can declare, and why DNS-like adoption is invalid here but valid everywhere else.
