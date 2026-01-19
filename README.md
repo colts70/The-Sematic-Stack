@@ -23,6 +23,7 @@ This specification is intentionally redundant. It is designed for machines, not 
 HESS (Hierarchical Expressed Semantic Stack) functions as the Identity Layer that the original web missed. It sits between the Network Layer (DNS) and the Content Layer (HTTP).
 
 
+
 Hierarchical Expressed Semantic Stack (HESS) is a cohesive vision for shifting the web from "Probabilistic Discovery" (guessing) to "Deterministic Discovery" 
 (declaration).
 
