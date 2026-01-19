@@ -64,6 +64,21 @@ The root domain is the only authoritative semantic root.
 • Anchors MAY NOT define a broader or different topic.
 • Anchors exist only to bind and reinforce the root — never to replace it.
 
+/type prevents class confusion (“what kind of thing is this?”)
+
+/entity pins the actual noun/ID (“which thing exactly?”)
+
+/url binds the entity to the domain you control (“where does the official meaning live?”)
+
+/canonical collapses naming drift + aliases (“what is it called, consistently?”)
+
+/sitemap declares crawl geometry (“where should machines start, on purpose?”)
+
+Five anchors are the minimum set needed to deterministically bind identity (type/entity/url/canonical) and constrain ingestion (sitemap) at the first hop. Remove one, and you reintroduce guesswork.
+
+The key rule in the spec) is:
+
+If any of the 5 anchors is missing/unreachable, the agent MUST degrade and MUST NOT treat the domain as deterministically bound for that missing dimension.
 
 “HESS defines the claim surface, not the winner.”
 
