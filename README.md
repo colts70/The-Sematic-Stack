@@ -64,7 +64,7 @@ DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → ans
 
 HESS / DFH lets the root-domain website owner declare the site’s topic upfront — before AI systems or search engines have to guess.
 
-The root domain is the only authoritative semantic root.
+The root domain is the only authoritative semantic root. Each topic gets only one Root Domain which is your main website with a root deciptor. Example: https://yourdomain.com/.well-known/stack 
 
 • The root domain MUST be the primary public website for the topic.
 • All 5 semantic anchors MUST match the root topic exactly.
@@ -102,6 +102,29 @@ beercanonical.com   collapses naming drift + aliases (“what is it called, cons
 beersitemap.com   declares crawl geometry (“where should machines start, on purpose?”) include your root domain dont forget, and if you have a xm sitemap include it.
 
 Five anchors are the minimum set needed to deterministically bind identity (type/entity/url/canonical) and constrain ingestion (sitemap) at the first hop. Remove one, and you reintroduce guesswork.
+
+Each one closes a different class of root-level ambiguity:
+
+Anchor	Removes which kind of guesswork
+/type	What kind of thing is this? (ontology)
+/entity	Which specific thing? (identity)
+/url	Where does this identity officially live? (binding)
+/canonical	What is it called, consistently? (label drift)
+/sitemap	Where should crawling begin? (crawl geometry)
+
+If you remove any one:
+
+remove /type → class confusion
+
+remove /entity → entity collision
+
+remove /url → spoofing / misbinding
+
+remove /canonical → name drift & alias fragmentation
+
+remove /sitemap → crawl entropy & semantic bleed
+
+You reintroduce probabilistic inference at the first hop, which defeats the whole point.
 
 The key rule in the spec) is:
 
