@@ -3,7 +3,7 @@
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### “A /.well-known/-hosted semantic manifest scheme for AI crawlers” — Built for search engines and AI
 
-This protocol moves the first semantic index out of search engines’ private knowledge graphs and into a public, domain-owned layer at the root of the web.
+This protocol moves the first semantic index out of search engines’ private knowledge graphs and into a public, domain-owned layer defined by five deterministic anchors, with a sitemap indicating where to crawl first and a root descriptor providing the instruction used for first-hop resolution.
 
 Status: Draft v3.0 — Conceptually Stable 
 
