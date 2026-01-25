@@ -2,8 +2,8 @@
 ## Hierarchical Expressed Semantic Stack (HESS)
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### “A /.well-known/-hosted semantic manifest scheme for AI crawlers” — Built for search engines and AI
-Moves the first semantic index out of search engines’ private knowledge graphs
-and into a public, domain-owned layer at the root of the web.
+
+This protocol moves the first semantic index out of search engines’ private knowledge graphs and into a public, domain-owned layer at the root of the web.
 
 Status: Draft v3.0 — Conceptually Stable 
 
@@ -53,6 +53,12 @@ In SEO, the party that defines the canonical entity usually controls the topic. 
 
 Hallucination Control at the Root: 
 When an AI system can deterministically identify a source as an Official Technical Manual rather than a Satirical Blog before content ingestion, the probability of hallucination is reduced because the context window is pre-weighted with authoritative intent and constraint metadata..
+
+AI is not broken.
+
+It is inefficient because the web never declared meaning at the root.
+As a result, modern AI systems spend enormous compute inferring what domains are,
+and compute is currently being used to hide that architectural omission.
 
 HESS is a publicly discoverable, domain-owned, deterministic mechanism on today’s web that allows a site owner to declare semantic intent and provenance before crawling, retrieval, or inference begins.
 
