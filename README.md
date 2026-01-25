@@ -5,6 +5,12 @@
 
 Status: Draft v3.0 — Conceptually Stable 
 
+Buy 6 domains total:
+1 Root Descriptor (your real website)
+5 Anchor domains (the pillars)
+Host 6 tiny JSON files
+publish
+
 HESS / DFH does not run inside AI systems or platforms.
 It is a public, network-resolvable protocol, hosted on the open web at a fixed, domain-owned address, with five mandatory external anchor endpoints that machines fetch before crawling or inference begins.
 
