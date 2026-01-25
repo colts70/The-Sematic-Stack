@@ -35,30 +35,20 @@ Hierarchical Expressed Semantic Stack (HESS) is a cohesive vision for shifting t
 
 Traditional SEO is an arms race: content volume, links, tech audits, endless updates. If you can become the preferred machine-readable source, you reduce how hard you have to fight.
 
-HESS transforms SEO from a marketing tactic into digital real estate ownership. Rather than optimizing content for discovery, a publisher establishes a deterministic semantic root—effectively registering the authoritative definition of a topic.
-
+HESS transforms SEO from a marketing tactic into a form of digital real estate ownership.
+Rather than optimizing content for discovery, a publisher establishes a deterministic semantic set of anchors that registers the authoritative definition of a topic.
 This shifts SEO from ranking competition to semantic property control.
-
-“In an AI-first web, being the canonical root
-matters more than being position #1.”
-
-Because in the answer-engine era:
-
-Traffic comes from being cited
-
-
-In SEO, the party that defines the canonical entity usually controls the topic. When a domain is established as the Primary Source for an entity through a deterministic HESS root, all other content on that entity is implicitly contextualized as Secondary—effectively commentary on a definition established at the root.
 
 “If DNS tells machines where to go, HESS / DFH tells machines what it means when they get there — before inference begins.”
 
-Hallucination Control at the Root: 
+Hallucination Control at the first hop:
 When an AI system can deterministically identify a source as an Official Technical Manual rather than a Satirical Blog before content ingestion, the probability of hallucination is reduced because the context window is pre-weighted with authoritative intent and constraint metadata..
 
 AI is not broken.
 
-It is inefficient because the web never declared meaning at the root.
-As a result, modern AI systems spend enormous compute inferring what domains are,
-and compute is currently being used to hide that architectural omission.
+It is inefficient because the web never declared meaning deterministically.
+As a result, modern AI systems expend enormous compute inferring what domains are,
+and compute is now being used to compensate for a missing architectural layer.
 
 HESS is a publicly discoverable, domain-owned, deterministic mechanism on today’s web that allows a site owner to declare semantic intent and provenance before crawling, retrieval, or inference begins.
 
@@ -72,52 +62,75 @@ Establishes the default semantic starting point unless contested or overridden b
 
 ** once the first semantic hop is **deterministically owned and implemented**, every downstream system is forced into **arbitration instead of guesswork**.
 
-If an agent looks for a first-hop semantic declaration, and your competitor has one and you don’t, the agent gets a cleaner answer from them.
 
 “Declarations are not trusted by default; they are only a candidate input to arbitration, gated by verifiable integrity + authority signals. Otherwise, agents ignore it and fall back to normal crawling.”
 
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
 
-HESS / DFH lets the root-domain website owner declare the site’s topic upfront — before AI systems or search engines have to guess.
+Each topic = one canonical root descriptor domain (the domain that “owns” the topic’s primary semantic identity).
 
-The root domain is the only authoritative semantic root. Each topic gets only one Root Domain which is your main website with a root deciptor. Example: https://yourdomain.com/.well-known/stack 
-
-• The root domain MUST be the primary public website for the topic.
-• All 5 semantic anchors MUST match the root topic exactly.
+That domain publishes a root descriptor file at a deterministic location so crawlers/agents can resolve meaning before they crawl pages.
+• The domain MUST be the primary public website for the topic.
+• All 5 semantic anchors MUST match the topic exactly.
 • Anchors MAY NOT define a broader or different topic.
-• Anchors exist only to bind and reinforce the root — never to replace it.
+
 
 Keep it simple:
 
-You buy 1 root domain (the real site).
+You buy or create 1 Root Descriptor domain (the real site).
 
-You buy 5 pillars
+You buy 5 pillars.
 
 Each pillar domain hosts one tiny JSON file.
 
-The root publishes one stack file that points to those five pillar files.
+The anchors point back to the Root Descriptor, not the other way around.
 
 That’s it.
 
-Example:
+Example: Topic = “beer”
 
-The 5 Anchors of your topic say beer. You would purchase these 5 domains through the dns regeristry of your choice. They are hosted later as semantic anchors using one tiny JSON file. Each anchor must include your domain inside so it can link back to the root.
+The five Anchors of your topic define the semantic identity of “beer.”
+You purchase these five Anchor Domains through the DNS registry of your choice.
 
-“For a topic like ‘beer’, you would purchase five Anchor Domains through the DNS registry of your choice.”
+Each Anchor Domain hosts one tiny JSON file.
 
-“Each anchor must explicitly include and bind back to the Root Domain, so agents can verify that all five anchors belong to the same topic owner.”
+Each Anchor file MUST explicitly include and bind back to the Root Descriptor, so agents can verify that all five anchors belong to the same topic owner.
 
-beertype.com   prevents class confusion (“what kind of thing is this?”) include your root domain dont forget 
+For a topic like “beer”, you might provision:
 
-beerentity.com   pins the actual noun/ID (“which thing exactly?”) include your root domain dont forget 
+beertype.com
+Prevents class confusion (“what kind of thing is this?”)
+Declares the topic type and binds back to the Root Descriptor.
 
-beerurl.com   binds the entity to the domain you control (“where does the official meaning live?”) include your root domain dont forget 
+beerentity.com
+Pins the actual noun / identity (“which thing exactly?”)
+Declares the entity and binds back to the Root Descriptor.
 
-beercanonical.com   collapses naming drift + aliases (“what is it called, consistently?”) include your root domain dont forget 
+beerurl.com
+Binds the entity to the domain you control (“where does the official meaning live?”)
+Declares the canonical URL and binds back to the Root Descriptor.
 
-beersitemap.com   declares crawl geometry (“where should machines start, on purpose?”) include your root domain dont forget, and if you have a xm sitemap include it.
+beercanonical.com
+Collapses naming drift and aliases (“what is it called, consistently?”)
+Declares the canonical name and binds back to the Root Descriptor.
 
-Five anchors are the minimum set needed to deterministically bind identity (type/entity/url/canonical) and constrain ingestion (sitemap) at the first hop. Remove one, and you reintroduce guesswork.
+beersitemap.com
+Declares crawl geometry (“where should machines start, on purpose?”)
+Declares the sitemap entry point and binds back to the Root Descriptor.
+If an XML sitemap exists, it MUST be referenced here.
+
+Binding Rule
+
+Every Anchor file must explicitly include your Root Descriptor domain.
+
+This is how machines know that all five anchors belong to the same topic owner.
+
+If an anchor does not bind back to the Root Descriptor, it is ignored.
+
+Five anchors are the minimum set required to deterministically bind identity
+(type, entity, URL, canonical) and constrain ingestion (sitemap) at the first hop.
+
+Remove any one anchor, and semantic resolution reverts to guesswork.
 
 If all five anchors are not present and reachable, the system is not deterministic.
 It is, by definition, operating in degraded probabilistic mode.
@@ -153,12 +166,8 @@ If any of the 5 anchors is missing/unreachable, the agent MUST degrade and MUST 
 
 You’re not claiming correctness — you’re claiming authorship of intent.
 
-The root domain is the only semantic authority.
+The five pillars MUST be hosted as live semantic anchor endpoints. Each pillar defines exactly one semantic role and MUST bind back to the root deciptor domain.
 
-The five pillars MUST be hosted as live semantic anchor endpoints. Each pillar defines exactly one semantic role and MUST bind back to the root domain, from which all semantic authority originates. 
-
-Pillars do not replace the root domain website.
-Pillars exist only to bind and reinforce the root authority.
 
 ⚡ 30-Second Implementation Checklist Create Directory: Ensure /.well-known/ exists on your server.
 
@@ -170,55 +179,32 @@ Pillars exist only to bind and reinforce the root authority.
 
 HESS is to meaning what DNS is to location: decentralized, permissionless, and designed to reduce “hallucination at the root” by pinning semantic intent before crawling or inference.
 
-🏁 30-Second Verification
-If you have created your https://yourdomain.com/.well-known/stack, you can verify your First-Hop readiness with these two checks:
-
-1. Root Header Check (Discovery Hint)
-
-Header Check:
-Does your root domain (e.g., https://yourdomain.com/) return the following HTTP response header?
-
-X-HESS-Stack: https://yourdomain.com/.well-known/stack
-
-
-This header is a discovery hint only and MUST point to the stack root.
-
-2. Anchor Pointer Check (Binding)
-
-Pointer Check:
-Does the dfh:anchors object inside your stack file resolve to absolute HTTPS URLs for all five anchors?
-
-All 5 anchors present
-
-All 5 use https://
-
-All 5 are reachable 
 
 Why HESS Is Asymmetric
 
-If a competitor establishes the semantic root for a topic (e.g., “Best Espresso Machines”), any content published afterward is interpreted relative to that root definition. Subsequent content functions as opinion or commentary rather than authorship.
+If a competitor establishes the semantic anchors for a topic (e.g., “Best Espresso Machines”), any content published afterward is interpreted relative to that definition. 
 
-By implementing HESS, a domain does not merely improve SEO performance—it establishes itself as a Primary Root Source in an ecosystem where AI agents act as the primary gatekeepers of information.
+By implementing HESS, a domain owner does not merely improve SEO performance—it establishes itself as a Primary Source in an ecosystem where AI agents act as the primary gatekeepers of information.
 
-The first deterministic semantic root becomes the starting point against which all other sources are evaluated.
+The first deterministic semantic anchors  becomes the starting point against which all other sources are evaluated.
 
-Under HESS, the result is a shift from ranking competition to semantic hierarchy. Once a primary root exists, downstream publishers are no longer competing to define the topic—they are competing to be recognized in relation to an already established definition.
+Under HESS, the result is a shift from ranking competition to semantic hierarchy. Once a primary set of anchors exists, downstream publishers are no longer competing to define the topic—they are competing to be recognized in relation to an already established definition.
 
 At that point, participation occurs downstream, where interpretation and arbitration replace authorship.
 
 ## ⚠️ First-Mover Risk (HESS / DFH)
 
 ### The Semantic Land-Grab Effect
-In competitive niches (e.g., *“Best Coffee Grinders”* or *“Crypto Tax Advice”*), the first party to establish a deterministic semantic root can lock in topic-level authority at minimal cost. Once claimed, later publishers are no longer merely out-ranked—they are semantically displaced from primary source consideration by AI systems.
+In competitive niches (e.g., *“Best Coffee Grinders”* or *“Crypto Tax Advice”*), the first party to establish  deterministic semantic anchors can lock in topic-level authority at minimal cost. Once claimed, later publishers are no longer merely out-ranked—they are semantically displaced from primary source consideration by AI systems.
 
-If a competitor adopts HESS / DFH first, they can establish root-level ownership of the topic before others participate.
+If a competitor adopts HESS / DFH first, they can establish anchor-level ownership of the topic before others participate.
 
 This represents a loss of **topic-ownership primitives**.
 
 Search engines and AI agents subsequently treat that domain as the **canonical source for the topic**—the origin point from which meaning, classification, and downstream interpretation are derived.
 ### Once This Happens
 
-- One domain becomes the **default answer** for AI and search
+- One set of anchors becomes the **default answer** for AI and search
 - Demand is **captured upstream** before users ever reach competitors
 - All other content is **evaluated relative to the first mover**, not independently
 - Late adopters are pushed into **permanent catch-up mode**
@@ -230,7 +216,7 @@ This is **not** a ranking loss you can optimize around.
 
 It is an **authority loss at the first semantic hop**.
 
-Once the root position is claimed, the starting position is gone.
+Once the semantic position is claimed, the starting position is gone.
 
 ### One-Line Lock
 
@@ -242,25 +228,21 @@ https://yourdomain.com/.well-known/stack
 
 Core Rule
 
-Your website domain is the ROOT AUTHORITY for the topic.
 
-The root website MUST be about the same topic as its five semantic anchors (pillars).
+The main Root Descriptor website MUST be about the same topic as its five semantic anchors (pillars).
 
 Mandatory Requirements (Normative)
 
-The root domain MUST publish the authoritative stack at:
+The root deciptor domain MUST publish the authoritative stack at:
 
 https://yourdomain.com/.well-known/stack
 
-The root domain MUST be the primary public website for the topic.
-
-The five anchors/pillars MUST match the root topic exactly.
+The Root Descriptor domain MUST be a public website relevant to the topic.
+The five anchors/pillars MUST match the topic exactly.
 Anchors are not websites — they are tiny machine-readable JSON-LD endpoints (like robots.txt for meaning).
 (Same topic, same entity scope — no unrelated subjects.)
 
-The anchors/pillars MUST NOT define a different topic than the root.
-They exist only to bind, ground, and reinforce the root authority.
----
+The Anchors MUST NOT define a different topic than the Root Descriptor site.
 
 ## 🧱 The 5 Mandatory Anchors
 
@@ -299,7 +281,7 @@ Search engines crawl pages, guess what they mean, compare signals, and *then* de
 Traditional SEO ranks **documents**.  
 HESS / DFH establishes your **domain as the authority for an entire topic**.
 
-Instead of competing page-by-page, every page you publish **inherits authority** from a declared semantic root.  
+Instead of competing page-by-page, every page you publish **inherits authority** from a declared semantic anchors.
 New pages rank faster because they are born inside an already-understood topic.
 
 ---
@@ -312,11 +294,11 @@ Without HESS, search engines must guess:
 - which name is canonical  
 - which entity the site represents  
 
-HESS declares this **explicitly at the root**:
+HESS declares this **explicitly at the first hop**:
 
 - one entity  
 - one canonical name  
-- one authoritative domain  
+- one authoritative set of anchors
 
 This collapses duplicate content, URL fragmentation, and entity confusion **before they affect rankings**.
 
@@ -330,11 +312,11 @@ Search engines and AI systems are **compute-constrained**.
 
 With HESS:
 
-- crawlers read one small file  
+- crawlers read 5 anchors
 - understand the site immediately  
 - crawl with intent instead of exploration  
 
-This reduces crawl waste and makes your domain **cheaper and safer to index**, directly improving crawl frequency, freshness, and inclusion priority.
+This reduces crawl waste and makes your Root Descriptor domain cheaper and safer to index, directly improving crawl frequency, freshness, and inclusion priority.
 
 Speed-to-index / speed-to-ship for new products
 
@@ -360,8 +342,7 @@ HESS / DFH makes your domain:
 - easier to cite  
 - harder to misattribute  
 
-When AI systems need an authoritative source for a topic, they choose the domain that **declared meaning first and cleanly**.
-
+When AI systems need an authoritative source for a topic, they choose the five anchors that declared meaning first and cleanly.
 ---
 
 ### 5. Stability Across Algorithm Changes
@@ -383,7 +364,7 @@ You stop optimizing to survive updates — and start defining the topic the algo
 
 ### 6. The Competitive Moat
 
-Once a domain becomes the **semantic root** for a topic:
+Once a domain becomes the semantic anchor for a topic, it establishes the primary point of semantic authority.
 
 - competitors can rank only *relative* to you  
 - backlinks matter less than declared authority  
@@ -411,7 +392,7 @@ HESS/DFH collapses many long-standing problems at the same architectural choke p
 
 This fixes the decision point where everything downstream is forced to guess.
 
-Meaning had no address → Meaning now lives at a stable, public, machine-readable root
+Meaning had no address → Meaning now lives at a stable, public, machine-readable anchor set with a Root Descriptor.
 
 Authority was inferred from popularity → Authorship replaces ranking as the starting signal
 
@@ -445,7 +426,7 @@ HESS / DFH declares semantic intent and provenance — not truth — at the firs
 
 Core Rule (Read Once)
 
-Only the public domain owner can define semantic intent at the root.
+Only the public domain owner can define semantic intent.
 Everyone else may interpret, dispute, or ignore it — but not authoritatively replace it.
 
 HESS asserts intent and provenance, not truth.
@@ -456,13 +437,7 @@ HESS asserts intent and provenance, not truth.
 > Agents **SHOULD** treat this header as a discovery hint only and **MUST** verify the referenced stack resource directly.  
 > Absence of this header **MUST NOT** be interpreted as absence of DFH support.
 
-“If multiple roots claim the same topic, agents MUST treat the topic as contested and fall back to downstream arbitration (KGs, RAG, policy, trust models).”
-
-
-
-
-
-
+“If multiple anchors claim the same topic, agents MUST treat the topic as contested and fall back to downstream arbitration (KGs, RAG, policy, trust models).”
 
 
 HESS does not replace current AI techniques like RAG (Retrieval-Augmented Generation); it grounds them. Without HESS, AI enters a domain in a "semantic fog." With HESS, the AI has a clear, domain-owner-authorized map of intent.
@@ -476,7 +451,7 @@ HESS is a proposed, open, domain-owned Semantic Layer Public Index (SLPI) design
 The legitimacy of this system stems from its placement in the network stack. By using the /.well-known/ directory—a standard reserved for site-wide metadata—and publishing a stack descriptor at /.well-known/stack, it creates a “Semantic ID Card” that machines read before crawling or inference begins.
 Without HESS: An AI crawler enters a domain, scrapes 5,000 pages, generates embeddings, and guesses that the site is about with 80% confidence.
 
-With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about with much higher certainty because the owner declared it at the root.
+With HESS: The crawler reads one JSON-LD file in milliseconds. It knows the site is about with much higher certainty because the owner declared it at at 5 anchors.
 
 HESS / DFH does not assert truth. It asserts semantic intent and provenance at the earliest possible machine-resolvable point.
 
@@ -572,9 +547,8 @@ Ignore it → the risk is asymmetric: a competitor will adopt first, lock in aut
 This is topic-level authority (the missing SEO primitive), not page-level tricks.
 
 
-What HESS also Is?  “HESS is built for AI grounding: Once the first semantic hop is deterministic, every downstream system is forced into arbitration instead of guesswork.” HESS applies JSON-style hierarchical structure to the web itself, replacing inferred meaning with explicitly declared semantic roots.
+What HESS also Is?  “HESS is built for AI grounding: Once the first semantic hop is deterministic, every downstream system is forced into arbitration instead of guesswork.” HESS applies JSON-style hierarchical structure to the web itself, replacing inferred meaning with explicitly declared semantic anchors.
 
-“A domain can only be authoritative for topics it controls at the root.”
 
 It is a modern, AI-era continuation of the original Semantic Web vision — implemented not as a probabilistic graph, but as a deterministic, domain-owned first hop.
 
@@ -607,7 +581,7 @@ What No Other System Provides:
 
 A Deterministic semantic starting point
 
-Publicweb-native discoverability Domain-owner control of meaning
+Public web-native discoverability Domain-owner control of meaning
 
 AI-first grounding (not human markup) 
 
@@ -718,7 +692,7 @@ It identifies the specific "Conceptual Surface" it needs.
 
 It executes a "High-Intent Crawl
 
-This is the "Checkmate" move because it forces the AI to navigate your site according to your defined hierarchy of meaning, rather than its own statistical guess.
+It forces the AI to navigate your site according to your defined hierarchy of meaning, rather than its own statistical guess.
 
 
 Relationship:
@@ -754,7 +728,7 @@ The web has DNS for location. HESS / DFH is DNS for meaning.
 
 
 
-This protocol addresses one of the hardest problems in AI and the web: semantic grounding and hallucination at the root of meaning.
+This protocol addresses one of the hardest problems in AI and the web: semantic grounding and hallucinations.
 
 Core Safety Principle “All downstream systems may accept, reject, weight, or override declarations according to their own trust, safety, and policy models.”
 
@@ -840,7 +814,7 @@ Problem → Fix Summary Current Problem HESS / DFH
 
 Fix No global semantic ground Creates a universal first-hop
 
-Meaning is scattered Unifies with deterministic anchors LLM hallucination at the root
+Meaning is scattered Unifies with deterministic anchors LLM hallucination at the first hop
 
 Provides fixed semantic identity SEO is page-level only Introduces topic-level identity No provenance for truth arbitration.
 
@@ -857,22 +831,6 @@ Efficiency: AI models use fewer "tokens" to understand your site, making your co
 
 🔑 Topic-Level Authority (The Missing SEO Primitive)
 Traditional SEO ranks pages. HESS / DFH establishes domains as the anchor for a whole topic.
-
-When you publish a deterministic semantic root at:
-
-https://yourdomain.com/.well-known/stack
-
-your domain becomes:
-
-the canonical authority for that topic
-
-the primary entity resolver (what “X” actually refers to)
-
-the semantic root that all downstream pages inherit from
-
-No meta tag, Schema snippet, or sitemap can do this — those are page-level signals.
-HESS / DFH is topic-level identity and authority, declared at the root.
-
 
 🧭 Deterministic Crawl Geometry (No More Guessing) HESS / DFH gives crawlers an explicit, deterministic crawl surface:
 
@@ -915,17 +873,11 @@ HESS / DFH:is domain-owned is topic-scoped is machine-first works before ranking
 
 🧩 Summary (SEO View) HESS / DFH gives search engines what they never had:
 
-a deterministic semantic root a canonical topic authority explicit entity resolution declared crawl geometry machine-verifiable trust Search stops guessing. Ranking stabilizes. Authority compounds.
-
-
-
 DNS told machines where to go. HESS / DFH tells them what it means when they get there.
 
+To install HESS / DFH you only need:
 
-
-Beginner Layer (Simple Explanation) To install HESS / DFH you only need:
-
-a .well-known/ directory a file named stack pure JSON-LD HTTPS hosting Machines resolve: https://yourdomain.com/.well-known/stack
+a .well-known/ directory, a file named stack, pure JSON-LD HTTPS hosting Machines resolve: https://yourdomain.com/.well-known/stack
 
 That single file gives AI:
 
@@ -933,7 +885,7 @@ semantic definition 10 anchors (meaning + provenance) optional mirrors determini
 
 The web has DNS for location. HESS/DFH adds a first hop for meaning.
 
-✅ The 5 Mandatory Pillars (Meaning Layer) Anchor Purpose (what it answers) What you put inside /
+✅ The 5 Mandatory Anchors (Meaning Layer) Anchor Purpose (what it answers) What you put inside /
 
 /type “What kind of thing is this domain about?” A small ontology/taxonomy declaration (JSON-LD) using stable vocabularies (Schema.org/W3C terms)
 
@@ -960,11 +912,6 @@ Sitemap answers what concepts exist its the actual directory, crawl here first. 
 
 Canonical what it is NOT (ambiguity fix)
 
-The Root defines the topic.
-
-Mirrors cannot override the Root.
-
-Mirrors may add context, never redefine.
 
 All 10 Anchors in a Single JSON-LD File
 
@@ -1011,68 +958,12 @@ What these anchors do
 /integrity — Hashes / signatures for tamper resistance
 
 Unified JSON-LD (Provenance Layer)
-{
-  "/authority": {
-    "@id": "#authority",
-    "owner": {
-      "name": "Example, Inc.",
-      "homepage": "https://example.com"
-    },
-    "jurisdiction": "US-CA"
-  },
-
-  "/source": {
-    "@id": "#source",
-    "items": [
-      {
-        "id": "kg:internal",
-        "type": "KnowledgeGraph",
-        "description": "Internal product ontology",
-        "url": "https://kg.example.com"
-      }
-    ]
-  },
-
-  "/timestamp": {
-    "@id": "#timestamp",
-    "created": "2025-01-01T00:00:00Z",
-    "updated": "2025-01-15T12:34:56Z"
-  },
-
-  "/license": {
-    "@id": "#license",
-    "id": "https://creativecommons.org/licenses/by/4.0/",
-    "summary": "CC BY 4.0 for the semantic and provenance layer."
-  },
-
-  "/integrity": {
-    "@id": "#integrity",
-    "algorithm": "SHA-256",
-    "hash": "e3b0c44298fc1c149afbf4c8996fb924...",
-    "signature": {
-      "algorithm": "ed25519",
-      "publicKey": "did:key:z6Mk...",
-      "value": "MEQCIA8..."
-    }
-  }
-}
-
-Mirrors (Important Rule)
-
-Mirrors may expand context, but never override the Root.
-
-The root domain defines meaning
-
-Mirrors may reference the root
-
-Mirrors cannot redefine identity, scope, or authority
 
 One-Sentence Summary
 
 The 5 mandatory anchors define meaning.
 The optional 5 provenance anchors define trust.
 
-The root always wins.
 
 End-to-End AI Flow Resolve Root Domain
 
@@ -1136,15 +1027,13 @@ One-Sentence Definition DFH is the official public semantic and provenance index
 /sitemap: The Crawl here first directory.
 
 🛠️ 30-Second Implementation Checklist
-Create Directory: Ensure /.well-known/ is accessible on your root domain.
+Create Directory: Ensure /.well-known/ is accessible 
 
 Deploy Stack: Upload stack.json (JSON-LD) to /.well-known/stack.
 
 Define Anchors: Host the 5 minimal JSON-LD files (Type, Entity, URL, Canonical, Sitemap).
 
 Header Check: Add X-HESS-Stack: https://yourdomain.com/.well-known/stack to your HTTP responses.
-
-Verify: Ensure the Content-Type is strictly application/ld+json.
 
 To claim Topic-Level Authority, you must move your identity from the "semantic fog" of your HTML into the deterministic light of the /.well-known/ directory.
 
