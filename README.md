@@ -1374,6 +1374,132 @@ SHOULD treat ties as parallel primaries
 
 MUST degrade to legacy crawl if any mandatory anchor is missing/unreachable
 
+Semantic Triangle — Protocol Clarifications
+
+These three issues are real protocol-design questions, and they can be resolved without breaking determinism if we treat HESS as a binding system, not a ranking system.
+
+1. Collision Conflict (Topic Squatting)
+
+Question: What if two Roots bind to the same 5 anchors?
+
+Answer:
+HESS does not require a global 1:1 uniqueness rule for anchors. It requires local determinism per Root.
+
+Determinism is evaluated per domain, not globally.
+
+Multiple Roots may legally reference the same external anchors.
+
+This is equivalent to multiple domains citing the same Wikipedia page.
+
+The key invariant is:
+
+A Root Descriptor is deterministic if its own 5 anchors are stable, resolvable, and self-consistent.
+
+There is no protocol-level invalidation if two Roots share anchors.
+
+However, this creates a semantic contention layer, not a protocol failure:
+
+Agents can detect:
+
+Anchor reuse
+
+Competing Roots claiming identical anchor sets
+
+This becomes a trust / authority signal, not a determinism violation.
+
+In other words:
+
+Collision does not break HESS.
+
+Collision becomes an evaluation input for downstream authority models.
+
+HESS defines identity resolution, not arbitration.
+
+2. Circular Dependency / Infinite Loop
+
+You are correct — this must be explicitly bounded.
+
+The resolution algorithm should be:
+
+Fetch Root once
+
+Fetch each of the 5 anchors once
+
+Validate:
+
+Anchors resolve
+
+Anchors bind back to Root
+
+If binding is not satisfied in one pass, abort determinism.
+
+No retries. No recursion. No redirects.
+
+Formally:
+
+HESS Resolution Depth = 1 Root + 5 Anchors
+Maximum graph depth = 2
+Any unresolved back-binding → immediate fallback to probabilistic mode.
+
+This preserves:
+
+Termination
+
+O(1) resolution cost
+
+Immunity to loop attacks
+
+This is a critical spec point and strengthens the protocol.
+
+3. Sitemap vs. Schema Conflict (Intent vs. Reality)
+
+This is the most important philosophical rule in HESS.
+
+You are defining Declared Meaning, not Observed Content.
+
+So the resolution order must be:
+
+HESS Intent = Authoritative Claim
+
+XML Sitemap = Evidence signal
+
+Content crawl = Consistency check
+
+If a domain declares:
+
+HESS /sitemap: “Lagers”
+
+XML sitemap: only “Stout” URLs
+
+Then:
+
+The agent does not reject HESS determinism.
+
+It flags a Semantic Divergence.
+
+This becomes:
+
+A trust penalty
+
+A provenance risk
+
+A grounding confidence reduction
+
+But not a protocol failure.
+
+Why?
+
+Because HESS is not describing what you currently publish —
+It is declaring what you claim to be the semantic root for.
+
+This mirrors:
+
+Schema.org vs page content
+
+Wikipedia infobox vs article text
+
+HESS defines intentional identity, not empirical exhaustiveness.
+
 “I wasn’t trying to be a visionary. I was chasing SEO, consolidating every 301 redirect I could, and trying to claim the semantic identity of my topic — when I accidentally stumbled onto a hole.”
 
 The "Accidental Architect" Reality:
@@ -1387,3 +1513,5 @@ The Invention: I created the five-pillar HESS stack to provide the minimal mecha
 I just bought the “Meaning” via DNS and told the algorithm to read the file via a `/.well-known/` endpoint.
 
 Only later did the broader implications become clear. What began as an attempt to stabilize semantic identity revealed a cascade of structural advantages: reduced crawl entropy, lower AI grounding and inference cost, resistance to semantic drift over time, and the presence of a previously missing layer in the web’s architecture. The system was not designed to optimize these properties; they emerged naturally once meaning was declared deterministically at the first hop.
+
+
