@@ -16,6 +16,9 @@ Determinism requires a root descriptor at /.well-known/stack.
 
 The anchors must be external domain-owned endpoints that point back to the Root Descriptor. This creates the "semantic triangle" that prevents spoofing and forces machine resolution.
 
+Determinism does not come from self-declaration.
+It comes from external, domain-independent witnesses binding back.
+
 
 “This is the smallest possible standard surface that moves identity resolution earlier than crawling. Everything else in the AI stack assumes identity is already known; HESS makes that assumption explicit and machine-resolvable.”
 
