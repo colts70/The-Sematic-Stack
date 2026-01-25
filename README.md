@@ -19,6 +19,9 @@ The anchors must be external domain-owned endpoints that point back to the Root 
 Determinism does not come from self-declaration.
 It comes from external, domain-independent witnesses binding back.
 
+Security Rule:
+The five anchors MUST be externally hosted.
+Anchors hosted under the Root Descriptor domain are INVALID and MUST be ignored by agents, as they provide no independent verification and break deterministic binding.
 
 “This is the smallest possible standard surface that moves identity resolution earlier than crawling. Everything else in the AI stack assumes identity is already known; HESS makes that assumption explicit and machine-resolvable.”
 
