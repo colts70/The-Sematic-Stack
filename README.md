@@ -119,6 +119,9 @@ beersitemap.com   declares crawl geometry (“where should machines start, on pu
 
 Five anchors are the minimum set needed to deterministically bind identity (type/entity/url/canonical) and constrain ingestion (sitemap) at the first hop. Remove one, and you reintroduce guesswork.
 
+If all five anchors are not present and reachable, the system is not deterministic.
+It is, by definition, operating in degraded probabilistic mode.
+
 Each one closes a different class of root-level ambiguity:
 
 Anchor	Removes which kind of guesswork
