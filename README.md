@@ -947,22 +947,7 @@ The web has DNS for location. HESS/DFH adds a first hop for meaning.
 
 Rule: These are meaning anchors (intent + identity), not “truth”.
 
-Downstream systems arbitrate truth and safety.
-
-📌 yourdomain.com/
-├─ .well-known/
-│  └─ stack                 <-- root descriptor (JSON-LD)
-├─ type/
-│  └─ index.jsonld          <-- meaning anchor 1
-├─ entity/
-│  └─ index.jsonld          <-- meaning anchor 2
-├─ url/
-│  └─ index.jsonld          <-- meaning anchor 3
-├─ canonical/
-│  └─ index.jsonld          <-- meaning anchor 4
-├─ sitemap/
-│  └─ index.jsonld          <-- meaning anchor 5 (DFH crawl declaration)
-└─ sitemap.xml              <-- standard XML sitemap (URL enumeration)
+Downstream systems arbitrate truth and safety
 
 
 Type answers what class of thing
@@ -974,11 +959,6 @@ URL answers where meaning lives, your main webite.
 Sitemap answers what concepts exist its the actual directory, crawl here first. The offical public ground for AI. /sitemap (DFH anchor) → semantic crawl declaration” → directory of conceptual surfaces, not URLs
 
 Canonical what it is NOT (ambiguity fix)
-
-
-/ ├https://yourdomain.com/.well-known/stack │ └─ stack ├─ ai.json ├─ sitemap.xml ├─ robots.txt └─ README.md
-
-Semantic Stack ├── Root Domain (topic authority) │ ├── /.well-known/stack │ └── Anchors │ ├── /type │ ├── /entity │ ├── /url │ ├── /sitemap │ ├── /canonical │ ├── /authority │ ├── /source │ ├── /timestamp │ ├── /license │ └── /integrity └── Mirrors (optional) └── /.well-known/stack → points to Root Rules
 
 The Root defines the topic.
 
@@ -1010,65 +990,6 @@ What each anchor does (plain English)
 /canonical — Canonical name + aliases (ambiguity collapse)
 
 /sitemap — Declared crawl entrypoints (not a URL list)
-
-Unified JSON-LD (Meaning Layer)
-{
-  "/type": {
-    "@id": "#type",
-    "ontology": [
-      { "id": "Product", "ref": "schema:Product", "broader": "schema:Thing" },
-      { "id": "Article", "ref": "schema:Article", "broader": "schema:CreativeWork" }
-    ],
-    "taxonomy": [
-      { "parent": "Product", "child": "Supplement" }
-    ]
-  },
-
-  "/entity": {
-    "@id": "#entity",
-    "items": [
-      {
-        "id": "product:sku-123",
-        "type": "Product",
-        "name": "Example Widget",
-        "canonicalUrl": "https://example.com/products/widget-123",
-        "metadata": {
-          "dct:creator": "Example, Inc.",
-          "dct:language": "en"
-        }
-      }
-    ]
-  },
-
-  "/url": {
-    "@id": "#url",
-    "items": [
-      {
-        "entity": "product:sku-123",
-        "url": "https://example.com/products/widget-123",
-        "rel": "canonical"
-      }
-    ]
-  },
-
-  "/canonical": {
-    "@id": "#canonical",
-    "items": [
-      {
-        "entity": "product:sku-123",
-        "canonicalLabel": "Example Widget",
-        "confidence": 1.0
-      }
-    ]
-  },
-
-  "/sitemap": {
-    "@id": "#sitemap",
-    "items": [
-      "https://example.com/sitemap.xml"
-    ]
-  }
-}
 
 Optional Provenance Anchors (Advanced / Enterprise Use)
 
