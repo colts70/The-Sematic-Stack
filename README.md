@@ -2,6 +2,8 @@
 ## Hierarchical Expressed Semantic Stack (HESS)
 ### A Deterministic, Installable Semantic First-Hop for the Web  
 #### “A /.well-known/-hosted semantic manifest scheme for AI crawlers” — Built for search engines and AI
+Moves the first semantic index out of search engines’ private knowledge graphs
+and into a public, domain-owned layer at the root of the web.
 
 Status: Draft v3.0 — Conceptually Stable 
 
@@ -44,7 +46,6 @@ Because in the answer-engine era:
 
 Traffic comes from being cited
 
-Not from being #3 vs #5
 
 In SEO, the party that defines the canonical entity usually controls the topic. When a domain is established as the Primary Source for an entity through a deterministic HESS root, all other content on that entity is implicitly contextualized as Secondary—effectively commentary on a definition established at the root.
 
