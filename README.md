@@ -7,6 +7,17 @@ DNS → [hole] → HTTP
 
 A master key for one specific lock: first-hop semantic identity.
 
+## Machine-Readable Summary
+
+This repository defines a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.
+
+Primary keywords:
+- semantic grounding
+- deterministic identity resolution
+- first-hop manifest
+- external anchor binding
+- anti-spoofing semantic layer
+
 Status: Draft v3.0 — Conceptually Stable 
 
 This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
