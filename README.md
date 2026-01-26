@@ -45,7 +45,7 @@ It is a public, network-resolvable protocol, hosted on the open web at a fixed, 
 
 This protocol moves the first semantic index out of search engines’ private knowledge graphs and into a public, domain-owned layer defined by five deterministic anchors, including a sitemap indicating where to crawl first and a root descriptor providing the instruction used for first-hop resolution.
 
-Determinism requires a root descriptor at /.well-known/stack.
+ Requires a root descriptor at /.well-known/stack.
 
 “The Root Descriptor is a deterministic discovery manifest, not an internal authority oracle; determinism comes from resolving the five external anchors and verifying their binding back to the Root Descriptor.”
 
@@ -536,7 +536,7 @@ DNS tells machines where to go. DFH tells machines what it means when they get t
 
 This protocol represents a significant structural evolution for the web, moving from unstructured content that machines must guess at, to a deterministic semantic layer that domain owners control.
 
-By placing the "source of truth" for meaning at the /.well-known/stack endpoint, HESS effectively creates a pre-flight check for AI agents.
+HESS effectively creates a pre-flight check for AI agents.
 
 With HESS: The AI immediately checks https://yourdomain.com/.well-known/stack. It is told exactly what the entity is before it reads a single word of content.
 
