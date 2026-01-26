@@ -25,10 +25,10 @@ because it fixes the only place all of those failures originate: the first seman
  
 Buy 6 domains total:
 
-1 Root Descriptor (your real website)
+1 Root Descriptor (your real website) root is discovery + routing only
 
 
-5 Anchor domains (the pillars)
+5 Anchor domains (the pillars) anchors are meaning + binding witnesses
 
 
 Host 6 tiny JSON files
