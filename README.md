@@ -11,13 +11,18 @@ This is the cleanest option to address (semantic grounding + hallucination + ide
 because it fixes the only place all of those failures originate: the first semantic hop.
  
 Buy 6 domains total:
+
 1 Root Descriptor (your real website)
+
+
 5 Anchor domains (the pillars)
+
+
 Host 6 tiny JSON files
+
+
 publish
 
-One root descriptor.
-And five external anchors.
 
 The descriptor contains no meaning.
 It only contains the routing instructions for the first hop.
