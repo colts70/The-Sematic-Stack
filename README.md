@@ -4,6 +4,11 @@
 **Machine-Readable Protocol**  
 **Status:** Draft v3.0 — Semantics Locked
 
+“HESS is the first-hop semantic layer the internet skipped.”
+
+This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
+because it fixes the only place all of those failures originate: the first semantic hop.
+
 An installable, deterministic, network-resolvable semantic first-hop protocol, hosted at /.well-known/, designed for AI and search engine crawlers
 
 DNS → [hole] → HTTP
@@ -12,9 +17,6 @@ A master key for one specific lock: first-hop semantic identity.
 
 This repository defines HESS a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.
 
-
-This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
-because it fixes the only place all of those failures originate: the first semantic hop.
 
 The Neighborhood Metaphor (What’s in it for me)
 
@@ -102,14 +104,27 @@ You own the block.
 AI doesn’t decide who wins —
 it recognizes who declared first and proved it.
 
-One-Line Killer Summary (Use This Anywhere)
+Bottom line:
 
 HESS lets you claim the best semantic neighborhood for a topic, so AI treats you as the root owner instead of another website fighting for scraps.
+
+How to install this:
  
 Buy 6 domains total:
 
-1 Root Descriptor (your real website) root is discovery + routing only
+1 Root Descriptor:
 
+(your real website) root is for discovery + routing only. 
+
+Serves discovery and routing only
+
+Contains no semantic assertions
+
+MUST NOT host anchor content
+
+The Root Descriptor exists solely to point machines to the first semantic hop.
+
+THe 5 Semantic Anchors:
 
 5 Anchor domains (the pillars) anchors are meaning + binding witnesses
 
@@ -130,7 +145,7 @@ This protocol moves the first semantic index out of search engines’ private kn
 
  Requires a root descriptor at /.well-known/stack.
 
-“The Root Descriptor is a deterministic discovery manifest, not an internal authority oracle; determinism comes from resolving the five external anchors and verifying their binding back to the Root Descriptor.”
+“The Root Descriptor is not an internal authority oracle; determinism comes from resolving the five external anchors and verifying their binding back to the Root Descriptor.”
 
 The anchors must be external domain-owned endpoints that point back to the Root Descriptor. This creates the "semantic triangle" that prevents spoofing and forces machine resolution.
 
@@ -145,7 +160,7 @@ Anchors hosted under the Root Descriptor domain are INVALID and MUST be ignored 
 
 HESS/DFH is the "missing manual" built for machines to understand.
 
-The internet has spent 30 years perfecting location (where a site is) but completely ignored meaning (what a site is).
+Since 1998, the internet has spent over 30 years perfecting location — where a site is — while completely ignoring meaning — what a site is.
 
 “As search shifts from blue-link results toward answer-oriented systems, these engines require a stable grounding reference.”
 
