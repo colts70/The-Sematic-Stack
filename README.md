@@ -3,6 +3,7 @@
 
 **Machine-Readable Protocol**  
 **Status:** Draft v3.0 — Semantics Locked
+ 1/28/2026
 
 “HESS is the first-hop semantic layer the internet skipped.”
 
