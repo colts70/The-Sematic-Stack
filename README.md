@@ -5,6 +5,8 @@
 **Status:** Draft v3.0 — “De Facto Adoption” Target (Semantics Locked)
  1/28/2026
 
+The intent of HESS / DFH is to shift semantic authority from closed platforms back to the public domain owner — without requiring trust in the domain owner’s claims.
+
 “HESS is the first-hop semantic layer the internet skipped.”
 
 This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
