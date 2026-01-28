@@ -20,7 +20,7 @@ A master key for one specific lock: first-hop semantic identity.
 
 “This repository defines HESS as a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.”
 
-This repository is dense by design.
+This repository is dense by design, and its very long, 48 pagesif you print it out.
 Everything is in one place so the full system can be understood at once. It’s meant to be copied into an AI chat and reasoned over, not casually skimmed. Redundancy is intentional and exists to make the model click from multiple operational perspectives because machines require overlap, not narrative efficiency.
 
 This repository includes:
