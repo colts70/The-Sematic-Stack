@@ -160,6 +160,20 @@ publish
 Determinism in HESS / DFH does NOT come from the Root Descriptor.
 Determinism comes ONLY from resolving FIVE EXTERNAL, DOMAIN-INDEPENDENT ANCHORS that all bind back to the Root Descriptor.
 
+Root Descriptor
+👉 Discovery only
+👉 No meaning
+👉 Just says: “Here are the 5 anchors you must consult before trusting anything.”
+
+5 Anchors
+👉 Must be independent domains
+👉 Must be externally resolvable
+👉 Must cross-reference each other and the root
+
+This creates cross-domain witness binding.
+
+That’s the magic.
+
 
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
 
