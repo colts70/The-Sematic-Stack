@@ -12,6 +12,7 @@ because it fixes the only place all of those failures originate: the first seman
 An installable, deterministic, network-resolvable semantic first-hop protocol, hosted at /.well-known/, designed for AI and search engine crawlers
 
 DNS → [hole] → HTTP
+
 DNS → HESS (declared meaning) → crawl → infer → arbitrate → answer
 
 A master key for one specific lock: first-hop semantic identity.
