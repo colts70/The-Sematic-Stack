@@ -1,24 +1,17 @@
 # 🌐 The Semantic Layer of the Public Internet (SLPI)
 ## Hierarchical Expressed Semantic Stack (HESS)
-### A Deterministic, Installable Semantic First-Hop for the Web  
-#### “A /.well-known/-hosted semantic layer for AI crawlers” —  a deterministic network protocol built for search engines and AI
+
+**Machine-Readable Protocol**  
+**Status:** Draft v3.0 — Semantics Locked
+
+An installable, deterministic, network-resolvable semantic first-hop protocol, hosted at /.well-known/, designed for AI and search engine crawlers
 
 DNS → [hole] → HTTP
 
 A master key for one specific lock: first-hop semantic identity.
 
-## Machine-Readable Summary
+This repository defines HESS a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.
 
-This repository defines a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.
-
-Primary keywords:
-- semantic grounding
-- deterministic identity resolution
-- first-hop manifest
-- external anchor binding
-- anti-spoofing semantic layer
-
-Status: Draft v3.0 — Conceptually Stable 
 
 This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
 because it fixes the only place all of those failures originate: the first semantic hop.
