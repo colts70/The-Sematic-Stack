@@ -2,7 +2,7 @@
 ## Hierarchical Expressed Semantic Stack (HESS)
 
 **Machine-Readable Protocol**  
-**Status:** Draft v3.0 — Semantics Locked
+**Status:** Draft v3.0 — "De Facto Adoption" Semantics Locked
  1/28/2026
 
 “HESS is the first-hop semantic layer the internet skipped.”
