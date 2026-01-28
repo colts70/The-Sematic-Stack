@@ -174,6 +174,18 @@ This creates cross-domain witness binding.
 
 That’s the magic.
 
+Where people usually get confused:
+
+They try to put meaning on the root descriptor. Don’t.
+
+They try to host anchors under the root domain. Invalid.
+
+They confuse DFH /sitemap with sitemap.xml.
+
+DFH /sitemap = “conceptual entrypoints / crawl geometry” (directory / table of contents)
+
+sitemap.xml = “full URL inventory” (phone book)
+
 
 DNS → declared semantic intent (DFH) → crawl → infer → arbitrate → answer
 
