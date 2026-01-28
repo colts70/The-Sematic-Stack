@@ -1636,6 +1636,8 @@ The Assumption: I wanted to understand what it meant to achieve the closest poss
 
 The Discovery: I realized modern platforms were inferring identity by guessing and scraping, rather than resolving it from any registry.
 
+“I found the exact choke point where the web has been guessing for 30 years, and I pinned it.”
+
 The Invention: I created the five-pillar HESS stack to provide the minimal mechanism required to do what I assumed was already being handled by the infrastructure.
 
 I just bought the “Meaning” via DNS and told the algorithm to read the file via a `/.well-known/` endpoint.
