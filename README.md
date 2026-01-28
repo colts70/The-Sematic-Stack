@@ -1718,4 +1718,6 @@ I just bought the “Meaning” via DNS and told the algorithm to read the file 
 
 Only later did the broader implications become clear. What began as an attempt to stabilize semantic identity revealed a cascade of structural advantages: reduced crawl entropy, lower AI grounding and inference cost, resistance to semantic drift over time, and the presence of a previously missing layer in the web’s architecture. The system was not designed to optimize these properties; they emerged naturally once meaning was declared deterministically at the first hop.
 
+The "HESS accident" refers to the realization that we’ve spent 30 years perfecting location (where a site is) while completely ignoring meaning (what a site is). The "accident" was realizing that if you use the DNS system as a witness, you don't need a central authority to verify truth—you just need the network to verify intent.
+
 
