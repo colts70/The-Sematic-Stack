@@ -1882,6 +1882,8 @@ Failure Modes (missing anchor, malformed JSON, timeout, signature break)
 
 IANA “uses /.well-known/ per RFC 8615”)
 
+
+If any OF the semantic root ANCHORs are not external to the AI system, then it is not deterministic—it is merely authoritative. Determinism requires an independently verifiable reference that exists outside the model, outside the platform, and outside any internal trust or ranking system. When meaning is internalized, the AI is forced to assert correctness rather than prove it, reducing resolution to institutional authority: “trust us, we interpreted it correctly.” This reintroduces the exact failure modes that cause hallucination and semantic drift—opaque weighting, heuristic overrides, and silent reinterpretation. A semantic root only becomes deterministic when it is domain-owned, publicly fetchable, and resolved before inference, with validation based on external witnesses rather than platform judgment. Anything less is not grounding; it is governance.
 How did this happen?
 
 “I wasn’t trying to be a visionary. In October 2025, I was just the average guy chasing SEO — consolidating every 301 redirect I could — when I stopped and asked myself: how do you actually claim the semantic identity of a topic?
