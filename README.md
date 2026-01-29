@@ -12,6 +12,18 @@ https://<root-domain>/.well-known/stack
 that points to five external anchor domains (/type, /entity, /url, /canonical, /sitemap).
 Agents fetch the descriptor before crawling to resolve declared intent + identity binding (not truth).
 
+“What an agent actually does” 5-bullet flow:
+
+Fetch root stack
+
+Fetch 5 anchors (once each)
+
+Verify back-binding
+
+If /entity + /url valid → identity eligible
+
+Continue crawl + arbitration
+
 
  This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
 because it fixes the only place all of those failures originate: the first semantic hop.
