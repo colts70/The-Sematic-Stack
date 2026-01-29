@@ -37,8 +37,6 @@ Misattribution / citation errors: ↓ ~70%
 
 Compute wasted on “what is this?”: ↓ ~90%
 
-These are directional estimates under the assumption DFH is honored by the agent.
-
 “Directional estimates / hypothesis”
 
 “Assumes agents honor DFH”
