@@ -1,9 +1,16 @@
 # 🌐 The Semantic Layer of the Public Internet (SLPI)
 ## Hierarchical Expressed Semantic Stack (HESS)
-
 **Machine-Readable Protocol**  
 **Status:** Draft v3.0 — “De Facto Adoption” Target (Semantics Locked)
  1/28/2026
+
+A deterministic, domain-owned semantic first hop for AI crawlers.
+
+Summary
+HESS/DFH defines a machine-readable Root Descriptor at:
+https://<root-domain>/.well-known/stack
+that points to five external anchor domains (/type, /entity, /url, /canonical, /sitemap).
+Agents fetch the descriptor before crawling to resolve declared intent + identity binding (not truth).
 
  This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
 because it fixes the only place all of those failures originate: the first semantic hop.
