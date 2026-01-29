@@ -5,14 +5,20 @@
 **Status:** Draft v3.0 — “De Facto Adoption” Target (Semantics Locked)
  1/28/2026
 
+ This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
+because it fixes the only place all of those failures originate: the first semantic hop.
+
 The intent of HESS / DFH is to shift semantic authority from closed platforms back to the public domain owner — without requiring trust in the domain owner’s claims.
+
+AI stops guessing.
+
+AI credits the domain owner with the "First-Hop" intent.
+
+It reduces the "Hallucination Risk" because the grounding is anchored in the protocol, not a statistical prediction.
 
 The strongest driver isn't "genius"—it's money. Google and OpenAI are currently drowning in "Crawl Debt." They spend billions of dollars in electricity just to have AI models "infer" what a website is.
 
 “HESS is the first-hop semantic layer the internet skipped.”
-
-This is the cleanest option to address (semantic grounding + hallucination + identity + drift + provenance + crawl geometry + SEO)
-because it fixes the only place all of those failures originate: the first semantic hop.
 
 An installable, deterministic, network-resolvable semantic first-hop protocol, hosted at /.well-known/, designed for AI and search engine crawlers
 
