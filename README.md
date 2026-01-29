@@ -21,6 +21,8 @@ ingest → guess → embed → reconcile → hallucinate
 
 DNS → HESS (declared meaning) → crawl → infer → arbitrate → answer
 
+DFH does not assert truth — it asserts intent and provenance at the earliest resolvable hop.
+
 A master key for one specific lock: first-hop semantic identity.
 
 Realistic impact when DFH is honored
