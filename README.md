@@ -125,6 +125,11 @@ You’re not begging algorithms to notice you
 
 You own the block.
 
+Proof of Effort (The Anti-Spam Filter)
+The requirement to purchase five independent domains is a "proof of work" mechanism. Spammers and "slop" generators won't spend the money or the time to provision five separate anchors and bind them to a root. This creates a high-signal neighborhood.
+
+By 2026 standards, if you aren't willing to prove your semantic identity, you're just noise.
+
 AI doesn’t decide who wins —
 it recognizes who declared first and proved it.
 
