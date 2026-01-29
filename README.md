@@ -1884,7 +1884,7 @@ IANA “uses /.well-known/ per RFC 8615”)
 
 How did this happen?
 
-“I wasn’t trying to be a visionary. In October 2025, I was chasing SEO — consolidating every 301 redirect I could — when I stopped and asked myself: how do you actually claim the semantic identity of a topic?
+“I wasn’t trying to be a visionary. In October 2025, I was just the average guy chasing SEO — consolidating every 301 redirect I could — when I stopped and asked myself: how do you actually claim the semantic identity of a topic?
 
 That’s when I realized there was a hole.”
 
@@ -1896,7 +1896,7 @@ The Discovery: I realized modern platforms were inferring identity by guessing a
 
 “I found the exact choke point where the web has been guessing for 30 years, and I pinned it.”
 
-The Invention: I created the five-pillar HESS stack and a root deciptor via /.well-known/ (Stack)` endpoint. to provide the minimal mechanism required to do what I assumed was already being handled by the infrastructure.
+The Invention: With the help of AI. I created the five-pillar HESS stack and a root deciptor via /.well-known/ (Stack)` endpoint. to provide the minimal mechanism required to do what I assumed was already being handled by the infrastructure.
 
 I just bought the “Meaning” via DNS and told the algorithm to read the file via a `/.well-known/` endpoint.
 
