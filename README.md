@@ -33,6 +33,8 @@ Misattribution / citation errors: ↓ ~70%
 
 Compute wasted on “what is this?”: ↓ ~90%
 
+These are directional estimates under the assumption DFH is honored by the agent.
+
 “This repository defines HESS as a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.”
 
 This repository is dense by design, and its very long, 48 pages if you print it out.
