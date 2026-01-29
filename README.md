@@ -97,21 +97,15 @@ DFH does not assert truth — it asserts intent and provenance at the earliest r
 
 A master key for one specific lock: first-hop semantic identity.
 
-Realistic impact when DFH is honored
+Realistic impact when DFH is honored:
 
-Hallucination caused by identity ambiguity: ↓ 70–90%
+Hallucination caused by identity ambiguity: ↓ 
 
-Semantic drift across re-indexing: ↓ 60–80%
+Semantic drift across re-indexing: ↓ 
 
-Misattribution / citation errors: ↓ ~70%
+Misattribution / citation errors: ↓ 
 
-Compute wasted on “what is this?”: ↓ ~90%
-
-“Directional estimates / hypothesis”
-
-“Assumes agents honor DFH”
-
-“Will vary by domain type + ambiguity level + enforcement strictness
+Compute wasted on “what is this?”: ↓
 
 “This repository defines HESS as a deterministic, external, network-resolvable semantic first-hop protocol for AI and crawlers.”
 
