@@ -6,6 +6,7 @@ A "machine-readable deed" for digital property.
  1/28/2026
 
 A deterministic, domain-owned semantic first hop for AI crawlers.
+Deterministic = resolution is based on externally fetchable, domain-owned anchors, not model inference or internal platform state.
 
 Summary
 HESS/DFH defines a machine-readable Root Descriptor at:
