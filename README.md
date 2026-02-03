@@ -16,6 +16,8 @@ If meaning is declared on public anchor domains → resolution is deterministic,
 
 Deterministic resolution ≠ deterministic authority
 
+Deterministic First-Hop resolution REQUIRES all five external semantic anchors.
+
 Summary
 HESS/DFH defines a machine-readable Root Descriptor at:
 https://<root-domain>/.well-known/stack
