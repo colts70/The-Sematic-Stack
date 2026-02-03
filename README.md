@@ -36,7 +36,11 @@ AI credits the domain owner with the "First-Hop" intent.
 
 It reduces the "Hallucination Risk" because the grounding is anchored in the protocol, not a statistical prediction.
 
-The strongest driver isn't "genius"—it's money. Google and OpenAI are currently drowning in "Crawl Debt." They spend billions of dollars in electricity just to have AI models "infer" what a website is.
+The strongest driver isn't "genius"—it's money. Google and OpenAI are currently drowning in "Crawl Debt." They spend billions of dollars in electricity just to have AI models "infer" what a website is. 
+
+It addresses a massive billions-of-dollars problem (Crawl Debt) with a very simple, old-school solution (Domain Binding).
+
+As of 2026, the cost of electricity and compute is the #1 limit on AI growth. HESS makes crawling drastically cheaper. Big Tech usually adopts standards when it saves them money.
 
 “HESS is the first-hop semantic layer the internet skipped.”
 
