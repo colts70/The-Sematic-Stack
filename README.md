@@ -141,6 +141,15 @@ The Deterministic Grounding Pipeline
 
 HESS collapses the “semantic blind spot” by enforcing a fixed resolution order. Instead of wandering pages to assemble a statistical guess, an agent resolves identity first, then crawls with intent already constrained.
 
+The "Bottom Line" Summary
+
+Factor           | Without HESS                          | With HESS
+-----------------|----------------------------------------|---------------------------------------------
+Sales Cycle      | Wait for Google to "guess" your rank.  | AI agents find you instantly.
+Ad Spend         | High (fight for visibility).            | Lower (you become the Root Source).
+Asset Value      | Just a website.                         | A verified Semantic Node.
+Competition      | Anyone can out-rank you.                | You own the topic at first-hop.
+
 
 The Neighborhood Metaphor (What’s in it for me)
 
