@@ -18,6 +18,25 @@ Deterministic resolution ≠ deterministic authority
 
 Deterministic First-Hop resolution REQUIRES all five external semantic anchors.
 
+✅ The Five Are Mandatory — Why
+
+Each anchor closes a different, non-overlapping ambiguity class.
+Remove any one, and machines are forced to guess again.
+
+Anchor	Question Answered	If Missing
+/type	What kind of thing is this?	Class confusion
+/entity	Which specific thing?	Entity collision
+/url	Where does meaning officially live?	Spoofing / misbinding
+/canonical	What is it called, consistently?	Alias drift
+/sitemap	Where does crawling begin?	Crawl entropy
+
+Determinism is the intersection of all five.
+Two anchors ≠ weak determinism.
+Three anchors ≠ partial determinism.
+Four anchors ≠ “mostly deterministic.”
+
+👉 Five or nothing.
+
 Summary
 HESS/DFH defines a machine-readable Root Descriptor at:
 https://<root-domain>/.well-known/stack
