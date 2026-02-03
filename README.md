@@ -18,24 +18,26 @@ Deterministic resolution ≠ deterministic authority
 
 Deterministic First-Hop resolution REQUIRES all five external semantic anchors.
 
-✅ The Five Are Mandatory — Why
+## ✅ The Five Anchors Are Mandatory — Why
 
-Each anchor closes a different, non-overlapping ambiguity class.
-Remove any one, and machines are forced to guess again.
+Each semantic anchor closes a **distinct, non-overlapping class of ambiguity**.  
+Remove **any one**, and machines are forced back into probabilistic inference.
 
-Anchor	Question Answered	If Missing
-/type	What kind of thing is this?	Class confusion
-/entity	Which specific thing?	Entity collision
-/url	Where does meaning officially live?	Spoofing / misbinding
-/canonical	What is it called, consistently?	Alias drift
-/sitemap	Where does crawling begin?	Crawl entropy
+| Anchor | Question Answered | Failure Mode if Missing |
+|-------|-------------------|-------------------------|
+| `/type` | What kind of thing is this? | Class / ontology confusion |
+| `/entity` | Which specific thing is this? | Entity collision |
+| `/url` | Where does this meaning officially live? | Spoofing / misbinding |
+| `/canonical` | What is it called, consistently? | Alias drift |
+| `/sitemap` | Where should crawling begin? | Crawl entropy |
 
-Determinism is the intersection of all five.
-Two anchors ≠ weak determinism.
-Three anchors ≠ partial determinism.
-Four anchors ≠ “mostly deterministic.”
+**Determinism exists only at the intersection of all five anchors.**
 
-👉 Five or nothing.
+- Two anchors ≠ weak determinism  
+- Three anchors ≠ partial determinism  
+- Four anchors ≠ “mostly deterministic”  
+
+👉 **Five or nothing.**
 
 Summary
 HESS/DFH defines a machine-readable Root Descriptor at:
@@ -51,7 +53,7 @@ Fetch 5 anchors (once each)
 
 Verify back-binding
 
-If /entity + /url valid → identity eligible
+If all 5 anchors are valid → identity eligible
 
 Continue crawl + arbitration
 
