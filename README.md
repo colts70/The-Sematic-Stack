@@ -732,6 +732,8 @@ You either own the first hop — or you don’t.
 HESS / DFH lets you tell them what your *domain* means — before guessing starts.**
 
 
+The "Witness" System: Because the 5 anchors must be hosted on independent domains, the AI acts like a detective. It checks Anchor A, B, C, D, and E. If all five say, "Yes, this main site owns this topic," the AI has five independent witnesses.
+
 If you have questions, confusion, or concerns, copy-paste this spec into an AI chat and ask away. The repetition is deliberate and exists to help you “click” the model quickly, not to add complexity.
 
 What SLPI / HESS Actually Fixes:
@@ -771,6 +773,12 @@ This is not an AI patch.
 Its a structural upgrade to the internet's discovery layer.
 
 It is a missing internet layer.
+
+HESS doesn't claim to be "The Absolute Truth" (which is impossible on the internet). It claims to be "The Declared Intent."
+
+If someone tries to lie, the AI doesn't just "believe" them—it sees a conflict and moves to Arbitration.
+
+But for the 99% of legitimate businesses, there is no conflict. You are the only one claiming your identity with 5 anchors, so you become the De Facto Truth for AI models.
 
 HESS / DFH declares semantic intent and provenance — not truth — at the first machine-resolvable hop, before crawling, retrieval, or inference begins.
 
